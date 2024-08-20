@@ -1,1 +1,13 @@
 
+
+
+
+
+
+
+---realz---
+game.Players.LocalPlayer:Connect(function(m)
+local split = m:split(" ")
+local cmd = split[1]
+local args1 = split[2]
+local args2 = split[3]

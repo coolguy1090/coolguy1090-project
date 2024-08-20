@@ -47,17 +47,7 @@ game.Players.LocalPlayer.Chatted:Connect(function(m)
   local args3 = split[4]
 
 if cmd == "antihat" then
-        spawn(function()
-while wait() do 
-
-            for i,v in pairs(workspace:GetDescendants()) do
-                if v:IsA("Accessory") and v.Name == "Accessory (Pointy)" or v.Name == "Accessory (happy)" or v.Name == "Accessory (SUN)"  or v.Name == "Accessory (MeshPart)" or v.Name == "" then
-                    v:Destroy()
-                end
-            end
-
-end
-end)
+antihatc()
 end
 
   if cmd == "bgears" then  
@@ -104,7 +94,6 @@ dcrash = true
 end
 
 local antihatc = coroutine.wrap(function()
-  if antihat then
     while wait() do
             if cmd == "antihat" then
         spawn(function()
@@ -120,7 +109,7 @@ end
 end)
 end
 end
-end
+end)
 end)
 
 local antikillc = coroutine.wrap(function()
@@ -166,4 +155,3 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/lnfiniteCoder/My-robl
 for _,v in pairs(onstart) do
 chat(""..v)
 end
-end)

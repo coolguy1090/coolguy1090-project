@@ -76,7 +76,7 @@ game.Players.LocalPlayer.Chatted:Connect(function(m)
     if cmd == "antikill" then
       antikillc = true
     elseif cmd == "unantikill" then
-      antikill = false
+      antikillc = false
     end
 end)
 

@@ -79,11 +79,7 @@ dcrash = true
     end
     
     if cmd == "antikill" then
-    while wait() do
-   if humanoid.Health == 0 then
-    chat("reset me")
-end
-end
+   antikill = true
 end
 
 local antikillc = coroutine.wrap(function()

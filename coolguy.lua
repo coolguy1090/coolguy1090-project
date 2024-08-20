@@ -1,4 +1,5 @@
 local antikill = true
+local p = "-"
 local lp = game.Players.LocalPlayer
 local getplrs = game.Players:GetPlayers()
 local char = lp.Character
@@ -43,7 +44,7 @@ end
 
 ---realz---
 game.Players.LocalPlayer.Chatted:Connect(function(m)
-  local split = m:split(" ")
+  local split = m:split(" ") or split[1]:find(p)
   local cmd = split[1]
   local args1 = split[2]
   local args2 = split[3]
@@ -68,16 +69,14 @@ game.Players.LocalPlayer.Chatted:Connect(function(m)
     elseif cmd == "unbgears" then
       bgears = false
     end
-    end)
+end)
 
 if cmd == "reloadscript" then
-chat("h Reloading script....")
-task.wait(0.3)
-loadstring(game:HttpGet('https://raw.githubusercontent.com/coolguy1090/coolguy1090-project/main/coolguy.lua'))()
-antikill = false
-bgears = false
-end
-
+    wait(0.3)
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/coolguy1090/coolguy1090-project/main/coolguy.lua'))()
+    bgears = false
+    antikill = false
+    end
 
     if cmd== "regen" then
 

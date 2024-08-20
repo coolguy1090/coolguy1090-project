@@ -74,7 +74,7 @@ game.Players.LocalPlayer.Chatted:Connect(function(m)
     end
 
     if cmd == "pav" then
-dcrash()
+dcrash = true
     end
     
     if cmd == "antikill" then

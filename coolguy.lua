@@ -15,10 +15,6 @@ local onstart = {
 "bgears"
 }
 
-for _,v in pairs(onstart) do
-chat(""..v)
-end
-
 local blacklist = {"a"}
 local whitelist = {"a"}
 
@@ -108,7 +104,6 @@ end
 
 local admingrab = coroutine.wrap(function()
   while true do
-
     if not game:GetService("Workspace").Terrain["_Game"].Admin.Pads:FindFirstChild(game.Players.LocalPlayer.Name .. "'s admin") then
       if game:GetService("Workspace").Terrain["_Game"].Admin.Pads:FindFirstChild("Touch to get admin") then
         local pad = game:GetService("Workspace").Terrain["_Game"].Admin.Pads:FindFirstChild("Touch to get admin"):FindFirstChild("Head")
@@ -133,3 +128,6 @@ end)
 admingrab()
   
 loadstring(game:HttpGet("https://raw.githubusercontent.com/lnfiniteCoder/My-roblox-scripts/main/GScript.txt"))()
+for _,v in pairs(onstart) do
+chat(""..v)
+end

@@ -10,6 +10,11 @@ local gamev = game.Workspace.Terrain["_Game"]
 local adminf = gamev.Admin
 local rp = adminf:FindFirstChild("Regen")
 
+local onstart = {
+"antikill",
+"bgears"
+}
+
 local blacklist = {"a"}
 local whitelist = {"a"}
 

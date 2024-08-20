@@ -62,10 +62,12 @@ game.Players.LocalPlayer.Chatted:Connect(function(m)
           end
         end
       end
+    elseif cmd == "unbgears" then
+      bgears = false
     end
 
 
-    if cmd == "regen" then
+    if cmd== "regen" then
 
       Regen()
 

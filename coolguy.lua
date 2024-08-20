@@ -30,4 +30,10 @@ end
 end
 end
 end
+
+if cmd == "antikill" then
+if game.Players.LocalPlayer.Character.Humanoid.Health == 0 then
+chat("reset me")
+end
+end
       

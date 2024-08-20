@@ -65,6 +65,7 @@ game.Players.LocalPlayer.Chatted:Connect(function(m)
     elseif cmd == "unbgears" then
       bgears = false
     end
+    end)
 
 
     if cmd== "regen" then
@@ -78,11 +79,12 @@ dcrash = true
     end
     
     if cmd == "antikill" then
-      antikillc = true
-    elseif cmd == "unantikill" then
-      antikillc = false
-    end
-end)
+    while wait() do
+   if humanoid.Health == 0 then
+    chat("reset me")
+end
+end
+end
 
 local antikillc = coroutine.wrap(function()
   while wait() do

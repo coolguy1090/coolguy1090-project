@@ -1,4 +1,5 @@
 local antikill = true
+local antihat = true
 local p = "-"
 local lp = game.Players.LocalPlayer
 local getplrs = game.Players:GetPlayers()
@@ -11,7 +12,6 @@ local adminf = gamev.Admin
 local rp = adminf:FindFirstChild("Regen")
 local connections = {}
 local onstart = {
-"antikill",
 "bgears"
 }
 
@@ -46,6 +46,19 @@ game.Players.LocalPlayer.Chatted:Connect(function(m)
   local args2 = split[3]
   local args3 = split[4]
 
+if cmd == "antihat" then
+        spawn(function()
+while wait() do 
+
+            for i,v in pairs(workspace:GetDescendants()) do
+                if v:IsA("Accessory") and v.Name == "Accessory (Pointy)" or v.Name == "Accessory (happy)" or v.Name == "Accessory (SUN)"  or v.Name == "Accessory (MeshPart)" or v.Name == "" then
+                    v:Destroy()
+                end
+            end
+
+end
+end)
+end
 
   if cmd == "bgears" then  
     bgears = true
@@ -62,10 +75,9 @@ game.Players.LocalPlayer.Chatted:Connect(function(m)
           end
         end
       end
-    elseif cmd == "unbgears" then
+    elseif m:sub(1,8) == "unbgears" then
       bgears = false
     end
-end)
 
 if cmd == "reloadscript" then
 chat("h Reloading script....")
@@ -84,23 +96,42 @@ wait(0.3)
     end
 
     if cmd == "pav" then
-      dcrash = true
+dcrash = true
     end
     
     if cmd == "antikill" then
-      antikill = true
-    end
+   antikill = true
+end
+
+local antihatc = coroutine.wrap(function()
+  if antihat then
+    while wait() do
+            if cmd == "antihat" then
+        spawn(function()
+while wait() do 
+
+            for i,v in pairs(workspace:GetDescendants()) do
+                if v:IsA("Accessory") and v.Name == "Accessory (Pointy)" or v.Name == "Accessory (happy)" or v.Name == "Accessory (SUN)"  or v.Name == "Accessory (MeshPart)" or v.Name == "" then
+                    v:Destroy()
+                end
+            end
+
+end
+end)
+end
+end
+end
+end)
 
 local antikillc = coroutine.wrap(function()
-  while wait() do
-    if antikill then
+  if antikill then
+   while wait() do
       if humanoid.Health == 0 then
-        chat("re")
+        chat("reset me")
       end
     end
   end
 end)
-antikillc()
 
 for _, Bricks in pairs(game:GetService("Workspace").Terrain._Game.Workspace.Obby:GetChildren()) do
         Bricks.CanTouch = false
@@ -135,3 +166,4 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/lnfiniteCoder/My-robl
 for _,v in pairs(onstart) do
 chat(""..v)
 end
+end)

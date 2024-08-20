@@ -31,6 +31,20 @@ end
 end
 end
 
+if cmd == "spam" then
+local a = msg:split(" ")
+b = true
+while b do
+wait()
+chat(""..a)
+end
+end
+end
+
+if cmd == "stop" then
+b = false
+end
+
 if cmd == "antikill" then
 if game.Players.LocalPlayer.Character.Humanoid.Health == 0 then
 chat("reset me")

@@ -1,3 +1,4 @@
+local antikill = true
 local lp = game.Players.LocalPlayer
 local getplrs = game.Players:GetPlayers()
 local char = lp.Character
@@ -69,6 +70,12 @@ game.Players.LocalPlayer.Chatted:Connect(function(m)
     end
     end)
 
+if cmd == "reloadscript" then
+loadstring(game:HttpGet('https://raw.githubusercontent.com/coolguy1090/coolguy1090-project/main/coolguy.lua'))()
+antikill = false
+bgears = false
+end
+
 
     if cmd== "regen" then
 
@@ -81,7 +88,7 @@ dcrash = true
     end
     
     if cmd == "antikill" then
-   local antikill = true
+   antikill = true
 end
 
 local antikillc = coroutine.wrap(function()

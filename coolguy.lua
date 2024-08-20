@@ -72,12 +72,23 @@ game.Players.LocalPlayer.Chatted:Connect(function(m)
       Regen()
 
     end
+
+    if cmd == "pav" then
+dcrash()
+    end
     
     if cmd == "antikill" then
       antikillc = true
     elseif cmd == "unantikill" then
       antikillc = false
     end
+end)
+
+local dcrash = coroutine.wrap(function()
+for i = 1,100 do
+chat("dog all all all")
+chat("clone all all all")
+end
 end)
 
 local antikillc = coroutine.wrap(function()

@@ -68,7 +68,10 @@ game.Players.LocalPlayer.Chatted:Connect(function(m)
 end)
 
 if cmd == "reloadscript" then
-    wait(0.3)
+chat("h Reloading script....")
+wait(0.7)
+chat("h Script Reloaded Succesfuly!")
+wait(0.3)
     loadstring(game:HttpGet('https://raw.githubusercontent.com/coolguy1090/coolguy1090-project/main/coolguy.lua'))()
     bgears = false
     antikill = false

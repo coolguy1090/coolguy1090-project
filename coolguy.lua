@@ -50,6 +50,11 @@ if cmd == prefix.."antihat" then
 antihat = true
 end
 
+  if cmd == prefix.."vg" then
+      local a = m:sub(4)
+      chat("gear "..a.." 94794847")
+      end
+
   if cmd == prefix.."bgears" then  
     bgears = true
       while bgears do

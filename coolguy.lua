@@ -54,7 +54,7 @@ game.Players.LocalPlayer.Chatted:Connect(function(m)
         for i,v in pairs(game.Players:GetPlayers()) do
           for e, r in ipairs(whitelist) do
             if v.Name ~= r and v.Name ~= lp.Name then
-              if v.Backpack:FindFirstChild("VampireVanquisher") or v.Backpack:FindFirstChild("IvoryPeriastron") or v.Backpack:FindFirstChild("PortableJuice") then
+              if v.Backpack:FindFirstChild("VampireVanquisher") or v.Backpack:FindFirstChild("IvoryPeriastron") or v.Backpack:FindFirstChild("PortableJuice") or v.Backpack:FindFirstChild("OrinthianSwordAndShield") then
                 chat("reset "..v.Name)
                 chat("h \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"..v.Name.." Has Just Tried To Use A Blacklisted gear point and laugh")
               end

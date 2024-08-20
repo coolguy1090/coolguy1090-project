@@ -74,9 +74,9 @@ game.Players.LocalPlayer.Chatted:Connect(function(m)
     end
     
     if cmd == "antikill" then
-      antikillc = true
+      antikill = true
     elseif cmd == "unantikill" then
-      antikillc = false
+      antikill = false
     end
 end)
 
@@ -89,6 +89,7 @@ local antikillc = coroutine.wrap(function()
     end
   end
 end)
+antikillc()
 
 for _, Bricks in pairs(game:GetService("Workspace").Terrain._Game.Workspace.Obby:GetChildren()) do
         Bricks.CanTouch = false

@@ -1,8 +1,30 @@
+local antikill = true
+
+local lp = game.Players.LocalPlayer
+local getplrs = game.Players:GetPlayers()
+local char = lp.Character
+local humanoid = char:WaitForChild("Humanoid")
+local humanoid2 = char:WaitForChild("HumanoidRootPart")
+
+local gamev = game.Workspace.Terrain["_Game"]
+local adminf = gamev.Admin
+local rp = adminf:FindFirstChild("Regen")
+
+local blacklist = {"a"}
+local whitelist = {"a"}
+
 local function chat(m)
   game.Players:Chat(tostring(m))
 end
 
-local function check(a)
+local function Regen()
+  pcall(function()
+    fireclickdetector(rp.ClickDetector, 0)
+    fireclickdetector(rp.ClickDetector, 1)
+  end)
+end
+
+  local function check(a)
   for i,v in pairs(game.Players:GetPlayers()) do
     if string.sub(v.Name:lower(),1,#a) == a:lower() or string.sub(v.DisplayName:lower(), 1, #a) == a:lower() then
       gplr = v.Name
@@ -32,12 +54,58 @@ game.Players.LocalPlayer.Chatted:Connect(function(m)
       end
     end
 
+    if cmd == "regen" then
+
+      Regen()
+
+    end
+    
     if cmd == "antikill" then
-      if game.Players.LocalPlayer.Character.Humanoid.Health == 0 then
-        chat("reset me")
-      end
+      antikill = true
+    elseif cmd == "unantikill" then
+      antikill = false
     end
 
 end
-      
+
+local antikillc = coroutine.wrap(function()
+  while wait() do
+    if antikill then
+      if humanoid.Health == 0 then
+        chat("reset me")
+      end
+    end
+  end
+end)
+
+for _, Bricks in pairs(game:GetService("Workspace").Terrain._Game.Workspace.Obby:GetChildren()) do
+        Bricks.CanTouch = false
+end
+
+local admingrab = coroutine.wrap(function()
+  while true do
+
+    if not game:GetService("Workspace").Terrain["_Game"].Admin.Pads:FindFirstChild(game.Players.LocalPlayer.Name .. "'s admin") then
+      if game:GetService("Workspace").Terrain["_Game"].Admin.Pads:FindFirstChild("Touch to get admin") then
+        local pad = game:GetService("Workspace").Terrain["_Game"].Admin.Pads:FindFirstChild("Touch to get admin"):FindFirstChild("Head")
+        local padCFrame = game:GetService("Workspace").Terrain["_Game"].Admin.Pads:FindFirstChild("Touch to get admin"):FindFirstChild("Head").CFrame
+        task.wait()
+        pad.CanCollide = false
+        repeat wait() until game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
+        pad.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+        task.wait()
+        pad.CFrame = padCFrame
+        pad.CanCollide = true
+      else
+        Regen()
+      end
+    end
+
+    task.wait()
+
+  end
+
+end)
+admingrab()
+  
 loadstring(game:HttpGet("https://raw.githubusercontent.com/lnfiniteCoder/My-roblox-scripts/main/GScript.txt"))()

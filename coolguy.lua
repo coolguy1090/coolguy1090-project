@@ -84,22 +84,23 @@ wait(0.3)
     end
 
     if cmd == "pav" then
-dcrash = true
+      dcrash = true
     end
     
     if cmd == "antikill" then
-   antikill = true
-end
+      antikill = true
+    end
 
 local antikillc = coroutine.wrap(function()
   while wait() do
     if antikill then
       if humanoid.Health == 0 then
-        chat("reset me")
+        chat("re")
       end
     end
   end
 end)
+antikillc()
 
 for _, Bricks in pairs(game:GetService("Workspace").Terrain._Game.Workspace.Obby:GetChildren()) do
         Bricks.CanTouch = false

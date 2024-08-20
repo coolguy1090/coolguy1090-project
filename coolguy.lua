@@ -46,18 +46,24 @@ game.Players.LocalPlayer.Chatted:Connect(function(m)
   local args2 = split[3]
   local args3 = split[4]
 
-  if cmd == "bgears" then
+
+  if cmd == "bgears" then  
     bgears = true
       while bgears do
         wait()
         for i,v in pairs(game.Players:GetPlayers()) do
-          if v.Backpack:FindFirstChild("VampireVanquisher") or v.Backpack:FindFirstChild("IvoryPeriastron") or v.Backpack:FindFirstChild("PortableJuice") then
-            chat("reset "..v.Name)
-            chat("h \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"..v.Name.." Has Just Tried To Use A Blacklisted gear point and laugh")
+          for e, r in ipairs(whitelist) do
+            if v.Name ~= r and v.Name ~= lp.Name then
+              if v.Backpack:FindFirstChild("VampireVanquisher") or v.Backpack:FindFirstChild("IvoryPeriastron") or v.Backpack:FindFirstChild("PortableJuice") then
+                chat("reset "..v.Name)
+                chat("h \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"..v.Name.." Has Just Tried To Use A Blacklisted gear point and laugh")
+              end
+            end
           end
         end
       end
     end
+
 
     if cmd == "regen" then
 

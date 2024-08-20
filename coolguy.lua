@@ -18,7 +18,7 @@ local cmd = split[1]
 local args1 = split[2]
 local args2 = split[3]
 
-    if cmd == "bgears"
+    if cmd == "bgears" then
   bgears = true
 while bgears do
 wait()
@@ -39,7 +39,6 @@ wait()
 chat(""..a)
 end
 end
-end
 
 if cmd == "stop" then
 b = false
@@ -50,4 +49,4 @@ if game.Players.LocalPlayer.Character.Humanoid.Health == 0 then
 chat("reset me")
 end
 end
-      
+end)

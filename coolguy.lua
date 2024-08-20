@@ -1,6 +1,6 @@
 local antikill = true
 local antihat = true
-local p = "-"
+local prefix = "-"
 local lp = game.Players.LocalPlayer
 local getplrs = game.Players:GetPlayers()
 local char = lp.Character
@@ -46,11 +46,11 @@ game.Players.LocalPlayer.Chatted:Connect(function(m)
   local args2 = split[3]
   local args3 = split[4]
 
-if cmd == "antihat" then
+if cmd == prefix.."antihat" then
 antihat = true
 end
 
-  if cmd == "bgears" then  
+  if cmd == prefix.."bgears" then  
     bgears = true
       while bgears do
         wait()
@@ -69,7 +69,7 @@ end
       bgears = false
     end
 
-if cmd == "reloadscript" then
+if cmd == prefix.."reloadscript" then
 chat("h Reloading script....")
 wait(0.7)
 chat("h Script Reloaded Succesfuly!")
@@ -79,17 +79,17 @@ wait(0.3)
     antikill = false
     end
 
-    if cmd== "regen" then
+    if cmd== prefix.."regen" then
 
       Regen()
 
     end
 
-    if cmd == "pav" then
+    if cmd == prefix.."pav" then
 dcrash = true
     end
     
-    if cmd == "antikill" then
+    if cmd == prefix.."antikill" then
    antikill = true
 end
 

@@ -47,7 +47,7 @@ game.Players.LocalPlayer.Chatted:Connect(function(m)
   local args3 = split[4]
 
 if cmd == "antihat" then
-antihatc()
+antihat = true
 end
 
   if cmd == "bgears" then  
@@ -94,20 +94,14 @@ dcrash = true
 end
 
 local antihatc = coroutine.wrap(function()
-    while wait() do
-       if antihat then
-            if cmd == "antihat" then
-        spawn(function()
-while wait() do 
-
-            for i,v in pairs(workspace:GetDescendants()) do
+  if antihat then
+      while wait() do
+            for i,v in pairs(game.Workspace:GetDescendants()) do
                 if v:IsA("Accessory") and v.Name == "Accessory (Pointy)" or v.Name == "Accessory (happy)" or v.Name == "Accessory (SUN)"  or v.Name == "Accessory (MeshPart)" or v.Name == "" then
                     v:Destroy()
                 end
             end
 
-end
-end)
 end
 end
 end)

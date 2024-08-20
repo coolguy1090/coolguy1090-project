@@ -37,6 +37,15 @@ end
   end
 end
 
+local cmds = {
+"antihat\n",
+"bgears\n\n",
+"unbgears\n\n\n",
+"loadscript\n\n\n\n",
+"regen\n\n\n\n\n",
+"pav - Crash Command\n\n\n\n\n\n"
+}
+
 
 ---realz---
 game.Players.LocalPlayer.Chatted:Connect(function(m)
@@ -47,7 +56,14 @@ game.Players.LocalPlayer.Chatted:Connect(function(m)
   local args3 = split[4]
 
 if cmd == prefix.."antihat" then
-antihat = true
+antihat()
+end
+
+if cmd == prefix.."cmds" then
+for _,v in pairs(cmds) do
+chat("h \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
+n\n\n\n\n"..v)
+end
 end
 
   if cmd == prefix.."bgears" then  
@@ -93,17 +109,16 @@ dcrash = true
    antikill = true
 end
 
-local antihatc = coroutine.wrap(function()
+local function antihat()
   antihat = true
       while antihat do
             for i,v in pairs(game.Workspace:GetDescendants()) do
                 if v:IsA("Accessory") and v.Name == "Accessory (Pointy)" or v.Name == "Accessory (happy)" or v.Name == "Accessory (SUN)"  or v.Name == "Accessory (MeshPart)" or v.Name == "" then
                     v:Destroy()
-                end
-            end
-
 end
-end)
+end
+end
+end
 end)
 
 local antikillc = coroutine.wrap(function()

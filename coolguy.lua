@@ -41,7 +41,7 @@ game.Players.LocalPlayer.Chatted:Connect(function(m)
   local args2 = split[3]
   local args3 = split[4]
 
-  if cmd == "bgears"
+  if cmd == "bgears" then
     bgears = true
       while bgears do
         wait()
@@ -65,8 +65,7 @@ game.Players.LocalPlayer.Chatted:Connect(function(m)
     elseif cmd == "unantikill" then
       antikill = false
     end
-
-end
+end)
 
 local antikillc = coroutine.wrap(function()
   while wait() do

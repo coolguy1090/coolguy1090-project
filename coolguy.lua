@@ -1,5 +1,3 @@
-local antikill = true
-
 local lp = game.Players.LocalPlayer
 local getplrs = game.Players:GetPlayers()
 local char = lp.Character
@@ -91,7 +89,6 @@ local antikillc = coroutine.wrap(function()
     end
   end
 end)
-antikillc()
 
 for _, Bricks in pairs(game:GetService("Workspace").Terrain._Game.Workspace.Obby:GetChildren()) do
         Bricks.CanTouch = false

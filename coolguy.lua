@@ -13,6 +13,10 @@ local onstart = {
 "bgears"
 }
 
+for _,v in pairs(onstart) do
+chat(""..v)
+end
+
 local blacklist = {"a"}
 local whitelist = {"a"}
 
@@ -77,7 +81,7 @@ dcrash = true
     end
     
     if cmd == "antikill" then
-   antikill = true
+   local antikill = true
 end
 
 local antikillc = coroutine.wrap(function()

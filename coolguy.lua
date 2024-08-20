@@ -12,7 +12,7 @@ end
 
 
 ---realz---
-game.Players.LocalPlayer:Connect(function(m)
+game.Players.LocalPlayer.Chatted:Connect(function(m)
 local split = m:split(" ")
 local cmd = split[1]
 local args1 = split[2]

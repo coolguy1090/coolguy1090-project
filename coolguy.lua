@@ -9,7 +9,7 @@ local humanoid2 = char:WaitForChild("HumanoidRootPart")
 local gamev = game.Workspace.Terrain["_Game"]
 local adminf = gamev.Admin
 local rp = adminf:FindFirstChild("Regen")
-
+local connections = {}
 local onstart = {
 "antikill",
 "bgears"
@@ -82,13 +82,6 @@ dcrash = true
     elseif cmd == "unantikill" then
       antikillc = false
     end
-end)
-
-local dcrash = coroutine.wrap(function()
-for i = 1,100 do
-chat("dog all all all")
-chat("clone all all all")
-end
 end)
 
 local antikillc = coroutine.wrap(function()

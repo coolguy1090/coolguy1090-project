@@ -95,6 +95,7 @@ end
 
 local antihatc = coroutine.wrap(function()
     while wait() do
+       if antihat then
             if cmd == "antihat" then
         spawn(function()
 while wait() do 

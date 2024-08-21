@@ -30,7 +30,6 @@ local onstart = {
 }
 
 local blgears = {
-
     "VampireVanquisher",
     "OrinthianSwordAndShield",
     "IvoryPeriastron"
@@ -153,10 +152,10 @@ local gearban2c = coroutine.wrap(function()
     while wait() do
       if gearban2 then
         for i, v in pairs(whitelist) do
-          for i, gear in pairs(blgears) do
-            for o, b in pairs(game.Players:GetPlayers()) do
+          for i, gear in ipairs(blgears) do
+            for o, b in ipairs(game.Players:GetPlayers()) do
               if b ~= plrserv:FindFirstChild(v) and b ~= lp and b ~= plrserv:FindFirstChild(owners) then
-                if v.Character:FindFirstChild(r) then
+                if v.Character:FindFirstChild(gear) then
                   chat("reset "..b.Name)
 chat("h \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBuddy Your Are Not Gonna Use "..gear.."\nSincerly Coolguy.docx.")
 end

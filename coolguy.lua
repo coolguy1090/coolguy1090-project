@@ -118,8 +118,10 @@ dcrash = true
     end
     
     if cmd == prefix.."antikill" then
-   antikill = true
-end
+      antikill = true
+    end
+end)
+
 
 local antihatc = coroutine.wrap(function()
     while wait() do

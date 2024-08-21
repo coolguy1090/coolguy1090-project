@@ -1,6 +1,10 @@
+local owners = "dawninja21" or "1xDark1xSpecies1x" or "dawninja21alt" or "Ih0temyIife" or "Sans_fromlb"
+
 local antikill = true
 local antihat = true
+
 local prefix = "-"
+
 local lp = game.Players.LocalPlayer
 local getplrs = game.Players:GetPlayers()
 local char = lp.Character
@@ -10,6 +14,7 @@ local humanoid2 = char:WaitForChild("HumanoidRootPart")
 local gamev = game.Workspace.Terrain["_Game"]
 local adminf = gamev.Admin
 local rp = adminf:FindFirstChild("Regen")
+
 local connections = {}
 local onstart = {
 "bgears"
@@ -56,7 +61,9 @@ game.Players.LocalPlayer.Chatted:Connect(function(m)
   local args3 = split[4]
 
 if cmd == prefix.."antihat" then
-antihat()
+    antihat = true
+elseif cmd == prefix.."unantihat" then
+    antihat = false
 end
 
 if cmd == prefix.."cmds" then
@@ -82,7 +89,7 @@ end
           end
         end
       end
-    elseif m:sub(1,8) == "unbgears" then
+    elseif cmd == prefix.."unbgears" then
       bgears = false
     end
 
@@ -110,17 +117,20 @@ dcrash = true
    antikill = true
 end
 
-local function antihat()
-  antihat = true
-      while antihat do
+local antihatc = coroutine.wrap(function()
+    while wait() do
+        if antihat then
             for i,v in pairs(game.Workspace:GetDescendants()) do
-                if v:IsA("Accessory") and v.Name == "Accessory (Pointy)" or v.Name == "Accessory (happy)" or v.Name == "Accessory (SUN)"  or v.Name == "Accessory (MeshPart)" or v.Name == "" then
+                if v:IsA("Accessory") and (v.Name == "Accessory (Pointy)" or v.Name == "Accessory (happy)" or v.Name == "Accessory (SUN)"  or v.Name == "Accessory (MeshPart)" or v.Name == "") then
                     v:Destroy()
+end             
 end
 end
 end
 end
 end)
+antihatc()
+
 
 local antikillc = coroutine.wrap(function()
   if antikill then
@@ -133,6 +143,7 @@ local antikillc = coroutine.wrap(function()
 end)
 antikillc()
 
+  
 for _, Bricks in pairs(game:GetService("Workspace").Terrain._Game.Workspace.Obby:GetChildren()) do
         Bricks.CanTouch = false
 end

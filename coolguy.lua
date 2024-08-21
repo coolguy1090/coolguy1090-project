@@ -157,8 +157,7 @@ local gearban2c = coroutine.wrap(function()
             for o, b in pairs(game.Players:GetPlayers()) do
               if b ~= plrserv:FindFirstChild(v) and b ~= lp and b ~= plrserv:FindFirstChild(owners) then
                 if v.Character:FindFirstChild(r) then
-                  ct("reset "..b.Name)
-                  ct("punish "..b.Name)
+                  chat("reset "..b.Name)
 end
 end
 end            

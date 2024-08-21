@@ -60,9 +60,10 @@ antihat()
 end
 
 if cmd == prefix.."cmds" then
-for _,v in pairs(cmds) do
+for i, v in pairs(cmds) do
 chat("h \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 n\n\n\n\n"..v)
+print(i..". "..v)
 end
 end
 
@@ -123,13 +124,14 @@ end)
 
 local antikillc = coroutine.wrap(function()
   if antikill then
-   while wait() do
+    while wait() do
       if humanoid.Health == 0 then
-        chat("reset me")
+        chat("re")
       end
     end
   end
 end)
+antikillc()
 
 for _, Bricks in pairs(game:GetService("Workspace").Terrain._Game.Workspace.Obby:GetChildren()) do
         Bricks.CanTouch = false

@@ -125,7 +125,7 @@ local antihatc = coroutine.wrap(function()
     while wait() do
         if antihat then
             for i,v in pairs(game.Workspace:GetDescendants()) do
-                if v:IsA("Accessory") and (v.Name == "Accessory (Pointy)" or v.Name == "Accessory (happy)" or v.Name == "Accessory (SUN)"  or v.Name == "Accessory (MeshPart)" or v.Name == "" then
+                if v:IsA("Accessory") and (v.Name == "Accessory (Pointy)" or v.Name == "Accessory (happy)" or v.Name == "Accessory (SUN)"  or v.Name == "Accessory (MeshPart)" or v.Name == "") then
                     v:Destroy()            
 end
 end

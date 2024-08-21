@@ -2,11 +2,20 @@ local owners = "dawninja21" or "1xDark1xSpecies1x" or "dawninja21alt" or "Ih0tem
 
 local antikill = true
 local antihat = true
+local antimsg = true
+local gearban = false
+local gearban2 = true
+local antidog = true
+local antirocket = true
+local anticlone = true
+local anticlientclone = true
+
 
 local prefix = "-"
 
 local lp = game.Players.LocalPlayer
 local getplrs = game.Players:GetPlayers()
+local plrserv = game:GetService("Players")
 local char = lp.Character
 local humanoid = char:WaitForChild("Humanoid")
 local humanoid2 = char:WaitForChild("HumanoidRootPart")
@@ -18,6 +27,14 @@ local rp = adminf:FindFirstChild("Regen")
 local connections = {}
 local onstart = {
 "bgears"
+}
+
+local blgears = {
+
+    "VampireVanquisher",
+    "OrinthianSwordAndShield",
+    "IvoryPeriastron"
+  
 }
 
 local blacklist = {"a"}
@@ -74,24 +91,11 @@ print(i..". "..v)
 end
 end
 
-  if cmd == prefix.."bgears" then  
-    bgears = true
-      while bgears do
-        wait()
-        for i,v in pairs(game.Players:GetPlayers()) do
-          for e, r in ipairs(whitelist) do
-            if v.Name ~= r and v.Name ~= lp.Name then
-              if v.Backpack:FindFirstChild("VampireVanquisher") or v.Backpack:FindFirstChild("IvoryPeriastron") or v.Backpack:FindFirstChild("PortableJuice") or v.Backpack:FindFirstChild("OrinthianSwordAndShield") then
-                chat("reset "..v.Name)
-                chat("h \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"..v.Name.." Has Just Tried To Use A Blacklisted gear point and laugh")
-              end
-            end
-          end
-        end
-      end
-    elseif cmd == prefix.."unbgears" then
-      bgears = false
-    end
+  if cmd == prefix.."bbg" then  
+      gearban2 = true 
+  elseif cmd == prefix.."unbbg" then
+      gearban2 = false
+  end
 
 if cmd == prefix.."reloadscript" then
 chat("h Reloading script....")
@@ -143,7 +147,27 @@ local antikillc = coroutine.wrap(function()
 end)
 antikillc()
 
-  
+local gearban2c = coroutine.wrap(function()
+
+    while wait() do
+      if gearban2 then
+        for i, v in pairs(whitelist) do
+          for e, r in pairs(blgears) do
+            for o, b in pairs(game.Players:GetPlayers()) do
+              if b ~= plrserv:FindFirstChild(v) and b ~= lp and b ~= plrserv:FindFirstChild(owners) then
+                if v.Character:FindFirstChild(r) then
+                  ct("reset "..b.Name)
+                  ct("punish "..b.Name)
+end
+end
+end            
+end
+end
+end                    
+end
+end)
+gearban2c()
+
 for _, Bricks in pairs(game:GetService("Workspace").Terrain._Game.Workspace.Obby:GetChildren()) do
         Bricks.CanTouch = false
 end

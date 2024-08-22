@@ -26,7 +26,7 @@ local rp = adminf:FindFirstChild("Regen")
 
 local connections = {}
 local onstart = {
-"-nok"
+"-nok",
 "-bbg"
 }
 

@@ -23,7 +23,14 @@ local humanoid2 = char:WaitForChild("HumanoidRootPart")
 local gamev = game.Workspace.Terrain["_Game"]
 local adminf = gamev.Admin
 local rp = adminf:FindFirstChild("Regen")
-
+--//funcs
+function dcrash()
+for i = 1,100 do
+chat("dog all all all")
+chat("clone all all all")
+end
+end
+--//
 local connections = {}
 local onstart = {
 "-nok",
@@ -83,7 +90,11 @@ elseif cmd == prefix.."unantihat" then
     antihat = false
 end
 
-if cmd == prefix.."akak" then
+if cmd == "akak" then
+chat("blind all")
+wait(0.3)
+chat("h \n\n\n"..aname.." Hello World!")
+wait(0.3)
 dcrash()
 end
 
@@ -134,7 +145,7 @@ if not game:GetService("Lighting"):FindFirstChild(plr.Name) then
      chat("punish "..plr.Name)
    chat("pm "..plr.Name.." Your Have Been Blacklisted From The Server!")
 if plr.PlayerRemoving then
-chat("-unban ")
+ban = false
 end
 end
 end
@@ -177,13 +188,6 @@ if antikill then
   end
 end)
 antikillc()
-
-local dcrash = coroutine.wrap(function()
-for i = 1,100 do
-chat("dog all all all")
-chat("clone all all all")
-end
-end)
 
 local gearban2c = coroutine.wrap(function()
 

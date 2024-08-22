@@ -118,6 +118,7 @@ dcrash = true
 
    if cmd == prefix.."ban" then
   check(args1)
+chat("h \n\n\n\n\n\n\n\n\n\nFunzy.Docx\n"..plr.Name.." Has Just Been Banned!")
     ban = true
 spawn(function()
 while ban do
@@ -134,6 +135,7 @@ end
 
 if cmd == prefix.."unban" then
 check(args1)
+chat("h \n\n\n\n\n\n\n\n\n\nFunzy.Docx "..plr.Name.." Has Just Been Unbanned!")
 ban = false
 end
     if cmd == prefix.."antikill" then
@@ -221,3 +223,5 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/lnfiniteCoder/My-robl
 for _,v in pairs(onstart) do
 chat(""..v)
 end
+
+chat("h \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFunzy.docx Loaded!")

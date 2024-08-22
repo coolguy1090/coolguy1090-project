@@ -53,7 +53,7 @@ end
   local function check(a)
   for i,v in pairs(game.Players:GetPlayers()) do
     if string.sub(v.Name:lower(),1,#a) == a:lower() or string.sub(v.DisplayName:lower(), 1, #a) == a:lower() then
-      gplr = v.Name
+      plr = v
     end
   end
 end
@@ -115,7 +115,27 @@ wait(0.3)
     if cmd == prefix.."pav" then
 dcrash = true
     end
-    
+
+   if cmd == "ban" then
+  check(args1)
+    ban = true
+spawn(function()
+while ban do
+    wait()
+if not game:GetService("Lighting"):FindFirstChild(plr.Name) then
+    chat("skydive "..plr.Name)
+   chat("blind "..plr.Name)
+     chat("punish "..plr.Name)
+   chat("pm "..plr.Name.." Your Have Been Blacklisted From The Server!")
+end
+end
+end)
+end
+
+if cmd == "unban" then
+check(args1)
+ban = false
+end
     if cmd == prefix.."antikill" then
       antikill = true
     end
@@ -152,8 +172,8 @@ local gearban2c = coroutine.wrap(function()
     while wait() do
       if gearban2 then
         for i, v in pairs(whitelist) do
-          for i, gear in ipairs(blgears) do
-            for o, b in ipairs(game.Players:GetPlayers()) do
+            for o, b in pairs(game.Players:GetPlayers()) do
+     for i, gear in ipairs(blgears) do
               if b ~= plrserv:FindFirstChild(v) and b ~= lp and b ~= plrserv:FindFirstChild(owners) then
                 if v.Character:FindFirstChild(gear) then
                   chat("reset "..b.Name)

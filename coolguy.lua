@@ -83,7 +83,7 @@ elseif cmd == prefix.."unantihat" then
     antihat = false
 end
 
-if cmd == "plainko" then
+if cmd == "planko" then
 chat("blind all")
 wait(0.1)
 dcrash()

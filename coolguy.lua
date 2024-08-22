@@ -138,6 +138,7 @@ end
 
 if cmd == prefix.."unban" then
 check(args1)
+chat("respawn "..plr.Name)
 chat("h \n\n\n\n\n\n\n\n\n\n<Funzy.Docx> "..plr.Name.." Has Just Been Unbanned!")
 ban = false
 end

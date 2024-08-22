@@ -190,11 +190,12 @@ end
 end
 end)
 
-local nok = coroutine.wrap(function()
-for _, Bricks in pairs(game:GetService("Workspace").Terrain._Game.Workspace.Obby:GetChildren()) do
-        Bricks.CanTouch = false
+local nokc = coroutine.wrap(function()
+for _, v in pairs(game:GetService("Workspace").Terrain._Game.Workspace.Obby:GetChildren()) do
+        v.CanTouch = false
 end
 end)
+nokc()
 
 local admingrab = coroutine.wrap(function()
   while true do

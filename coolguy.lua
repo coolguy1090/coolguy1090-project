@@ -27,6 +27,7 @@ local rp = adminf:FindFirstChild("Regen")
 local connections = {}
 local onstart = {
 "-nok"
+"-bbg"
 }
 
 local blgears = {
@@ -188,7 +189,6 @@ end
 end                    
 end
 end)
-gearban2c()
 
 local nok = coroutine.wrap(function()
 for _, Bricks in pairs(game:GetService("Workspace").Terrain._Game.Workspace.Obby:GetChildren()) do

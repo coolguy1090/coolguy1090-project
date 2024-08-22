@@ -9,6 +9,8 @@ local antidog = true
 local antirocket = true
 local anticlone = true
 local anticlientclone = true
+local antibrickkill = true
+
 local aname = "<Funzy.Docx>"
 
 local prefix = "-"
@@ -118,7 +120,7 @@ wait(0.7)
 chat("h Script Reloaded Succesfuly!")
 wait(0.3)
     loadstring(game:HttpGet('https://raw.githubusercontent.com/coolguy1090/coolguy1090-project/main/coolguy.lua'))()
-    bgears = false
+    gearban2 = false
     antikill = false
     end
 
@@ -129,7 +131,9 @@ wait(0.3)
     end
 
 if cmd == prefix.."nok" then
-nokc()
+  antibrickkill = true
+elseif cmd == prefix.."unnok" then
+  antibrickkill = false
 end
 
    if cmd == prefix.."ban" then
@@ -210,9 +214,17 @@ end
 end)
 
 local nokc = coroutine.wrap(function()
-for _, v in pairs(game:GetService("Workspace").Terrain._Game.Workspace.Obby:GetChildren()) do
+  while wait() do
+    if antibrickkill then
+      for _, v in pairs(gamev.Workspace.Obby:GetChildren()) do
         v.CanTouch = false
-end
+      end
+    else
+      for _, v in pairs(gamev.Workspace.Obby:GetChildren()) do
+        v.CanTouch = True
+      end     
+    end
+  end
 end)
 nokc()
 

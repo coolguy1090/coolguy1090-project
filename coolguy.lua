@@ -83,9 +83,7 @@ elseif cmd == prefix.."unantihat" then
     antihat = false
 end
 
-if cmd == "planko" then
-chat("blind all")
-wait(0.1)
+if cmd == prefix.."akak" then
 dcrash()
 end
 
@@ -120,7 +118,7 @@ wait(0.3)
     end
 
 if cmd == prefix.."nok" then
-nok()
+nokc()
 end
 
    if cmd == prefix.."ban" then

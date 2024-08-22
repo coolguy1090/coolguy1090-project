@@ -12,8 +12,8 @@ local anticlientclone = true
 local aname = "<Funzy.Docx>"
 
 local prefix = "-"
-local lpc = lp.Character
 local lp = game.Players.LocalPlayer
+local lpc = lp.Character
 local getplrs = game.Players:GetPlayers()
 local plrserv = game:GetService("Players")
 local char = lp.Character

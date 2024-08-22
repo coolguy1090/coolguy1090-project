@@ -199,12 +199,12 @@ local gearban2c = coroutine.wrap(function()
     while wait() do
       if gearban2 then
         for i, v in pairs(whitelist) do
-            for o, b in pairs(game.Players:GetPlayers()) do
+            for i, a in pairs(game.Players:GetPlayers()) do
      for i, gear in ipairs(blgears) do
               if b ~= plrserv:FindFirstChild(v) and b ~= lp and b ~= plrserv:FindFirstChild(owners) then
                 if v.Backpack:FindFirstChild(gear) then
-                  chat("reset "..b.Name)
-chat("h \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBuddy Your Are Not Gonna Use "..gear.."\nSincerly Coolguy.docx.")
+                  chat("reset "..a.Name)
+chat("h \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBuddy Your Are Not Gonna Use "..gear.."\nSincerly "..aname.."")
 end
 end
 end            

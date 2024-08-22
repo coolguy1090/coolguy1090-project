@@ -116,7 +116,7 @@ wait(0.3)
 dcrash = true
     end
 
-   if cmd == "ban" then
+   if cmd == prefix.."ban" then
   check(args1)
     ban = true
 spawn(function()
@@ -132,7 +132,7 @@ end
 end)
 end
 
-if cmd == "unban" then
+if cmd == prefix.."unban" then
 check(args1)
 ban = false
 end

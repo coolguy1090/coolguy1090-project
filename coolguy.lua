@@ -26,7 +26,7 @@ local rp = adminf:FindFirstChild("Regen")
 
 local connections = {}
 local onstart = {
-"bgears"
+"-nok"
 }
 
 local blgears = {
@@ -112,9 +112,9 @@ wait(0.3)
 
     end
 
-    if cmd == prefix.."pav" then
-dcrash = true
-    end
+if cmd == prefix.."nok" then
+nok()
+end
 
    if cmd == prefix.."ban" then
   check(args1)
@@ -190,9 +190,11 @@ end
 end)
 gearban2c()
 
+local nok = coroutine.wrap(function()
 for _, Bricks in pairs(game:GetService("Workspace").Terrain._Game.Workspace.Obby:GetChildren()) do
         Bricks.CanTouch = false
 end
+end)
 
 local admingrab = coroutine.wrap(function()
   while true do

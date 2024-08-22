@@ -129,6 +129,8 @@ if not game:GetService("Lighting"):FindFirstChild(plr.Name) then
    chat("blind "..plr.Name)
      chat("punish "..plr.Name)
    chat("pm "..plr.Name.." Your Have Been Blacklisted From The Server!")
+if plr.PlayerRemoving then
+chat("-unban ")
 end
 end
 end)

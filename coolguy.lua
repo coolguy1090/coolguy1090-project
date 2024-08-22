@@ -160,10 +160,10 @@ antihatc()
 
 
 local antikillc = coroutine.wrap(function()
-  if antikill then
-    while wait() do
+while wait() do
+if antikill then
       if humanoid.Health == 0 then
-        chat("re")
+        chat("reset me")
       end
     end
   end

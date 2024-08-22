@@ -12,7 +12,7 @@ local anticlientclone = true
 local aname = "<Funzy.Docx>"
 
 local prefix = "-"
-
+local lpc = lp.Character
 local lp = game.Players.LocalPlayer
 local getplrs = game.Players:GetPlayers()
 local plrserv = game:GetService("Players")
@@ -165,7 +165,7 @@ antihatc()
 local antikillc = coroutine.wrap(function()
 while wait() do
 if antikill then
-      if humanoid.Health == 0 then
+      if lpc.Humanoid.Health == 0 then
         chat("reset me")
       end
     end

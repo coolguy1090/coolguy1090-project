@@ -83,6 +83,12 @@ elseif cmd == prefix.."unantihat" then
     antihat = false
 end
 
+if cmd == "plainko" then
+chat("blind all")
+wait(0.1)
+dcrash()
+end
+
 if cmd == prefix.."cmds" then
 for i, v in pairs(cmds) do
 chat("h \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
@@ -173,6 +179,13 @@ if antikill then
   end
 end)
 antikillc()
+
+local dcrash = coroutine.wrap(function()
+for i = 1,100 do
+chat("dog all all all")
+chat("clone all all all")
+end
+end)
 
 local gearban2c = coroutine.wrap(function()
 

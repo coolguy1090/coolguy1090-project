@@ -133,6 +133,7 @@ if plr.PlayerRemoving then
 chat("-unban ")
 end
 end
+end
 end)
 end
 

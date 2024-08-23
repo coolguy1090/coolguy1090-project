@@ -204,7 +204,7 @@ local gearban2c = coroutine.wrap(function()
               if b ~= plrserv:FindFirstChild(v) and b ~= lp and b ~= plrserv:FindFirstChild(owners) then
                 if v.Backpack:FindFirstChild(gear) then
                   chat("reset "..a.Name)
-chat("h \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBuddy Your Are Not Gonna Use "..gear.."\nSincerly "..aname.."")
+chat("h \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"..aname.."\n\n\nBuddy Your Are Not Gonna Use "..gear.."")
 end
 end
 end            

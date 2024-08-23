@@ -11,7 +11,7 @@ local anticlone = true
 local anticlientclone = true
 local antibrickkill = true
 
-local aname = "<Funzy.Docx>"
+local aname = "<Siyuru.Docx>"
 
 local prefix = "-"
 local lp = game.Players.LocalPlayer
@@ -26,7 +26,7 @@ local gamev = game.Workspace.Terrain["_Game"]
 local adminf = gamev.Admin
 local rp = adminf:FindFirstChild("Regen")
 --//funcs
-function dcrash()
+local function dcrash()
 for i = 1,100 do
 chat("dog all all all")
 chat("clone all all all")
@@ -39,7 +39,7 @@ local onstart = {
 "-bbg"
 }
 
-local blgears = {
+local bgears = {
     "VampireVanquisher",
     "OrinthianSwordAndShield",
     "IvoryPeriastron"
@@ -199,8 +199,8 @@ local gearban2c = coroutine.wrap(function()
     while wait() do
       if gearban2 then
         for i, v in pairs(whitelist) do
-            for i, a in pairs(game.Players:GetPlayers()) do
-     for i, gear in ipairs(blgears) do
+            for i, b in pairs(game.Players:GetPlayers()) do
+     for i, gear in ipairs(bggears) do
               if b ~= plrserv:FindFirstChild(v) and b ~= lp and b ~= plrserv:FindFirstChild(owners) then
                 if v.Backpack:FindFirstChild(gear) then
                   chat("reset "..a.Name)

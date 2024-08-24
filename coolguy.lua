@@ -50,7 +50,7 @@ local blacklist = {"a"}
 local whitelist = {"a"}
 
 local function chat(m)
-  game.Players:Chat(tostring(m))
+  game.Players:Chat(m)
 end
 
 local function Regen()
@@ -69,7 +69,7 @@ end
   end
 end
 
-local admin = {prefix = "", version = "1.0"}
+local admin = {prefix = "-", version = "1.0"}
 local commands = {}
 local descriptions = {}
 local http = game:GetService("HttpService")
@@ -103,17 +103,20 @@ local cmds = {
 
 ---realz---
 game.Players.LocalPlayer.Chatted:Connect(function(m)
-  local split = m:split(" ") or split[1]:find(p)
+  local split = m:split(" ")
   local cmd = split[1]
   local args1 = split[2]
   local args2 = split[3]
   local args3 = split[4]
 
-if cmd == prefix.."antihat" then
-    antihat = true
-elseif cmd == prefix.."unantihat" then
-    antihat = false
+addcommand("wl",
+"",
+function()
+check(args1)
+if plr.Chatted(msg) then
+chat("-"..msg)
 end
+end)
 
 addcommand("ma",
 "",
@@ -121,21 +124,25 @@ function()
 chat("m a")
 end)
 
-if cmd == "akak" then
+addcommand("akak",
+    "",
+    function()
 chat("blind all")
 wait(0.3)
 chat("h \n\n\n"..aname.." Hello World!")
 wait(0.3)
 dcrash()
-end
+end)
 
-if cmd == prefix.."cmds" then
+addcommand("a",
+    "",
+    function()
 for i, v in pairs(cmds) do
 chat("h \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 n\n\n\n\n"..v)
 print(i..". "..v)
 end
-end
+end)
 
   if cmd == prefix.."bbg" then  
       gearban2 = true 
@@ -143,7 +150,9 @@ end
       gearban2 = false
   end
 
-if cmd == prefix.."reloadscript" then
+addcommand("reloadscript",
+    "",
+    function()
 chat("h Reloading script....")
 wait(0.7)
 chat("h Script Reloaded Succesfuly!")
@@ -151,21 +160,23 @@ wait(0.3)
     loadstring(game:HttpGet('https://raw.githubusercontent.com/coolguy1090/coolguy1090-project/main/coolguy.lua'))()
     gearban2 = false
     antikill = false
-    end
+    end)
 
-    if cmd== prefix.."regen" then
+    addcommand("regen",
+        "",
+        function()
+            Regen()
+        end)
 
-      Regen()
+addcomand("nok",
+    "",
+    function()
+        antikillbrick = true
+        end)
 
-    end
-
-if cmd == prefix.."nok" then
-  antibrickkill = true
-elseif cmd == prefix.."unnok" then
-  antibrickkill = false
-end
-
-   if cmd == prefix.."ban" then
+  addcommand("ban",
+      "",
+      function()
   check(args1)
 chat("h \n\n\n\n\n\n\n\n\n\n"..aname.."\n\n\n\n\n"..plr.Name.." Has Just Been Banned!")
     ban = true
@@ -180,18 +191,24 @@ if not game:GetService("Lighting"):FindFirstChild(plr.Name) and plr.Name ~= nil 
 end
 end
 end)
-end
-
-if cmd == prefix.."unban" then
-check(args1)
-chat("respawn "..plr.Name)
-chat("h \n\n\n\n\n\n\n\n\n\n"..aname.."\n\n\n\n\n "plr.Name.." Has Just Been Unbanned!")
-ban = false
-end
-    if cmd == prefix.."antikill" then
-      antikill = true
-    end
 end)
+end)
+
+
+addcommand("unban",
+    "",
+    function()
+    check(args1)
+chat("respawn "..plr.Name)
+chat("h \n\n\n\n\n\n\n\n\n\n"..aname.."\n\n\n\n\n "..plr.Name.." Has Just Been Unbanned!")
+ban = false
+end)
+
+   addcommand("antikill",
+       "",
+       function()
+           antikill = true
+           end)
 
 
 local antihatc = coroutine.wrap(function()

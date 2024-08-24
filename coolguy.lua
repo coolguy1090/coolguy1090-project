@@ -98,7 +98,7 @@ function addcmd(name, desc, Func)
     lp.Chatted:Connect(function(m)
     local m = m:lower()
     args = m:split(" ")
-    if args[1] == prefix..name then
+    if args1 == prefix..name then
         Func()
     end
 end)
@@ -139,13 +139,13 @@ end
 end
 end)
 
-addcommand("ma",
+addcmd("ma",
 "",
 function()
 chat("m a")
 end)
 
-addcommand("akak",
+addcmd("akak",
     "",
     function()
 chat("blind all")
@@ -155,7 +155,7 @@ wait(0.3)
 dcrash()
 end)
 
-addcommand("cmds",
+addcmd("cmds",
     "",
     function()
 for i, v in pairs(cmds) do
@@ -165,13 +165,13 @@ print(i..". "..v)
 end
 end)
 
-  if cmd == prefix.."bbg" then  
-      gearban2 = true 
-  elseif cmd == prefix.."unbbg" then
-      gearban2 = false
-  end
+  addcmd("bbg",
+""
+function()
+gearban2 = true
+end)
 
-addcommand("reloadscript",
+addcmd("reloadscript",
     "",
     function()
 chat("h Reloading script....")
@@ -183,19 +183,19 @@ wait(0.3)
     antikill = false
     end)
 
-    addcommand("regen",
+    addcmd("regen",
         "",
         function()
             Regen()
         end)
 
-addcomand("nok",
+addcmd("nok",
     "",
     function()
         antikillbrick = true
         end)
 
-  addcommand("ban",
+  addcmd("ban",
       "",
       function()
   check(args1)
@@ -216,7 +216,7 @@ end)
 end)
 
 
-addcommand("unban",
+addcmd("unban",
     "",
     function()
     check(args1)
@@ -225,7 +225,7 @@ chat("h \n\n\n\n\n\n\n\n\n\n"..aname.."\n\n\n\n\n "..plr.Name.." Has Just Been U
 ban = false
 end)
 
-   addcommand("antikill",
+   addcmd("antikill",
        "",
        function()
            antikill = true

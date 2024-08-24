@@ -148,7 +148,7 @@ end
 end)
 
   addcmd("bbg",
-""
+"",
 function()
 gearban2 = true
 end)

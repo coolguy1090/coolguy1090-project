@@ -149,9 +149,6 @@ if not game:GetService("Lighting"):FindFirstChild(plr.Name) then
    chat("blind "..plr.Name)
      chat("punish "..plr.Name)
    chat("pm "..plr.Name.." Your Have Been Blacklisted From The Server!")
-if plr.PlayerRemoving then
-ban = false
-end
 end
 end
 end)
@@ -160,7 +157,7 @@ end
 if cmd == prefix.."unban" then
 check(args1)
 chat("respawn "..plr.Name)
-chat("h \n\n\n\n\n\n\n\n\n\n<Funzy.Docx> "..plr.Name.." Has Just Been Unbanned!")
+chat("h \n\n\n\n\n\n\n\n\n\n"..aname.."\n\n\n\n\n "plr.Name.." Has Just Been Unbanned!")
 ban = false
 end
     if cmd == prefix.."antikill" then

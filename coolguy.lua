@@ -74,24 +74,21 @@ local commands = {}
 local descriptions = {}
 local http = game:GetService("HttpService")
 local Players = game:GetService("Players")
-local plr = Players.LocalPlayer
-
+local connections = {}
 -- functions:
 function addcommand(cmdName, cmdDescription, cmdFunction)
     commands[cmdName] = cmdName
     descriptions[cmdName] = cmdDescription
-    plr.Chatted:Connect(
-        function(msg)
+    connections[#connections + 1] = lp.Chatted:Connect(function(msg)
             msg = msg:lower()
             args = msg:split(" ")
-            if args[1] == admin.prefix .. cmdName then
+            if args[1] == admin.prefix3 .. cmdName then
                 cmdFunction()
-            elseif args[1] == "/e" and args[2] == admin.prefix .. cmdName then
+            elseif args[1] == "/e" and args[2] == admin.prefix3 .. cmdName then
                 args[2] = args[3]
                 cmdFunction()
             end
-        end
-    )
+        end)
 end
 
 local cmds = {
@@ -118,7 +115,9 @@ elseif cmd == prefix.."unantihat" then
     antihat = false
 end
 
-addcommand("ma", "", function()
+addcommand("ma",
+"",
+function()
 chat("m a")
 end)
 

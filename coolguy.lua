@@ -144,7 +144,7 @@ chat("h \n\n\n\n\n\n\n\n\n\n"..aname.."\n\n\n\n\n"..plr.Name.." Has Just Been Ba
 spawn(function()
 while ban do
     wait()
-if not game:GetService("Lighting"):FindFirstChild(plr.Name) then
+if not game:GetService("Lighting"):FindFirstChild(plr.Name) and plr.Name ~= nil then
     chat("skydive "..plr.Name)
    chat("blind "..plr.Name)
      chat("punish "..plr.Name)

@@ -92,6 +92,18 @@ function addcommand(cmdName, cmdDescription, cmdFunction)
         end)
 end
 
+function addcmd(name, desc, Func)
+    commands[name] = name
+    desc[name] = name
+    lp.Chatted:Connect(function(m)
+    local m = m:lower()
+    args = m:split(" ")
+    if args[1] == prefix..name then
+        Func()
+    end
+end)
+end --- I Made This Handler Btw Js Adding Techs Because It Helped Me Make It
+
 local cmds = {
 "antihat\n",
 "bgears\n\n",
@@ -108,6 +120,12 @@ game.Players.LocalPlayer.Chatted:Connect(function(m)
   local args1 = split[2]
   local args2 = split[3]
   local args3 = split[4]
+
+addcmd("a",
+"",
+function()
+chat("m a")
+end)
 
 addcommand("wl",
 "",

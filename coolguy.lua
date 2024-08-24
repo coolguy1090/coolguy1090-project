@@ -10,6 +10,7 @@ local antirocket = true
 local anticlone = true
 local anticlientclone = true
 local antibrickkill = true
+local wlsted = {}
 
 local aname = "<Siyuru.Docx>"
 
@@ -104,7 +105,6 @@ local cmds = {
 ---realz---
 game.Players.LocalPlayer.Chatted:Connect(function(m)
   local split = m:split(" ")
-  local cmd = split[1]
   local args1 = split[2]
   local args2 = split[3]
   local args3 = split[4]
@@ -113,8 +113,11 @@ addcommand("wl",
 "",
 function()
 check(args1)
+table.insert(wlsted, plr.Name)
 if plr.Chatted(msg) then
+    if table.find(wlsted, plr.Name) then
 chat("-"..msg)
+end
 end
 end)
 
@@ -134,7 +137,7 @@ wait(0.3)
 dcrash()
 end)
 
-addcommand("a",
+addcommand("cmds",
     "",
     function()
 for i, v in pairs(cmds) do

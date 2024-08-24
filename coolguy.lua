@@ -74,17 +74,17 @@ end
 local commands = {}
 local desc = {}
 
-function addcmd(name, desc, Func)
+local function addcmd(name, desc, Func)
+lp.Chatted:Connect(function(m)
     commands[name] = name
     desc[name] = name
-    lp.Chatted:Connect(function(m)
     local m = m:lower()
     args = m:split(" ")
     if args1 == prefix..name then
         Func()
     end
 end)
-end --- I Made This Handler Btw Js Adding Techs Because It Helped Me Make It
+end --- I Made This Handler Btw
 
 local cmds = {
 "antihat\n",
@@ -109,7 +109,7 @@ function()
 chat("m a")
 end)
 
-addcommand("wl",
+addcmd("wl",
 "",
 function()
 check(args1)

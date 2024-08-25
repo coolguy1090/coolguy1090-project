@@ -242,6 +242,23 @@ end
 end)
 end)
 
+addcmd("gban",
+    "",
+    function()
+        check(args[2])
+        chat("gear me 1665990")
+        local cframe = lpc.HumanoidRootPart.CFrame
+        lpc.HumanoidRootPart.CFrame = plr.HumanoidRootPart.CFrame
+        for i, v in pairs(game.Players.LocalPlayer.BackpackGetChildren()) do
+          if v.Name == "PortableJuice" then
+v.Click:FireServer(game.Players[gplr].Character:GetPivot().Position)
+                wait(0.3)
+                lpc.HumanoidRootPart.CFrame = cframe
+                chat("freeze "..plr.Name)
+            end
+        end
+        end)
+
 
 addcmd("unban",
     "",
@@ -318,6 +335,25 @@ local nokc = coroutine.wrap(function()
   end
 end)
 nokc()
+
+local function equipall()
+
+  for i = 1, 50 do
+
+    wait()
+
+    local Backpack = game.Players.LocalPlayer:FindFirstChildOfClass("Backpack")
+
+    for _, v in ipairs(Backpack:GetChildren()) do
+
+      v.Parent = game.Players.LocalPlayer.Character
+      v:Activate()
+
+    end
+
+  end
+
+end
 
 local admingrab = coroutine.wrap(function()
   while true do

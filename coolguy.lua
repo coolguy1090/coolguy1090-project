@@ -84,7 +84,7 @@ local cmds = {
 }
 
 
-local function addcmd(name, desc, Func)
+local function addcmd(name, desc, Func) --- Credits To Tech Slightly Edited.
 lp.Chatted:Connect(function(m)
     commands[name] = name
     desc[name] = name

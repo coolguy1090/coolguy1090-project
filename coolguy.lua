@@ -74,18 +74,6 @@ end
 local commands = {}
 local desc = {}
 
-local function addcmd(name, desc, Func)
-lp.Chatted:Connect(function(m)
-    commands[name] = name
-    desc[name] = name
-    local m = m:lower()
-    args = m:split(" ")
-    if args1 == prefix..name then
-        Func()
-    end
-end)
-end --- I Made This Handler Btw
-
 local cmds = {
 "antihat\n",
 "bgears\n\n",
@@ -96,12 +84,17 @@ local cmds = {
 }
 
 
----realz---
-game.Players.LocalPlayer.Chatted:Connect(function(m)
-  local split = m:split(" ")
-  local args1 = split[2]
-  local args2 = split[3]
-  local args3 = split[4]
+local function addcmd(name, desc, Func)
+lp.Chatted:Connect(function(m)
+    commands[name] = name
+    desc[name] = name
+    local m = m:lower()
+    args = m:split(" ")
+    if args[2] == prefix..name then
+        Func()
+    end
+end)
+end --- i made this btw
 
 addcmd("a",
 "",
@@ -126,6 +119,14 @@ addcmd("ma",
 function()
 chat("m a")
 end)
+
+addcmd("antikill",
+"",
+function(args)
+check(args[2])
+while wait() do
+if plr.Character.Humanoid.Health <= 0 then
+chat("reset "..plr.Name)
 
 addcmd("akak",
     "",

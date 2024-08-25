@@ -105,7 +105,7 @@ end)
 addcmd("wl",
 "",
 function()
-check(args1)
+check(args[2])
 table.insert(wlsted, plr.Name)
 if plr.Chatted(msg) then
     if table.find(wlsted, plr.Name) then

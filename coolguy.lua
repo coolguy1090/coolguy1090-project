@@ -200,6 +200,48 @@ end
 end)
 end)
 
+addcmd("k2",
+    "",
+    function()
+        check(args[2])
+        chat("blind "..plr.Name)
+        chat("tp "..plr.Name.." me")
+        kicking = true
+        spawn(function()
+                while kicking do
+                    for i = 1, 100 do
+            chat("hat "..plr.Name.." 18137588505")
+                    end
+      task.wait(0.3)
+                            for i = 1, 100 do
+            chat("hat "..plr.Name.." 18137588505")
+                            end
+      task.wait(0.3)
+                          for i = 1, 100 do
+            chat("hat "..plr.Name.." 18137588505")
+                          end
+      task.wait(0.3)
+                           for i = 1, 100 do
+            chat("hat "..plr.Name.." 18137588505")
+                           end
+      task.wait(0.3)
+                           for i = 1, 100 do
+            chat("hat "..plr.Name.." 18137588505")
+                           end
+      task.wair(0.3)
+                           for i = 1, 100 do
+            chat("hat "..plr.Name.." 18137588505")
+                           end
+      task.wait(0.3)
+                           for i = 1, 100 do
+            chat("hat "..plr.Name.." 18137588505")
+          end
+                    task.wait(0.3)
+kicking = false
+end
+end)
+end)
+
 
 addcmd("unban",
     "",

@@ -122,11 +122,14 @@ end)
 
 addcmd("antikill",
 "",
-function(args)
+function()
 check(args[2])
 while wait() do
 if plr.Character.Humanoid.Health <= 0 then
 chat("reset "..plr.Name)
+end
+end
+end)
 
 addcmd("akak",
     "",
@@ -181,7 +184,7 @@ addcmd("nok",
   addcmd("ban",
       "",
       function()
-  check(args1)
+  check(args[2])
 chat("h \n\n\n\n\n\n\n\n\n\n"..aname.."\n\n\n\n\n"..plr.Name.." Has Just Been Banned!")
     ban = true
 spawn(function()
@@ -202,7 +205,7 @@ end)
 addcmd("unban",
     "",
     function()
-    check(args1)
+    check(args[2])
 chat("respawn "..plr.Name)
 chat("h \n\n\n\n\n\n\n\n\n\n"..aname.."\n\n\n\n\n "..plr.Name.." Has Just Been Unbanned!")
 ban = false

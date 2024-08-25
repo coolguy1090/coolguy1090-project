@@ -34,7 +34,6 @@ chat("clone all all all")
 end
 end
 --//
-local connections = {}
 local onstart = {
 "-nok",
 "-bbg"
@@ -70,10 +69,6 @@ end
   end
 end
 
-
-local commands = {}
-local desc = {}
-
 local cmds = {
 "antihat\n",
 "bgears\n\n",
@@ -88,6 +83,7 @@ getgenv().prefix3 = "-" --- ty tech
 local admin = {prefix3 = prefix3, version = "v2"}
 local commands = {}
 local descriptions = {}
+local connections = {}
 local function addcmd(cmdName, cmdDescription, cmdFunction)
     commands[cmdName] = cmdName
     descriptions[cmdName] = cmdDescription

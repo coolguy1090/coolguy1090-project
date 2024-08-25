@@ -84,17 +84,24 @@ local cmds = {
 }
 
 
-local function addcmd(name, desc, Func) --- Credits To Tech Slightly Edited.
-lp.Chatted:Connect(function(m)
-    commands[name] = name
-    desc[name] = name
-    local m = m:lower()
-    args = m:split(" ")
-    if args[1] == prefix..name then
-        Func()
-    end
-end)
-end --- i made this btw
+getgenv().prefix3 = "-" --- ty tech
+local admin = {prefix3 = prefix3, version = "v2"}
+local commands = {}
+local descriptions = {}
+local function addcmd(cmdName, cmdDescription, cmdFunction)
+    commands[cmdName] = cmdName
+    descriptions[cmdName] = cmdDescription
+    connections[#connections + 1] = plr.Chatted:Connect(function(msg)
+            msg = msg:lower()
+            args = msg:split(" ")
+            if args[1] == admin.prefix3 .. cmdName then
+                cmdFunction()
+            elseif args[1] == "/e" and args[2] == admin.prefix3 .. cmdName then
+                args[2] = args[3]
+                cmdFunction()
+            end
+        end)
+end
 
 addcmd("a",
 "",

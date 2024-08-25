@@ -90,7 +90,7 @@ lp.Chatted:Connect(function(m)
     desc[name] = name
     local m = m:lower()
     args = m:split(" ")
-    if args[2] == prefix..name then
+    if args[1] == prefix..name then
         Func()
     end
 end)

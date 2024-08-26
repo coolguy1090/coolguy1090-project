@@ -35,8 +35,7 @@ end
 end
 --//
 local onstart = {
-"-nok",
-"-bbg"
+"-autogod"
 }
 
 local bgears = {

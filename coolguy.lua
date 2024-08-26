@@ -11,6 +11,100 @@ local anticlone = true
 local anticlientclone = true
 local antibrickkill = true
 local wlsted = {}
+local mtable = {
+   ["1"] = {id = "6680495507", name = "Robbery"},
+   ["2"] = {id = "6772846771", name = "7H0T"},
+   ["3"] = {id = "6781116057", name = "Deja Vu"},
+   ["4"] = {id = "1837871444", name = "Anarchy"},
+   ["5"] = {id = "6897686359", name = "Broadway"},
+   ["6"] = {id = "6695430066", name = "Unknown"},
+   ["7"] = {id = "6872126938", name = "Surf Curse"},
+   ["8"] = {id = "6788646778", name = "Rare Gem"},
+   ["9"] = {id = "6847929757", name = "Lonely"},
+   ["10"] = {id = "6953866301", name = "Unknown"},
+   ["11"] = {id = "7014573768", name = "Money Real Long"},
+   ["12"] = {id = "8997664593", name = "Unknown"},
+   ["13"] = {
+       id = "15689455422",
+       name = "kirkiimad - i love (slow+reverb version)"
+   },
+   ["14"] = {id = "5410086218", name = "Crabrave"},
+   ["15"] = {id = "6828176320", name = "Unknown"},
+   ["16"] = {id = "6703926669", name = "Unknown"},
+   ["17"] = {id = "6937042327", name = "Stunning"},
+   ["18"] = {id = "6670954642", name = "Unknown"},
+   ["19"] = {id = "6845637094", name = "Legends"},
+   ["20"] = {id = "6805032026", name = "KILL BILL (Fast)"},
+   ["21"] = {id = "13530437708", name = "Phonk 1 - The Final Phonk"},
+   ["22"] = {id = "6708444383", name = "Met her on the internet"},
+   ["23"] = {id = "7027334622", name = "Hushabye"},
+   ["25"] = {id = "9043918359", name = "Stay Dangerous"},
+   ["26"] = {id = "6924735395", name = "Get you (Slowed)"},
+   ["27"] = {id = "6911766512", name = "Phonk 2"},
+   ["28"] = {id = "1840003540", name = "Tell it to yourself"},
+   ["29"] = {id = "9042523170", name = "Come Closer"},
+   ["30"] = {id = "1846808350", name = "Get up and Boogie"},
+   ["31"] = {id = "9047105533", name = "DIZZY - Lofi"}, -- So epic ngl
+   ["32"] = {id = "9048375035", name = "All dropping 8 beats"},
+   ["33"] = {id = "6529070845", name = "Brace Yourself"},
+   ["34"] = {id = "6917155909", name = "They trying to be cray"},
+   ["35"] = {id = "6913550990", name = "TLT FNAF 2"},
+   ["36"] = {id = "1839029458", name = "Exotico Speedo"},
+   ["37"] = {id = "35930009", name = "Monster Mash"},
+   ["38"] = {id = "11808880515", name = "women song"},
+   ["39"] = {id = "6681840651", name = "What?!"},
+   ["40"] = {id = "1841647093", name = "Life in an Elevator"},
+   ["41"] = {id = "1837070127", name = "Prima Bossa"},
+   ["42"] = {id = "6806140478", name = "Night Lights"},
+   ["43"] = {id = "2042581436", name = "annoying citizen"},
+   ["44"] = {id = "8147012902", name = "gigachad loop"},
+   ["45"] = {id = "6893776529", name = "Plasdu & 1006x3 - Kroxxxxroadxx"},
+   ["46"] = {id = "9124780123", name = "Miss the rage Loop (Sparo Loop)"},
+   ["47"] = {id = "142376088", name = "Raining Tacos"},
+   ["48"] = {id = "1846368080", name = "Stadium Rave (A)"},
+   ["49"] = {id = "1840511219", name = "Funky Fanfare"},
+   ["50"] = {id = "1839404854", name = "Rock In"},
+   ["51"] = {id = "6674211522", name = "Loud music fail"},
+   ["52"] = {id = "6984999899", name = "AAAAAAAAAAAAAAAAAAAAA"},
+   ["53"] = {id = "1838097718", name = "Royal Dedication"},
+   ["54"] = {id = "9038845849", name = "dubstep"},
+   ["55"] = {id = "1843622301", name = "Mumbai Moon"},
+   ["56"] = {id = "14145627857", name = "Catch My Drift"},
+   ["57"] = {id = "14145624031", name = "Phonk Vol. 1"},
+   ["58"] = {id = "13530438299", name = "stop posting about baller"},
+   ["59"] = {id = "6770303644", name = "Minecraft Chest"},
+   ["60"] = {id = "6783714255", name = "Brooklyn blood bop"},
+   ["61"] = {id = "1838028467", name = "VIP Me"},
+   ["62"] = {id = "1848354536", name = "chill back"},
+   ["63"] = {id = "45819151", name = "sad depressing music 4am"},
+   ["64"] = {id = "5410085763", name = "TOKYO MACHINE - PLAY!"},
+   ["65"] = {id = "16190783444", name = "CHIPI CHIPI CHAPA CHAPA"},
+   ["66"] = {id = "16190782786", name = "Lil Kuudere X sukoyomi"},
+   ["67"] = {id = "6844230235", name = "WHAT THE HELL"},
+   ["68"] = {id = "15689451063", name = "Interworld - Metamorphosis"},
+   ["69"] = {id = "1841668624", name = "Have a Lazy Day a"},
+   ["70"] = {id = "1848350335", name = "Desert Sands"},
+   ["71"] = {id = "1837853076", name = "SEE YOU IN HELL!"},
+   ["72"] = {id = "1838635121", name = "Sad End"},
+   ["73"] = {id = "6841685130", name = "ButtonPress_53"},
+   ["74"] = {id = "1839817591", name = "Animation Opening"},
+   ["75"] = {id = "1837879082", name = "Paradise Falls"},
+   ["76"] = {id = "1837392641", name = "Cannibal Collection"},
+   ["77"] = {id = "6901063458", name = "Rihanna - SOS"},
+   ["78"] = {id = "16662831858", name = "WahRA - Idk Remix"},
+   ["79"] = {id = "15689440479", name = "Phonk"},
+   ["80"] = {id = "1840006904", name = "Tricky"},
+   ["81"] = {id = "17422208483", name = "Drama"},
+   ["82"] = {id = "16190758325", name = "Unknown"},
+   ["82"] = {id = "15689441772", name = "Phonk"},
+   ["83"] = {id = "6889574376", name = "Unknown"},
+   ["84"] = {id = "6991661856", name = "Unknown"},
+   ["85"] = {id = "6969006426", name = "Unknown"},
+   ["86"] = {id = "16190757458", name = "Actual Brainrot Potion"},
+   ["87"] = {id = "6831109213", name = "Unknown"}
+
+} -- thanks dizzy LOL
+
 
 local aname = "<Siyuru.Docx>"
 
@@ -109,6 +203,16 @@ addcmd("unwelmsg",
 function()
 joins = false
 end)
+
+    addcmd("m",
+"",
+    function()
+local song = mtable[args]
+     if song then
+   chat("music 000000000000000000000000000000000000000"..song.id)
+   chat("h \n\n\n\n\n\n\n\n\n\nNow Playing...\n\n"..song.name)
+end
+end) --- ty dizzy (if dizzy wonders and sees this js know u helped me in the past with this.)
 
 addcmd("wl",
 "",

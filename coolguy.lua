@@ -221,7 +221,7 @@ check(args[2])
 table.insert(wlsted, plr.Name)
 if plr.Chatted(msg) then
     if table.find(wlsted, plr.Name) then
-chat("-"..msg)
+chat(msg)
 end
 end
 end)

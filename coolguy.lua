@@ -182,6 +182,13 @@ addcmd("nok",
         antikillbrick = true
         end)
 
+addcmd("ban2",
+""
+    function()
+                check(args[2])
+  table.insert(blacklisted, plr.Name)
+end)
+
   addcmd("ban",
       "",
       function()
@@ -330,6 +337,33 @@ end
 end                    
 end
 end)
+
+local banfunction = coroutine.wrap(function()
+
+  while wait() do
+
+    pcall(function()
+
+      for i, v in ipairs(blacklist) do
+          
+                        if not game.Lighting:FindFirstChild(v) and v ~= nil then
+        
+            Regen()
+            wait()
+            chat("punish "..v)
+            chat("blind "..v)
+            chat("skydive "..v)
+
+        end
+            
+      end
+          
+    end)
+      
+  end
+    
+end)
+banfunction() --- ty gojo
 
 local welmsg = coroutine.wrap(function()
 spawn(function()

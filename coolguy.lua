@@ -134,6 +134,16 @@ end
 end
 end)
 
+addcmd("autogod",
+"",
+function()
+while wait() do
+if game.Players.LocalPlayer.Character.Humanoid.MaxHealth ~= "inf" then
+                        chat("god me")
+end
+end
+end)
+
 addcmd("akak",
     "",
     function()

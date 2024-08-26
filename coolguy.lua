@@ -388,6 +388,7 @@ addcmd("gb", --- Creditd To Kohlslite For Click
        local tool = lp.Backpack:FindFirstChild("PortableJustice")
         tool.parent = lpc
     tool:Activate()
+    wait(0.3)
         tool.MouseClick:FireServer(alal)
                 wait(0.3)
                   chat("freeze "..plr.Name)

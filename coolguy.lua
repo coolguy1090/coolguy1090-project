@@ -207,7 +207,7 @@ end)
     addcmd("m",
 "",
     function()
-local song = mtable[args]
+local song = mtable[args[2]]
      if song then
    chat("music 000000000000000000000000000000000000000"..song.id)
    chat("h \n\n\n\n\n\n\n\n\n\nNow Playing...\n\n"..song.name)

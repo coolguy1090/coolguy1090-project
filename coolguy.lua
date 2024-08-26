@@ -1,5 +1,5 @@
 local owners = "dawninja21" or "1xDark1xSpecies1x" or "dawninja21alt" or "Ih0temyIife" or "Sans_fromlb"
-
+local joins = true
 local antikill = true
 local antihat = true
 local antimsg = true
@@ -70,12 +70,12 @@ end
 end
 
 local cmds = {
-"antihat\n",
-"bgears\n\n",
-"unbgears\n\n\n",
-"loadscript\n\n\n\n",
-"regen\n\n\n\n\n",
-"pav - Crash Command\n\n\n\n\n\n"
+"antihat",
+"bgears",
+"unbgears",
+"loadscript",
+"regen",
+"pav - Crash Command"
 }
 
 
@@ -99,10 +99,16 @@ local function addcmd(cmdName, cmdDescription, cmdFunction)
         end)
 end
 
-addcmd("a",
+addcmd("welmsg",
 "",
 function()
-chat("m a")
+joins = true
+end)
+
+addcmd("unwelmsg",
+"",
+function()
+joins = false
 end)
 
 addcmd("wl",
@@ -115,12 +121,6 @@ if plr.Chatted(msg) then
 chat("-"..msg)
 end
 end
-end)
-
-addcmd("ma",
-"",
-function()
-chat("m a")
 end)
 
 addcmd("antikill",
@@ -148,8 +148,6 @@ addcmd("cmds",
     "",
     function()
 for i, v in pairs(cmds) do
-chat("h \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
-n\n\n\n\n"..v)
 print(i..". "..v)
 end
 end)
@@ -254,10 +252,10 @@ addcmd("gban",
         lpc.HumanoidRootPart.CFrame = plr.HumanoidRootPart.CFrame
         for i, v in pairs(game.Players.LocalPlayer.BackpackGetChildren()) do
           if v.Name == "PortableJuice" then
-v.Click:FireServer(game.Players[gplr].Character:GetPivot().Position)
+v.Click:FireServer(plr.Character:GetPivot().Position)
                 wait(0.3)
+                  chat("freeze "..plr.Name)
                 lpc.HumanoidRootPart.CFrame = cframe
-                chat("freeze "..plr.Name)
             end
         end
         end)
@@ -271,12 +269,6 @@ chat("respawn "..plr.Name)
 chat("h \n\n\n\n\n\n\n\n\n\n"..aname.."\n\n\n\n\n "..plr.Name.." Has Just Been Unbanned!")
 ban = false
 end)
-
-   addcmd("antikill",
-       "",
-       function()
-           antikill = true
-           end)
 
 
 local antihatc = coroutine.wrap(function()
@@ -322,6 +314,18 @@ end
 end
 end                    
 end
+end)
+
+local welmsg = coroutine.wrap(function()
+spawn(function()
+  while wait() do
+if joins then
+    game.Players.PlayerAdded:Connect(function(v)
+chat("pm "..v.Name.." This Server Is Protected By Siyuru.docx Enjoy Your Stay!")
+end)
+end
+end
+end)
 end)
 
 local nokc = coroutine.wrap(function()

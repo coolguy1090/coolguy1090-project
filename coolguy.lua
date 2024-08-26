@@ -243,16 +243,31 @@ end
 end)
 end)
 
-addcmd("gban",
+addcmd("vgc", -- similar tk kohlslite but i swear i didnt skid it.
+"",
+function()
+    chat("gear me 00000000000000094794847")
+    local tool = lp.Backpack:FindFirstChild("VampireVanquisher")
+tool.parent = lpc
+wait(0.3)
+vg:Activate()
+wait(0.1)
+     for i,100 do
+chat("unsize me me me")
+end
+end)
+
+addcmd("gb", --- Creditd To Kohlslite For Click
     "",
     function()
         check(args[2])
         chat("gear me 1665990")
+        local alal = plr.Character
         local cframe = lpc.HumanoidRootPart.CFrame
         lpc.HumanoidRootPart.CFrame = plr.HumanoidRootPart.CFrame
-        for i, v in pairs(game.Players.LocalPlayer.BackpackGetChildren()) do
-          if v.Name == "PortableJuice" then
-v.Click:FireServer(plr.Character:GetPivot().Position)
+       local tool = lp.Backpack:FindFirstChild("PortableJuice")
+        tool.parent = lpc
+        tool.MouseClick:FireServer(alal)
                 wait(0.3)
                   chat("freeze "..plr.Name)
                 lpc.HumanoidRootPart.CFrame = cframe

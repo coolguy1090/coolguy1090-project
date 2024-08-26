@@ -262,7 +262,7 @@ wait(0.1)
      for i,100 do
 chat("unsize me me me")
 end
-end)
+end) --- srry gojo but ur simple vg sucks no offense
 
 addcmd("gb", --- Creditd To Kohlslite For Click
     "",
@@ -272,7 +272,7 @@ addcmd("gb", --- Creditd To Kohlslite For Click
         local alal = plr.Character
         local cframe = lpc.HumanoidRootPart.CFrame
         lpc.HumanoidRootPart.CFrame = plr.HumanoidRootPart.CFrame
-       local tool = lp.Backpack:FindFirstChild("PortableJuice")
+       local tool = lp.Backpack:FindFirstChild("PortableJustice")
         tool.parent = lpc
         tool.MouseClick:FireServer(alal)
                 wait(0.3)

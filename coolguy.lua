@@ -378,7 +378,7 @@ addcmd("vgc", -- similar tk kohlslite but i swear i didnt skid it.
 function()
     chat("gear me 00000000000000094794847")
     local tool = lp.Backpack:FindFirstChild("VampireVanquisher")
-tool.parent = lpc
+tool.Parent = lpc
 repeat wait() until
       tool:FindFirstChild("Remote")
 
@@ -398,7 +398,7 @@ addcmd("gb", --- Creditd To Kohlslite For Click
         local cframe = lpc.HumanoidRootPart.CFrame
         lpc.HumanoidRootPart.CFrame = plr.HumanoidRootPart.CFrame
        local tool = lp.Backpack:FindFirstChild("PortableJustice")
-        tool.parent = lpc
+        tool.Parent = lpc
     wait(0.3)
         tool.MouseClick:FireServer(alal)
                 wait(0.3)

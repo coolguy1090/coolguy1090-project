@@ -18,6 +18,7 @@ local gearban2 = true
 local antidog = true
 local antirocket = true
 local anticlone = true
+local perm = true
 local anticlientclone = true
 local antibrickkill = true
 local wlsted = {}
@@ -126,8 +127,7 @@ local plrserv = game:GetService("Players")
 local char = lp.Character
 local humanoid = char:WaitForChild("Humanoid")
 local humanoid2 = char:WaitForChild("HumanoidRootPart")
-
-local gamev = game.Workspace.Terrain["_Game"]
+local gamev = game:GetService("Workspace").Terrain["_Game"]
 local adminf = gamev.Admin
 local rp = adminf:FindFirstChild("Regen")
 --//funcs
@@ -379,11 +379,9 @@ function()
     chat("gear me 00000000000000094794847")
     local tool = lp.Backpack:FindFirstChild("VampireVanquisher")
 tool.Parent = lpc
-repeat wait() until
-      tool:FindFirstChild("Remote")
-
-tool.Remote:FireServer(Enum.KeyCode.Q)
-wait(0.1)
+wait(0.3)
+tool:Activate()
+wait(0.3)
      for i,100 do
 chat("unsize me me me")
 end
@@ -537,11 +535,34 @@ local function equipall()
 
 end
 
+
+local permc = coroutine.wrap(function()
+            if perm then 
+if not game:GetService("Workspace").Terrain["_Game"].Admin.Pads:FindFirstChild(game.Players.LocalPlayer.Name .. "'s admin") then
+                    local pad = gamev.Admin.Pads:FindFirstChild("Touch to get admin"):FindFirstChild("Head")
+                    if pad then
+                        local head = pad:FindFirstChild("Head")
+                        if head then
+                            local spr = lpc:FindFirstChild("Head")
+                            firetouchinterest(head, spr, 1)
+                            firetouchinterest(head, spr, 0)
+                            firetouchinterest(head, spr, 1)
+                            task.wait()
+                            firetouchinterest(head, spr, 0)
+                        end
+                    end
+                end)
+            end
+end)
+
+permc()
+
+
 local admingrab = coroutine.wrap(function()
   while true do
     if not game:GetService("Workspace").Terrain["_Game"].Admin.Pads:FindFirstChild(game.Players.LocalPlayer.Name .. "'s admin") then
       if game:GetService("Workspace").Terrain["_Game"].Admin.Pads:FindFirstChild("Touch to get admin") then
-        local pad = game:GetService("Workspace").Terrain["_Game"].Admin.Pads:FindFirstChild("Touch to get admin"):FindFirstChild("Head")
+        local pad = gamev.Admin.Pads:FindFirstChild("Touch to get admin"):FindFirstChild("Head")
         local padCFrame = game:GetService("Workspace").Terrain["_Game"].Admin.Pads:FindFirstChild("Touch to get admin"):FindFirstChild("Head").CFrame
         task.wait()
         pad.CanCollide = false

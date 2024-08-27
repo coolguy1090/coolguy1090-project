@@ -537,7 +537,8 @@ end
 
  -- alr this time dizzy made this slightly edited.
     coroutine.wrap(function()
-            if perm and gamev.Admin.Pads:FindFirstChild(game.Players.LocalPlayer.Name.."'s admin") == nil then
+            if perm then
+if not gamev.Admin.Pads:FindFirstChild(game.Players.LocalPlayer.Name.."'s admin") then
                     local pad = gamev.Admin.Pads:FindFirstChild("Touch to get admin"):FindFirstChild("Head")
                     if pad then
                             local spr = game.Players.LocalPlayer.Character:FindFirstChild("Head")
@@ -547,6 +548,7 @@ end
                             task.wait()
                             firetouchinterest(pad, spr, 0)
                        end
+end
                     end
             end)
 
@@ -572,7 +574,7 @@ end --- idk errors rn cuz school and lazy so ill fix when im free :D
 permc()
 
 
-local admingrab = coroutine.wrap(function()
+local admingrab = coroutine.wrap(function() -- made by dizzy LMFAO
   while true do
     if not game:GetService("Workspace").Terrain["_Game"].Admin.Pads:FindFirstChild(game.Players.LocalPlayer.Name .. "'s admin") then
       if game:GetService("Workspace").Terrain["_Game"].Admin.Pads:FindFirstChild("Touch to get admin") then

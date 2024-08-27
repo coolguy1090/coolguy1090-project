@@ -370,8 +370,6 @@ function()
     local tool = lp.Backpack:FindFirstChild("VampireVanquisher")
 tool.parent = lpc
 wait(0.3)
-vg:Activate()
-wait(0.1)
      for i,100 do
 chat("unsize me me me")
 end
@@ -387,7 +385,6 @@ addcmd("gb", --- Creditd To Kohlslite For Click
         lpc.HumanoidRootPart.CFrame = plr.HumanoidRootPart.CFrame
        local tool = lp.Backpack:FindFirstChild("PortableJustice")
         tool.parent = lpc
-    tool:Activate()
     wait(0.3)
         tool.MouseClick:FireServer(alal)
                 wait(0.3)

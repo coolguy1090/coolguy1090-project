@@ -296,7 +296,7 @@ addcmd("nok",
         end)
 
 addcmd("ban2",
-""
+"",
     function()
                 check(args[2])
   table.insert(blacklisted, plr.Name)
@@ -369,13 +369,15 @@ function()
     chat("gear me 00000000000000094794847")
     local tool = lp.Backpack:FindFirstChild("VampireVanquisher")
 tool.parent = lpc
-wait(0.1)
-lpc.VampireVanquisher.Remote:FireServer(Enum.KeyCode.Q)
+repeat wait() until
+      tool:FindFirstChild("Remote")
+
+tool.Remote:FireServer(Enum.KeyCode.Q)
 wait(0.3)
      for i,100 do
 chat("unsize me me me")
 end
-end) --- srry gojo but ur simple vg sucks no offense
+end)--- srry gojo but ur simple vg sucks no offense
 
 addcmd("gb", --- Creditd To Kohlslite For Click
     "",

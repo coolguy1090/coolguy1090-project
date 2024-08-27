@@ -334,7 +334,7 @@ end)
 addcmd("k2",
     "",
     function()
-         local cframe = lpc.HumanoidRootPart.CFrame = lpc.HumanoidRootPart.CFrame
+         local cframe = lpc.HumanoidRootPart.CFrame
         check(args[2])
         chat("blind "..plr.Name)
        lpc.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-482.402496, 3.69999933, -483.656372, -0.69966048, -6.97966627e-08, -0714475453, -8.5245567e-08, 1, -1.42114089e-08, 0.714475453, 5.09627078e-08, -0.69966048))

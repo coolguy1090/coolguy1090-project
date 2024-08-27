@@ -558,10 +558,9 @@ end
 
 
 coroutine.wrap(function() --- Actually I Made This From Scratch But People Will Say I Skidded It So Yeah    --- Dizzys Perm Slightly Edited.
-  perm = true
-   while perm do
-            if not game:GetService("Workspace").Terrain["_Game"].Admin.Pads:FindFirstChild(game.Players.LocalPlayer.Name .. "'s admin") then
-            if game:GetService("Workspace").Terrain["_Game"].Admin.Pads:FindFirstChild("Touch to get admin") then
+   while wait() do
+            if not gamev.Admin.Pads:FindFirstChild(game.Players.LocalPlayer.Name .. "'s admin") then
+            if gamev.Admin.Pads:FindFirstChild("Touch to get admin") then
                 local pad = gamev.Admin.Pads:FindFirstChild("Touch to get admin"):FindFirstChild("Head")
                 local padcframe = pad.CFrame
 wait()

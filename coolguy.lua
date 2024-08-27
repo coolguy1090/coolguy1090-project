@@ -536,24 +536,21 @@ local function equipall()
 end
 
 
-local permc = coroutine.wrap(function()
-            if perm then 
-if not game:GetService("Workspace").Terrain["_Game"].Admin.Pads:FindFirstChild(game.Players.LocalPlayer.Name .. "'s admin") then
-                    local pad = gamev.Admin.Pads:FindFirstChild("Touch to get admin"):FindFirstChild("Head")
+local permc = coroutine.wrap(function()    --- I Did Not Make This Prrm Credits To Dizzy
+            if perm then                   --- Slightly Edited If U Dont Mind?
+if not gamev.Admin.Pads:FindFirstChild(game.Players.LocalPlayer.Name .. "'s admin") then
+                    local pad = gamev.Admin.Pads:FindFirstChild("Touch to get admin"):FindFirstChild:("Head")
                     if pad then
-                        local head = pad:FindFirstChild("Head")
-                        if head then
                             local spr = lpc:FindFirstChild("Head")
-                            firetouchinterest(head, spr, 1)
-                            firetouchinterest(head, spr, 0)
-                            firetouchinterest(head, spr, 1)
+                            firetouchinterest(pad, spr, 1)
+                            firetouchinterest(pad, spr, 0)
+                            firetouchinterest(pad, spr, 1)
                             task.wait()
-                            firetouchinterest(head, spr, 0)
+                            firetouchinterest(pad, spr, 0)
                         end
                     end
                 end)
-            end
-end)
+            end)
 
 permc()
 

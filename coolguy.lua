@@ -369,6 +369,8 @@ function()
     chat("gear me 00000000000000094794847")
     local tool = lp.Backpack:FindFirstChild("VampireVanquisher")
 tool.parent = lpc
+wait(0.1)
+lpc.VampireVanquisher.Remote:FireServer(Enum.KeyCode.Q)
 wait(0.3)
      for i,100 do
 chat("unsize me me me")

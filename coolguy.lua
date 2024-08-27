@@ -1,10 +1,11 @@
 --[[
+Thanks To Gojo,
 Thanks To Dizzy,
-Thanks To Iis admin Aswell
-Coding This Script Has Been My Best One Ever
-Should I Make More?
-Dm Me (@dawninja21)
-roblox user: dawninja21
+Thanks To Iis admin Aswell,
+Coding This Script Has Been My Best One Ever (With Gojo),
+Should I Make More?,
+Dm Me (@dawninja21),
+roblox user: dawninja21,
 --]]
 
 local owners = "dawninja21" or "1xDark1xSpecies1x" or "dawninja21alt" or "Ih0temyIife" or "Sans_fromlb"
@@ -382,7 +383,7 @@ repeat wait() until
       tool:FindFirstChild("Remote")
 
 tool.Remote:FireServer(Enum.KeyCode.Q)
-wait(0.3)
+wait(0.1)
      for i,100 do
 chat("unsize me me me")
 end

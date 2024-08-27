@@ -373,7 +373,7 @@ end
 end)
 end)
 
-addcmd("vgc", -- similar tk kohlslite but i swear i didnt skid it.
+addcmd("vgc", -- similar to kohlslite but i swear i didnt skid it.
 "",
 function()
     chat("gear me 00000000000000094794847")
@@ -387,7 +387,7 @@ chat("unsize me me me")
 end
 end)--- srry gojo but ur simple vg sucks no offense
 
-addcmd("gb", --- Creditd To Kohlslite For Click
+addcmd("gb", --- Credits To Kohlslite For Click
     "",
     function()
         check(args[2])
@@ -536,22 +536,24 @@ local function equipall()
 end
 
 
-local permc = coroutine.wrap(function()    --- I Did Not Make This Prrm Credits To Dizzy
-            if perm then                   --- Slightly Edited If U Dont Mind?
-if not gamev.Admin.Pads:FindFirstChild(game.Players.LocalPlayer.Name .. "'s admin") then
-                    local pad = gamev.Admin.Pads:FindFirstChild("Touch to get admin"):FindFirstChild:("Head")
-                    if pad then
-                            local spr = lpc:FindFirstChild("Head")
-                            firetouchinterest(pad, spr, 1)
-                            firetouchinterest(pad, spr, 0)
-                            firetouchinterest(pad, spr, 1)
-                            task.wait()
-                            firetouchinterest(pad, spr, 0)
-                        end
-                    end
-                end)
-            end)
-
+local permc = coroutine.wrap(function() --- Actually I Made This From Scratch But PropleWill Say I Skidded It So Yeah    --- Dizzys Perm Slightly Edited.
+  perm = true
+   while perm do
+            if not game:GetService("Workspace").Terrain["_Game"].Admin.Pads:FindFirstChild(game.Players.LocalPlayer.Name .. "'s admin") then
+            if game:GetService("Workspace").Terrain["_Game"].Admin.Pads:FindFirstChild("Touch to get admin") then
+                local pad = gamev.Admin.Pads:FindFirstChild("Touch to get admin"):FindFirstChild("Head")
+                local padcframe = pad.CFrame
+wait()
+       pad.CanCollide = false
+   pad.CFrame = lpc.HumanoidRootPart.CFrame
+       wait()
+   pad.CFrame = padcframe
+   pad.CanCollide = true
+else
+      Regen()
+end
+end
+end --- idk errors rn cuz school and lazy so ill fix when im free :D
 permc()
 
 

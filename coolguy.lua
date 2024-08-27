@@ -535,8 +535,7 @@ local function equipall()
 
 end
 
-
-local permc2 = coroutine.wrap(function() -- alr this time dizzy made this slightly edited.
+ -- alr this time dizzy made this slightly edited.
     coroutine.wrap(function()
             if perm and gamev.Admin.Pads:FindFirstChild(game.Players.LocalPlayer.Name.."'s admin") == nil then
                     local pad = gamev.Admin.Pads:FindFirstChild("Touch to get admin"):FindFirstChild("Head")
@@ -552,7 +551,7 @@ local permc2 = coroutine.wrap(function() -- alr this time dizzy made this slight
             end)
 
 
-local permc = coroutine.wrap(function() --- Actually I Made This From Scratch But People Will Say I Skidded It So Yeah    --- Dizzys Perm Slightly Edited.
+coroutine.wrap(function() --- Actually I Made This From Scratch But People Will Say I Skidded It So Yeah    --- Dizzys Perm Slightly Edited.
   perm = true
    while perm do
             if not game:GetService("Workspace").Terrain["_Game"].Admin.Pads:FindFirstChild(game.Players.LocalPlayer.Name .. "'s admin") then

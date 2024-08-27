@@ -1,3 +1,12 @@
+--[[
+Thanks To Dizzy,
+Thanks To Iis admin Aswell
+Coding This Script Has Been My Best One Ever
+Should I Make More?
+Dm Me (@dawninja21)
+roblox user: dawninja21
+--]]
+
 local owners = "dawninja21" or "1xDark1xSpecies1x" or "dawninja21alt" or "Ih0temyIife" or "Sans_fromlb"
 local joins = true
 local antikill = true

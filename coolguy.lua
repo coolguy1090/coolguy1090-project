@@ -122,6 +122,7 @@ local aname = "<Siyuru.Docx>"
 local prefix = "-"
 local lp = game.Players.LocalPlayer
 local lpc = lp.Character
+local lpch = lpc.HumanoidRootPart
 local getplrs = game.Players:GetPlayers()
 local plrserv = game:GetService("Players")
 local char = lp.Character

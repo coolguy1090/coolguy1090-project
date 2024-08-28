@@ -395,20 +395,18 @@ addcmd("gb", --- Credits To Kohlslite For Click
     "",
     function()
         check(args[2])
-        chat("gear me 1665990")
         local alal = plr.Character
         local cframe = lpc.HumanoidRootPart.CFrame
-      local tool = lp.Backpack:FindFirstChild("PortableJustice")
+    chat("gear me 1665990")
+        local tool = lp.Backpack:FindFirstChild("PortableJustice")
         tool.Parent = lpc
         lpc.HumanoidRootPart.CFrame = plr.HumanoidRootPart.CFrame
     wait(0.3)
         tool.MouseClick:FireServer(alal)
-                wait(0.3)
-                  chat("freeze "..plr.Name)
-                lpc.HumanoidRootPart.CFrame = cframe
-            end
-        end
-        end)
+wait(0.3)
+                     chat("freeze "..plr.Name)
+            lpc.HumanoidRootPart.CFrame = cframe
+end)
 
 
 addcmd("unban",

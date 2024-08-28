@@ -402,7 +402,7 @@ addcmd("gb", --- Credits To Kohlslite For Click
         tool.Parent = lpc
         lpc.HumanoidRootPart.CFrame = plr.HumanoidRootPart.CFrame
     wait(0.3)
-        tool.MouseClick:FireServer(alal)
+        tool.Click:FireServer(alal)
 wait(0.3)
                      chat("freeze "..plr.Name)
             lpc.HumanoidRootPart.CFrame = cframe

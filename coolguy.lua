@@ -401,7 +401,7 @@ addcmd("gb", --- Credits To Kohlslite For Click
     chat("gear me 1665990")
         local tool = lp.Backpack:FindFirstChild("PortableJustice")
         tool.Parent = lpc
-        lpc.HumanoidRootPart.CFrame = plr.HumanoidRootPart.CFrame
+        lpch.CFrame = plr.HumanoidRootPart.CFrame
     wait(0.3)
         tool.Click:FireServer(alal)
 wait(0.3)

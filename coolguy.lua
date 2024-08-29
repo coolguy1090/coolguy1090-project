@@ -495,7 +495,6 @@ local banfunction = coroutine.wrap(function()
 end)
 banfunction() --- ty gojo
 
-local welmsg = coroutine.wrap(function()
 spawn(function()
   while wait() do
 if joins then

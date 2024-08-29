@@ -140,7 +140,10 @@ end
 end
 --//
 local onstart = {
-"-autogod"
+"-autogod",
+"iyc logs",
+"iyc esp"
+
 }
 
 local bgears = {

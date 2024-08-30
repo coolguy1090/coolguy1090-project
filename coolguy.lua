@@ -155,9 +155,23 @@ local bgears = {
 local blacklist = {"a"}
 local whitelist = {"a"}
 
+local function say(msg)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(msg, "All")
+end
+
 local function chat(m)
   game.Players:Chat(m)
 end
+
+local function notif(text)
+        game:GetService("StarterGui"):SetCore(
+            "SendNotification",
+            {
+                Title = Siyuru.Docx,
+                Text = Text
+            }
+        )
+    end
 
 local function Regen()
   pcall(function()
@@ -392,6 +406,7 @@ wait(0.3)
      for i,100 do
 chat("unsize me me me")
 end
+notif("Server Crashed!")
 end)--- srry gojo but ur simple vg sucks no offense
 
 addcmd("gb", --- Credits To Kohlslite For Click
@@ -410,8 +425,8 @@ wait(0.3)
                      chat("freeze "..plr.Name)
             lpc.HumanoidRootPart.CFrame = cframe
 chat("ungear me")
+notif(""..plr.Name.." Has Been Gbanned.")
 end)
-
 
 addcmd("unban",
     "",
@@ -607,5 +622,11 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/lnfiniteCoder/My-robl
 for _,v in pairs(onstart) do
 chat(""..v)
 end
+
+local LoadTime = tick()
+local time = math.floor((tick() - LoadTime) * 1000)
+
+notif("Loaded! in " .. time .. "ms.")
+say(""..aname.." Loaded in "..time.."ms.")
 
 chat("h \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"..aname.." Loaded!")

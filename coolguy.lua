@@ -12,6 +12,7 @@ ill fix when im free.
 
 local owners = "dawninja21" or "1xDark1xSpecies1x" or "dawninja21alt" or "Ih0temyIife" or "Sans_fromlb"
 local joins = true
+local antifreeze = true
 local antikill = true
 local antihat = true
 local antimsg = true
@@ -156,16 +157,6 @@ local bgears = {
 
 local blacklist = {"a"}
 local whitelist = {"a"}
-
-local wl = isfile("Whitelisted.txt") -- credits to jotunn
-            if not wl then 
-               writefile("Whitelisted.txt", "shedletsky\n")
-            else
-              wl = readfile("Whitelisted.txt"):split("\n")
-              for i = 1,#wl do 
-                table.insert(whitelist, wl[i])
-              end 
-            end
 
 local function say(msg)
     game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(msg, "All")

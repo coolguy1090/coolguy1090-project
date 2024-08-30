@@ -456,6 +456,14 @@ chat("h \n\n\n\n\n\n\n\n\n\n"..aname.."\n\n\n\n\n "..plr.Name.." Has Just Been U
 ban = false
 end)
 
+addcmd("toolban", --- unfinished rn.
+"",
+   function()
+check(args[2])
+      if plr.Backpack:FindFirstChildClassOf("Tool") then
+end
+end)
+
 
 local antihatc = coroutine.wrap(function()
     while wait() do

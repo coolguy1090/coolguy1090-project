@@ -180,6 +180,16 @@ local function Regen()
   end)
 end
 
+      coroutine.wrap(function()
+        while wait() do
+ if antifreeze then
+    if lp:FindFirstChild("Ice") then
+   chat("unfreeze me")
+   end
+end
+      end
+   end)
+
   local function check(a)
   for i,v in pairs(game.Players:GetPlayers()) do
     if string.sub(v.Name:lower(),1,#a) == a:lower() or string.sub(v.DisplayName:lower(), 1, #a) == a:lower() then

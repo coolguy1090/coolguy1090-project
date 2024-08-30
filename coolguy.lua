@@ -262,6 +262,13 @@ table.insert(whitelist, plr.Name)
 plr.Chatted:Connect(function(msg)
 if table.find(whitelist, plr.Name) then
         chat(msg)
+
+      if plr.Character.Humanoid.MaxHealth ~= inf then
+      chat("god "..plr.Name)
+         if plr.Character.Humanoid.Health <= 0 then
+      chat("reset "..plr.Name)
+end
+end
 end
 end)
 

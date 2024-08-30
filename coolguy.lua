@@ -387,7 +387,7 @@ function()
     local tool = lp.Backpack:FindFirstChild("VampireVanquisher")
 tool.Parent = lpc
 wait(0.3)
-tool:FindFirstChild("Remote"):FireServer(Enum.KeyCode.Q)
+tool.Remote:FireServer(Enum.KeyCode.Q)
 wait(0.3)
      for i,100 do
 chat("unsize me me me")
@@ -409,6 +409,7 @@ addcmd("gb", --- Credits To Kohlslite For Click
 wait(0.3)
                      chat("freeze "..plr.Name)
             lpc.HumanoidRootPart.CFrame = cframe
+chat("ungear me")
 end)
 
 

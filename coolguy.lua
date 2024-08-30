@@ -6,6 +6,8 @@ Coding This Script Has Been My Best One Ever (With Gojo),
 Should I Make More?,
 Dm Me (@dawninja21),
 roblox user: dawninja21,
+There are a bunch of errors.
+ill fix when im free.
 --]]
 
 local owners = "dawninja21" or "1xDark1xSpecies1x" or "dawninja21alt" or "Ih0temyIife" or "Sans_fromlb"

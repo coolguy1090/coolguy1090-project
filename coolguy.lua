@@ -576,45 +576,8 @@ local function equipall()
 
 end
 
- -- alr this time dizzy made this slightly edited.
-    coroutine.wrap(function()
-            if perm then
-if not gamev.Admin.Pads:FindFirstChild(game.Players.LocalPlayer.Name.."'s admin") then
-                    local pad = gamev.Admin.Pads:FindFirstChild("Touch to get admin"):FindFirstChild("Head")
-                    if pad then
-                            local spr = game.Players.LocalPlayer.Character:FindFirstChild("Head")
-                            firetouchinterest(pad, spr, 1)
-                            firetouchinterest(pad, spr, 0)
-                            firetouchinterest(pad, spr, 1)
-                            task.wait()
-                            firetouchinterest(pad, spr, 0)
-                       end
-end
-                    end
-            end)
 
-
-coroutine.wrap(function() --- Actually I Made This From Scratch But People Will Say I Skidded It So Yeah    --- Dizzys Perm Slightly Edited.
-   while wait() do
-            if not gamev.Admin.Pads:FindFirstChild(game.Players.LocalPlayer.Name .. "'s admin") then
-            if gamev.Admin.Pads:FindFirstChild("Touch to get admin") then
-                local pad = gamev.Admin.Pads:FindFirstChild("Touch to get admin"):FindFirstChild("Head")
-                local padcframe = pad.CFrame
-wait()
-       pad.CanCollide = false
-   pad.CFrame = lpc.HumanoidRootPart.CFrame
-       wait()
-   pad.CFrame = padcframe
-   pad.CanCollide = true
-else
-      Regen()
-end
-end
-end --- idk errors rn cuz school and lazy so ill fix when im free :D
-permc()
-
-
-local admingrab = coroutine.wrap(function() -- made by dizzy LMFAO
+local admingrab = coroutine.wrap(function() -- made by dizzy
   while true do
     if not game:GetService("Workspace").Terrain["_Game"].Admin.Pads:FindFirstChild(game.Players.LocalPlayer.Name .. "'s admin") then
       if game:GetService("Workspace").Terrain["_Game"].Admin.Pads:FindFirstChild("Touch to get admin") then

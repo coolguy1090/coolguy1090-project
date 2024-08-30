@@ -255,6 +255,14 @@ local song = mtable[args[2]]
 end
 end) --- ty dizzy (if dizzy wonders and sees this js know u helped me in the past with this.)
 
+addcmd("banhammer",
+"",
+function() --- Unfinished.
+      local tool = game.Players.LocalPlayer.Backpack:WaitForChild("BanHammer")
+      tool.Handle.Touched:Connect(function(v)
+end)
+
+
 addcmd("wl",
 "",
 function()

@@ -155,6 +155,16 @@ local bgears = {
 local blacklist = {"a"}
 local whitelist = {"a"}
 
+local wl = isfile("Whitelisted.txt") -- credits to jotunn
+            if not wl then 
+               writefile("Whitelisted.txt", "shedletsky\n")
+            else
+              wl = readfile("Whitelisted.txt"):split("\n")
+              for i = 1,#wl do 
+                table.insert(whitelist, wl[i])
+              end 
+            end
+
 local function say(msg)
     game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(msg, "All")
 end
@@ -255,11 +265,10 @@ addcmd("wl",
 "",
 function()
 check(args[2])
-table.insert(wlsted, plr.Name)
-if plr.Chatted(msg) then
-    if table.find(wlsted, plr.Name) then
-chat(msg)
-end
+table.insert(whitelist, plr.Name)
+plr.Chatted:Connect(function(msg)
+if table.find(whitelist, plr.Name) then
+        chat(msg)
 end
 end)
 

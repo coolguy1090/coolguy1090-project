@@ -343,7 +343,7 @@ addcmd("k2",
        lpc.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-482.402496, 3.69999933, -483.656372, -0.69966048, -6.97966627e-08, -0714475453, -8.5245567e-08, 1, -1.42114089e-08, 0.714475453, 5.09627078e-08, -0.69966048))
       wait(0.3)
         chat("tp "..plr.Name.." me")
-   lpc.HumanoidRootPart.CFrame = cframe
+   lpch.CFrame = cframe
         kicking = true
         spawn(function()
                 while kicking do
@@ -387,7 +387,7 @@ function()
     local tool = lp.Backpack:FindFirstChild("VampireVanquisher")
 tool.Parent = lpc
 wait(0.3)
-tool:Activate()
+tool:FindFirstChild("Remote"):FireServer(Enum.KeyCode.Q)
 wait(0.3)
      for i,100 do
 chat("unsize me me me")

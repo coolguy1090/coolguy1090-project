@@ -284,11 +284,18 @@ addcmd("antikill",
 "",
 function()
 check(args[2])
-while wait() do
-if plr.Character.Humanoid.Health <= 0 then
-chat("reset "..plr.Name)
+if not connections.antikill then
+      connections.antikill = 
+game:GetService("RunService").RenderStepped:Connect(function()
+         if lpch.Health <= 0 then
+chat("reset me") 
 end
-end
+end)
+
+addcmd("unantikill",
+"",
+function()
+      connections.antikill:Disconnect()
 end)
 
 addcmd("autogod",

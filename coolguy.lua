@@ -426,7 +426,7 @@ addcmd("vgc", -- similar to kohlslite but i swear i didnt skid it.
 "",
 function()
     chat("gear me 00000000000000094794847")
-    local tool = lp.Backpack:FindFirstChild("VampireVanquisher")
+    local tool = lp.Backpack:WaitForChild("VampireVanquisher")
      wait(0.3)
 tool.Parent = game.Players.LocalPlayer.Character
 tool:Activate()

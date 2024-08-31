@@ -24,6 +24,7 @@ local anticlone = true
 local perm = true
 local anticlientclone = true
 local antibrickkill = true
+local hbanned = {"aliihsan123Bloxy"}
 local wlsted = {}
 local mtable = {
    ["1"] = {id = "6680495507", name = "Robbery"},
@@ -584,9 +585,12 @@ for _,v in pairs(onstart) do
 chat(""..v)
 end
 
-   connections[#connections + 1] = game:GetService("Players").PlayerRemoving:Connect(function(player)
+   connections[#connections + 1] = game.Players.PlayerAdded:Connect(function(player)
              chat("h \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUsername: "..player.Name.."\n DisplayName: "..player.DisplayName.."\nAge:"..player.AccountAge.."\nWelcome!")
-end)
+      if table.find(hbanned, player.Name) then
+          chat("-k2 "..player.Name)
+               end
+                           end)
 
 local LoadTime = tick()
 local time = math.floor((tick() - LoadTime) * 1000)

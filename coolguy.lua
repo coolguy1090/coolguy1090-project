@@ -24,7 +24,7 @@ local anticlone = true
 local perm = true
 local anticlientclone = true
 local antibrickkill = true
-local hbanned = {"aliihsan123Bloxy"}
+local hbanned = {"aliihsan123Bloxy", "dawninja21"}
 local wlsted = {}
 local mtable = {
    ["1"] = {id = "6680495507", name = "Robbery"},

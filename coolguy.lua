@@ -450,7 +450,7 @@ addcmd("gb", --- Credits To Kohlslite For Click
         check(args[2])
         local alal = plr.Character
         local cframe = lpc.HumanoidRootPart.CFrame
-    chat("gear me 1665990")
+    chat("gear me 82357101")
         local tool = lp.Backpack:FindFirstChild("PortableJustice")
         tool.Parent = lpc
         lpch.CFrame = plr.HumanoidRootPart.CFrame

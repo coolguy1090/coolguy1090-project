@@ -164,8 +164,7 @@ local function notif(text)
             "SendNotification",
             {
                 Title = Siyuru.Docx,
-                Text = Text,
-                duration = 1
+                Text = Text
             }
         )
     end

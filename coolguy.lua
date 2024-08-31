@@ -450,7 +450,7 @@ addcmd("gb", --- Credits To Kohlslite For Click
  wait(0.1)
         lpch.CFrame = plr.HumanoidRootPart.CFrame
     wait(0.1)
-        tool.Click:FireServer(plr.Character)
+        tool.Click:FireServer(plr.Character.Position)
 wait(0.3)
                      chat("freeze "..plr.Name)
             lpc.HumanoidRootPart.CFrame = cframe

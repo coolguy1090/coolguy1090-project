@@ -121,8 +121,6 @@ local mtable = {
 
 
 local aname = "<Siyuru.Docx>"
-
-local prefix = "-"
 local lp = game.Players.LocalPlayer
 local lpc = game.Players.LocalPlayer.Character
 local lpch = game.Players.LocalPlayer.Character.HumanoidRootPart
@@ -140,8 +138,7 @@ end
 end
 --//
 local onstart = {
-"iyc logs",
-"iyc esp"
+"iyc logs"
 }
 
 local bgears = {

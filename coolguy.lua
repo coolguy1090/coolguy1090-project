@@ -140,10 +140,8 @@ end
 end
 --//
 local onstart = {
-"-autogod",
 "iyc logs",
 "iyc esp"
-
 }
 
 local bgears = {
@@ -219,7 +217,7 @@ local connections = {}
 local function addcmd(cmdName, cmdDescription, cmdFunction)
     commands[cmdName] = cmdName
     descriptions[cmdName] = cmdDescription
-    connections[#connections + 1] = plr.Chatted:Connect(function(msg)
+    connections[#connections + 1] = lp.Chatted:Connect(function(msg)
             msg = msg:lower()
             args = msg:split(" ")
             if args[1] == admin.prefix3 .. cmdName then
@@ -248,7 +246,7 @@ end)
     function()
 local song = mtable[args[2]]
      if song then
-   chat("music 000000000000000000000000000000000000000"..song.id)
+   chat("music "..song.id)
    chat("h \n\n\n\n\n\n\n\n\n\nNow Playing...\n\n"..song.name)
 end
 end) --- ty dizzy (if dizzy wonders and sees this js know u helped me in the past with this.)
@@ -304,7 +302,7 @@ addcmd("autogod",
 "",
 function()
 while wait() do
-if game.Players.LocalPlayer.Character.Humanoid.MaxHealth ~= "inf" then
+if game.Players.LocalPlayer.Character.Humanoid.Health ~= "inf" then
                         chat("god me")
 end
 end
@@ -435,7 +433,8 @@ addcmd("vgc", -- similar to kohlslite but i swear i didnt skid it.
 function()
     chat("gear me 00000000000000094794847")
     local tool = lp.Backpack:FindFirstChild("VampireVanquisher")
-tool.Parent = lpc
+tool.Parent = game.Players.LocalPlayer.Character
+tool:Activate()
 wait(0.3)
 tool.Remote:FireServer(Enum.KeyCode.Q)
 wait(0.3)
@@ -526,33 +525,6 @@ end
 end                    
 end
 end)
-
-local banfunction = coroutine.wrap(function()
-
-  while wait() do
-
-    pcall(function()
-
-      for i, v in ipairs(blacklist) do
-          
-                        if not game.Lighting:FindFirstChild(v) and v ~= nil then
-        
-            Regen()
-            wait()
-            chat("punish "..v)
-            chat("blind "..v)
-            chat("skydive "..v)
-
-        end
-            
-      end
-          
-    end)
-      
-  end
-    
-end)
-banfunction() --- ty gojo
 
 spawn(function()
   while wait() do

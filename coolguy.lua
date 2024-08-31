@@ -171,7 +171,7 @@ local function notif(text)
             "SendNotification",
             {
                 Title = Siyuru.Docx,
-                Text = Text
+                Text = Text,
                 duration = 1
             }
         )
@@ -261,6 +261,7 @@ function() --- Unfinished.
       local tool = game.Players.LocalPlayer.Backpack:WaitForChild("BanHammer")
       tool.Handle.Touched:Connect(function(v)
 end)
+end)
 
 
 addcmd("wl",
@@ -279,6 +280,7 @@ end
 end
 end
 end)
+end)
 
 addcmd("antikill",
 "",
@@ -290,6 +292,9 @@ game:GetService("RunService").RenderStepped:Connect(function()
 chat("reset me") 
 end
 end)
+end
+end)
+
 
 addcmd("unantikill",
 "",
@@ -436,7 +441,7 @@ tool.Parent = lpc
 wait(0.3)
 tool.Remote:FireServer(Enum.KeyCode.Q)
 wait(0.3)
-     for i,100 do
+     for i = 1,100 do
 chat("unsize me me me")
 end
 notif("Server Crashed!")
@@ -560,7 +565,6 @@ end)
 end
 end
 end)
-end)
 
 local nokc = coroutine.wrap(function()
   while wait() do
@@ -629,7 +633,7 @@ end
 
    connections[#connections + 1] = game:GetService("Players").PlayerRemoving:Connect(function(player)
              chat("h \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUsername: "..player.Name.."\n DisplayName: "..player.DisplayName.."\nAge:"..player.AccountAge.."\nWelcome!")
-end
+end)
 
 local LoadTime = tick()
 local time = math.floor((tick() - LoadTime) * 1000)

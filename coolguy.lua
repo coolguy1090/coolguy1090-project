@@ -447,9 +447,10 @@ addcmd("gb", --- Credits To Kohlslite For Click
     chat("gear me 82357101")
         local tool = lp.Backpack:WaitForChild("PortableJustice")
         tool.Parent = lpc
+ wait(0.1)
         lpch.CFrame = plr.HumanoidRootPart.CFrame
-    wait(0.3)
-        tool.Click:FireServer(alal)
+    wait(0.1)
+        tool.Click:FireServer(plr.Character)
 wait(0.3)
                      chat("freeze "..plr.Name)
             lpc.HumanoidRootPart.CFrame = cframe

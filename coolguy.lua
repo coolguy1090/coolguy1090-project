@@ -278,7 +278,8 @@ end)
 addcmd("antikill",
 "",
 function()
-      connections["antikill"] = 
+      if not connections.antikill then
+      connections.antikill = 
 game:GetService("RunService").RenderStepped:Connect(function()
          if lpch.Health == 0 then
 chat("reset me") 
@@ -287,11 +288,11 @@ end)
 end)
 
 
-addcmd("unantikill",
-"",
-function()
-connections["antikill"]:Disconnect()
-end)
+   addcmd("unantikill",
+   "",
+   function()
+      connections.antikill:Disconnect()
+   end)
 
 addcmd("autogod",
 "",

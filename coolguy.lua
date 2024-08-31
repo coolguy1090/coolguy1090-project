@@ -427,7 +427,6 @@ addcmd("vgc", -- similar to kohlslite but i swear i didnt skid it.
 function()
     chat("gear me 00000000000000094794847")
     local tool = lp.Backpack:WaitForChild("VampireVanquisher")
-     wait(0.3)
 tool.Parent = game.Players.LocalPlayer.Character
 tool:Activate()
 wait(0.3)
@@ -446,7 +445,7 @@ addcmd("gb", --- Credits To Kohlslite For Click
         local alal = plr.Character
         local cframe = lpc.HumanoidRootPart.CFrame
     chat("gear me 82357101")
-        local tool = lp.Backpack:FindFirstChild("PortableJustice")
+        local tool = lp.Backpack:WaitForChild("PortableJustice")
         tool.Parent = lpc
         lpch.CFrame = plr.HumanoidRootPart.CFrame
     wait(0.3)

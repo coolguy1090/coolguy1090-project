@@ -278,7 +278,6 @@ end)
 addcmd("antikill",
 "",
 function()
-      if not connections.antikill then
       connections.antikill = 
 game:GetService("RunService").RenderStepped:Connect(function()
          if lpch.Health == 0 then

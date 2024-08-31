@@ -608,7 +608,5 @@ end)
 local LoadTime = tick()
 local time = math.floor((tick() - LoadTime) * 1000)
 
-notif("Loaded! in " .. time .. "ms.")
-say(""..aname.." Loaded in "..time.."ms.")
 
-chat("h \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"..aname.." Loaded!")
+say(""..aname.." Loaded in "..time.."ms.")

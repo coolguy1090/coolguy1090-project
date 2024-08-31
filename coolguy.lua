@@ -277,21 +277,19 @@ end)
 addcmd("antikill",
 "",
 function()
-if not connections.antikill then
-      connections.antikill = 
+      connections["antikill"] = 
 game:GetService("RunService").RenderStepped:Connect(function()
-         if lpch.Health <= 0 then
+         if lpch.Health == 0 then
 chat("reset me") 
 end
 end)
-end
 end)
 
 
 addcmd("unantikill",
 "",
 function()
-      connections.antikill:Disconnect()
+connections["antikill"]:Disconnect()
 end)
 
 addcmd("autogod",
@@ -490,18 +488,6 @@ end
 end
 end)
 antihatc()
-
-
-local antikillc = coroutine.wrap(function()
-while wait() do
-if antikill then
-      if lpc.Humanoid.Health == 0 then
-        chat("reset me")
-      end
-    end
-  end
-end)
-antikillc()
 
 local gearban2c = coroutine.wrap(function()
 

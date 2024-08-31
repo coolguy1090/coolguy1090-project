@@ -283,7 +283,6 @@ end)
 addcmd("antikill",
 "",
 function()
-check(args[2])
 if not connections.antikill then
       connections.antikill = 
 game:GetService("RunService").RenderStepped:Connect(function()
@@ -626,6 +625,10 @@ admingrab()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/lnfiniteCoder/My-roblox-scripts/main/GScript.txt"))()
 for _,v in pairs(onstart) do
 chat(""..v)
+end
+
+   connections[#connections + 1] = game:GetService("Players").PlayerRemoving:Connect(function(player)
+             chat("h \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUsername: "..player.Name.."\n DisplayName: "..player.DisplayName.."\nAge:"..player.AccountAge.."\nWelcome!")
 end
 
 local LoadTime = tick()

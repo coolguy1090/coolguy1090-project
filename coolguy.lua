@@ -24,7 +24,7 @@ local anticlone = true
 local perm = true
 local anticlientclone = true
 local antibrickkill = true
-local hbanned = {"aliihsan123Bloxy", "dawninja21"}
+local hbanned = {"aliihsan123Bloxy"}
 local wlsted = {}
 local mtable = {
    ["1"] = {id = "6680495507", name = "Robbery"},
@@ -510,16 +510,6 @@ end
 end
 end)
 
-spawn(function()
-  while wait() do
-if joins then
-    game.Players.PlayerAdded:Connect(function(v)
-chat("pm "..v.Name.." This Server Is Protected By Siyuru.docx Enjoy Your Stay!")
-end)
-end
-end
-end)
-
 local nokc = coroutine.wrap(function()
   while wait() do
     if antibrickkill then
@@ -584,12 +574,13 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/lnfiniteCoder/My-robl
 for _,v in pairs(onstart) do
 chat(""..v)
 end
-
+         spawn(function()
    connections[#connections + 1] = game.Players.PlayerAdded:Connect(function(player)
              chat("h \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUsername: "..player.Name.."\n DisplayName: "..player.DisplayName.."\nAge:"..player.AccountAge.."\nWelcome!")
       if table.find(hbanned, player.Name) then
           chat("-k2 "..player.Name)
-               end
+      end
+           end)
                            end)
 
 local LoadTime = tick()

@@ -422,7 +422,7 @@ addcmd("ban2",
 end)
 
 
-   addcmd("gear",
+   addcmd("findgear",
    "",
    function()
 local gear = gearlist[args[2]]

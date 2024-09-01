@@ -464,6 +464,7 @@ addcmd("k2",
       wait(0.3)
         chat("tp "..plr.Name.." me")
          chat("size "..plr.Name.." 10")
+      wait(0.3)
    lpch.CFrame = cframe
         kicking = true
         spawn(function()

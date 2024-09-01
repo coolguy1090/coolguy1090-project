@@ -481,10 +481,9 @@ addcmd("gb", --- Credits To Kohlslite For Click
     "",
     function()
         check(args[2])
-        local alal = plr.Character
         local cframe = lpc.HumanoidRootPart.CFrame
+                local tool = lp.Backpack:WaitForChild("PortableJustice")
     chat("gear me 82357101")
-        local tool = lp.Backpack:WaitForChild("PortableJustice")
         tool.Parent = lpc
  wait(0.3)
         lpch.CFrame = plr.Character.HumanoidRootPart.CFrame

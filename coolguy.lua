@@ -301,14 +301,14 @@ end)
       connections.antikill:Disconnect()
    end)
 
-addcmd("autogod", --- made by jot.txt
+addcmd("autogod",
 "",
 function()
 check(args[2])
                 lp.CharacterAdded:Connect(function(a)
                         a:WaitForChild("Humanoid"):GetPropertyChangedSignal("Health"):Connect(function()
                                 chat("god me")
-end
+end)
 end)
 end)
 

@@ -312,6 +312,12 @@ end)
 end)
 end)
 
+addcmd("rj",
+"",
+function()
+      chat("iyc rj")
+end)
+
 addcmd("akak",
     "",
     function()

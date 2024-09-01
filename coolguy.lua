@@ -58,7 +58,7 @@ local mtable = {
    ["28"] = {id = "1840003540", name = "Tell it to yourself"},
    ["29"] = {id = "9042523170", name = "Come Closer"},
    ["30"] = {id = "1846808350", name = "Get up and Boogie"},
-   ["31"] = {id = "9047105533", name = "DIZZY - Lofi"}, -- So epic ngl
+   ["31"] = {id = "9047105533", name = "Lofi Chill"}, -- So epic ngl
    ["32"] = {id = "9048375035", name = "All dropping 8 beats"},
    ["33"] = {id = "6529070845", name = "Brace Yourself"},
    ["34"] = {id = "6917155909", name = "They trying to be cray"},

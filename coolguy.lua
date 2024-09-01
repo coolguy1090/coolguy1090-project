@@ -301,7 +301,7 @@ end)
       connections.antikill:Disconnect()
    end)
 
-addcmd("autogod",
+addcmd("autogod", --- made by jot.txt
 "",
 function()
 check(args[2])

@@ -463,6 +463,7 @@ addcmd("k2",
        lpc.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-482.402496, 3.69999933, -483.656372, -0.69966048, -6.97966627e-08, -0714475453, -8.5245567e-08, 1, -1.42114089e-08, 0.714475453, 5.09627078e-08, -0.69966048))
       wait(0.3)
         chat("tp "..plr.Name.." me")
+         chat("size "..plr.Name.." 10")
    lpch.CFrame = cframe
         kicking = true
         spawn(function()

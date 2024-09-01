@@ -304,11 +304,12 @@ end)
 addcmd("autogod",
 "",
 function()
-while wait() do
-if game.Players.LocalPlayer.Character.Humanoid.Health ~= "inf" then
-                        chat("god me")
+check(args[2])
+                lp.CharacterAdded:Connect(function(a)
+                        a:WaitForChild("Humanoid"):GetPropertyChangedSignal("Health"):Connect(function()
+                                chat("god me")
 end
-end
+end)
 end)
 
 addcmd("akak",

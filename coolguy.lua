@@ -1,5 +1,4 @@
 --[[
-Thanks To Python,
 Thanks To Gojo,
 Thanks To Dizzy,
 Thanks To Iis admin Aswell,
@@ -458,7 +457,7 @@ addcmd("gb", --- Credits To Kohlslite For Click
         local tool = lp.Backpack:WaitForChild("PortableJustice")
         tool.Parent = lpc
  wait(0.1)
-        lpch.CFrame = plr.HumanoidRootPart.CFrame
+        lpch.CFrame = plr.Character.HumanoidRootPart.CFrame
     wait(0.1)
         tool.MouseClick:FireServer(plr.Character)
 wait(0.3)

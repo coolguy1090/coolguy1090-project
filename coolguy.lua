@@ -178,6 +178,14 @@ local function Regen()
   end)
 end
 
+local function dcrash() 
+      for i = 1,100 do
+        chat("dog all all all")
+        chat("clone all all all")
+end
+      end
+
+
       coroutine.wrap(function()
         while wait() do
  if antifreeze then
@@ -318,7 +326,7 @@ addcmd("cmds",
     "",
     function()
 for i, v in pairs(cmds) do
-print(i..". "..v)
+print(i.." "..v)
 end
 end)
 

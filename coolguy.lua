@@ -265,6 +265,29 @@ end)
 end)
 
 
+      addcmd("k1",
+"",
+   function()
+    check(args[2])
+    chat("respawn "..plr.Name)
+    task.wait(.2)
+    chat("jail/".. plr.Name)
+    chat("speed ".. plr.Name .. " 0")
+    chat("setgrav ".. plr.Name .. " 1000")
+    chat("blind ".. plr.Name)
+    chat("ff ".. plr.Name)
+rkick = true
+spawn(function()
+      while rkick do
+   wait()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = plr.Character.HumanoidRootPart.CFrame * CFrame.Angles(0,math.rad(180),0) * CFrame.new(0,0,-2)
+    chat("rocket/me/me/me")
+    chat("rocket ".. plr.Name .."/".. plr.Name .."/".. plr.Name)
+end
+end)
+end)
+
+
 addcmd("wl",
 "",
 function()

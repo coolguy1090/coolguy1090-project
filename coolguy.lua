@@ -139,7 +139,8 @@ end
 end
 --//
 local onstart = {
-"iyc logs"
+"iyc logs",
+"-akak"
 }
 
 local bgears = {

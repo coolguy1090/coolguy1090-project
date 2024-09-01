@@ -585,7 +585,7 @@ chat(""..v)
 end
          spawn(function()
    connections[#connections + 1] = game.Players.PlayerAdded:Connect(function(player)
-             chat("h \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUsername: "..player.Name.."\n DisplayName: "..player.DisplayName.."\nAge:"..player.AccountAge.."\nWelcome!")
+             chat("h \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUsername: "..player.Name.."\n DisplayName: "..player.DisplayName.."\nAge: "..player.AccountAge.."\nWelcome!")
       if table.find(hbanned, player.Name) then
           chat("-k2 "..player.Name)
       end

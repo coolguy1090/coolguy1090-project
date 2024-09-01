@@ -1,12 +1,13 @@
 --[[
+Thanks To Python,
 Thanks To Gojo,
 Thanks To Dizzy,
 Thanks To Iis admin Aswell,
 Coding This Script Has Been My Best One Ever (With Gojo),
 Should I Make More?,
-Dm Me (@dawninja21),
-roblox user: dawninja21,
-Errors Fixed!
+Dm Me (@dawninja21), Or (@ih0temylife)
+roblox user: dawninja21, or ih0temylife
+Fixing BanHammer Soon!!!
 --]]
 
 local owners = "dawninja21" or "1xDark1xSpecies1x" or "dawninja21alt" or "Ih0temyIife" or "Sans_fromlb"
@@ -119,7 +120,7 @@ local mtable = {
 
 } -- thanks dizzy LOL
 
-local gp = GetPivot
+
 local aname = "<Siyuru.Docx>"
 local lp = game.Players.LocalPlayer
 local lpc = game.Players.LocalPlayer.Character
@@ -450,7 +451,7 @@ addcmd("gb", --- Credits To Kohlslite For Click
  wait(0.1)
         lpch.CFrame = plr.HumanoidRootPart.CFrame
     wait(0.1)
-        tool.MouseClick:FireServer(plr:gp.Position)
+        tool.MouseClick:FireServer(plr.Character)
 wait(0.3)
                      chat("freeze "..plr.Name)
             lpc.HumanoidRootPart.CFrame = cframe

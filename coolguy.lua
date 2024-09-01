@@ -119,7 +119,7 @@ local mtable = {
 
 } -- thanks dizzy LOL
 
-
+local gp = GetPivot
 local aname = "<Siyuru.Docx>"
 local lp = game.Players.LocalPlayer
 local lpc = game.Players.LocalPlayer.Character
@@ -450,7 +450,7 @@ addcmd("gb", --- Credits To Kohlslite For Click
  wait(0.1)
         lpch.CFrame = plr.HumanoidRootPart.CFrame
     wait(0.1)
-        tool.Click:FireServer(plr.Character.Position)
+        tool.MouseClick:FireServer(plr:gp.Position)
 wait(0.3)
                      chat("freeze "..plr.Name)
             lpc.HumanoidRootPart.CFrame = cframe

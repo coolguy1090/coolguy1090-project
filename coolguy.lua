@@ -121,6 +121,7 @@ local mtable = {
 } -- thanks dizzy LOL
 
 
+local rs = game:GetService("RunService")
 local aname = "<Siyuru.Docx>"
 local lp = game.Players.LocalPlayer
 local lpc = game.Players.LocalPlayer.Character
@@ -279,7 +280,7 @@ addcmd("antikill",
 "",
 function()
       connections.antikill = 
-game:GetService("RunService").RenderStepped:Connect(function()
+rs.RenderStepped:Connect(function()
          if lpch.Health == 0 then
 chat("reset me") 
 end

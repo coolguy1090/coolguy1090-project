@@ -202,6 +202,28 @@ local function Regen()
   end)
 end
 
+local function purge() --Credits To Knocks/Kneekers
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(455.448242, 3.63637614, 453.299042, 0.649438977, 6.72485001e-08, 0.760413706, -7.56329328e-08, 1, -2.38416611e-08, -0.760413706, -4.20286135e-08, 0.649438977)
+wait(0.3)
+game.Players:Chat("tp others me")
+game.Players:Chat("speed all 0")
+game.Players:Chat("setgrav all 10000")
+game.Players:Chat("blind others")
+wait(.5)
+
+for i = 1,100 do
+game.Players:Chat("rocket/ all all al")
+end
+wait(.5)
+game.Players:Chat("size all 9.9")
+wait(2)
+for i = 1,10 do
+game.Players:Chat("tp others me")
+game.Players:Chat("unskydive all")
+wait(.5)
+end
+end
+
 local function dcrash() 
       for i = 1,100 do
         chat("dog all all all")
@@ -387,6 +409,12 @@ wait(0.3)
 chat("h \n\n\n"..aname.." Hello World!")
 wait(0.3)
 dcrash()
+end)
+
+addcmd("purge",
+"",
+function()
+               purge()
 end)
 
 addcmd("cmds",

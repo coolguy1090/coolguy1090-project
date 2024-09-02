@@ -172,7 +172,6 @@ local bgears = {
     "VampireVanquisher",
     "OrinthianSwordAndShield",
     "IvoryPeriastron"
-  
 }
 
 local blacklist = {"a"}
@@ -624,16 +623,18 @@ end)
 antihatc()
 
 local gearban2c = coroutine.wrap(function()
-    while wait() do
-      if gearban2 then
-        for i, gear in ipairs(bgears) do
-               for i,v in pairs(game.Players:GetPlayers()) do
-                    if v.Character:FindFirstChild(gear) or v.Backpack:FindFirstChild(gear) and v.Name ~= lp.Name then
-                  chat("reset "..v.Name)
-chat("h/\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"..aname.."\n\n\nBuddy Your Are Not Gonna Use "..gear.."")
+  while wait() do
+    if gearban2 then
+      for i, gear in pairs(bgears) do
+        for i,v in pairs(game.Players:GetPlayers()) do
+          for wli, wlv in pairs(whitelist) do
+            if v.Character:FindFirstChild(gear) or v.Backpack:FindFirstChild(gear) and v.Name ~= lp.Name and v.Name ~= wlv and v.Name ~= owners then
+            chat("reset "..v.Name)
+            chat("h/\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"..aname.."\n\n\nBuddy Your Are Not Gonna Use "..gear.."")
 end
 end
-end            
+end
+end
 end
 end
 end)

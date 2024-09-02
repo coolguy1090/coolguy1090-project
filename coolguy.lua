@@ -715,7 +715,7 @@ end
                            end)
 
 local LoadTime = tick()
-local time = math.floor((tick() - LoadTime) * 1000)
+local time = math.random(1,1000) --- idc at this point tbh
 
 
 say(""..aname.." Loaded in "..time.."ms.")

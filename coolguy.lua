@@ -164,7 +164,8 @@ end
 end
 --//
 local onstart = {
-"iyc logs"
+"iyc logs",
+"-antir"
 }
 
 local bgears = {
@@ -332,6 +333,18 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = plr.Character.Human
     chat("rocket ".. plr.Name .."/".. plr.Name .."/".. plr.Name)
 end
 end)
+end)
+
+addcmd("antir",
+"",
+function()
+         while wait() do
+        for i,v in pairs(game.Workspace:GetDescendants()) do
+            if v.Name == "Rocket" then
+            v:Destroy()
+end
+end
+end
 end)
 
 addcmd("fixfilter",

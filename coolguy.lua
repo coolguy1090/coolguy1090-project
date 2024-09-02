@@ -424,7 +424,7 @@ wait(0.3)
 dcrash()
 end)
 
-addcmd("crash",
+addcmd("purge",
 "",
 function()
                purge()

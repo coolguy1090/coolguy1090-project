@@ -177,6 +177,8 @@ local bgears = {
 local blacklist = {"a"}
 local whitelist = {"a"}
 
+
+--//funcs
 local function say(msg)
     game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(msg, "All")
 end

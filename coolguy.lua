@@ -268,7 +268,7 @@ local admin = {prefix3 = prefix3, version = "v2"}
 local commands = {}
 local descriptions = {}
 local connections = {}
-local function addcmd(cmdName, cmdDescription, cmdFunction)
+local function addcommand(cmdName, cmdDescription, cmdFunction)
     commands[cmdName] = cmdName
     descriptions[cmdName] = cmdDescription
     connections[#connections + 1] = lp.Chatted:Connect(function(msg)
@@ -283,19 +283,19 @@ local function addcmd(cmdName, cmdDescription, cmdFunction)
         end)
 end
 
-addcmd("welmsg",
+addcommand("welmsg",
 "",
 function()
 joins = true
 end)
 
-addcmd("unwelmsg",
+addcommand("unwelmsg",
 "",
 function()
 joins = false
 end)
 
-    addcmd("m",
+    addcommand("m",
 "",
     function()
 local song = mtable[args[2]]
@@ -305,7 +305,7 @@ local song = mtable[args[2]]
 end
 end) --- ty dizzy (if dizzy wonders and sees this js know u helped me in the past with this.)
 
-addcmd("banhammer",
+addcommand("banhammer",
 "",
 function() --- Unfinished.
       local tool = game.Players.LocalPlayer.Backpack:WaitForChild("BanHammer")
@@ -314,7 +314,7 @@ end)
 end)
 
 
-      addcmd("k1",
+      addcommand("k1",
 "",
    function()
     check(args[2])
@@ -336,7 +336,7 @@ end
 end)
 end)
 
-addcmd("antir",
+addcommand("antir",
 "",
 function()
          while wait() do
@@ -348,7 +348,7 @@ end
 end
 end)
 
-addcmd("fixfilter",
+addcommand("fixfilter",
 "",
 function()
          for i = 1,100 do
@@ -362,7 +362,7 @@ end
          chat("h \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n-------------------------\nFix Ur Goofy Filter RoadBlocks\n-------------------------")
 end)
 
-addcmd("wl",
+addcommand("wl",
 "",
 function()
 check(args[2])
@@ -380,7 +380,7 @@ end
 end)
 end)
 
-addcmd("antikill",
+addcommand("antikill",
 "",
 function()
       connections.antikill = 
@@ -392,13 +392,13 @@ end)
 end)
 
 
-   addcmd("unantikill",
+   addcommand("unantikill",
    "",
    function()
       connections.antikill:Disconnect()
    end)
 
-addcmd("autogod",
+addcommand("autogod",
 "",
 function()
 check(args[2])
@@ -409,13 +409,13 @@ end)
 end)
 end)
 
-addcmd("rj",
+addcommand("rj",
 "",
 function()
       chat("iyc rj")
 end)
 
-addcmd("akak",
+addcommand("akak",
     "",
     function()
 chat("blind all")
@@ -425,13 +425,13 @@ wait(0.3)
 dcrash()
 end)
 
-addcmd("crash",
+addcommand("crash",
 "",
 function()
                purge()
 end)
 
-addcmd("cmds",
+addcommand("cmds",
     "",
     function()
 for i, v in pairs(cmds) do
@@ -439,13 +439,13 @@ print(i.." "..v)
 end
 end)
 
-  addcmd("bbg",
+  addcommand("bbg",
 "",
 function()
 gearban2 = true
 end)
 
-addcmd("reloadscript",
+addcommand("reloadscript",
     "",
     function()
 chat("h Reloading script....")
@@ -457,19 +457,19 @@ wait(0.3)
     antikill = false
     end)
 
-    addcmd("regen",
+    addcommand("regen",
         "",
         function()
             Regen()
         end)
 
-addcmd("nok",
+addcommand("nok",
     "",
     function()
         antikillbrick = true
         end)
 
-addcmd("ban2",
+addcommand("ban2",
 "",
     function()
                 check(args[2])
@@ -477,7 +477,7 @@ addcmd("ban2",
 end)
 
 
-   addcmd("findgear",
+   addcommand("findgear",
    "",
    function()
 local gear = gearlist[args[2]]
@@ -490,7 +490,7 @@ end
 end)
        
 
-  addcmd("ban",
+  addcommand("ban",
       "",
       function()
   check(args[2])
@@ -509,7 +509,7 @@ end
 end)
 end)
 
-addcmd("k2",
+addcommand("k2",
     "",
     function()
          local cframe = lpc.HumanoidRootPart.CFrame
@@ -557,7 +557,7 @@ end
 end)
 end)
 
-addcmd("vgc", -- similar to kohlslite but i swear i didnt skid it.
+addcommand("vgc", -- similar to kohlslite but i swear i didnt skid it.
 "",
 function()
     chat("gear me 00000000000000094794847")
@@ -573,7 +573,7 @@ end
 notif("Server Crashed!")
 end)--- srry gojo but ur simple vg sucks no offense
 
-addcmd("gb", --- Credits To Kohlslite For Click
+addcommand("gb", --- Credits To Kohlslite For Click
     "",
     function()
         check(args[2])
@@ -602,7 +602,7 @@ chat("h \n\n\n\n\n\n\n\n\n\n"..aname.."\n\n\n\n\n "..plr.Name.." Has Just Been U
 ban = false
 end)
 
-addcmd("toolban", --- unfinished rn.
+addcommand("toolban", --- unfinished rn.
 "",
    function()
 check(args[2])

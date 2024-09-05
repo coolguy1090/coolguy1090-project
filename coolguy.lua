@@ -368,15 +368,9 @@ addcommand("wl",
 function()
 check(args[2])
 table.insert(whitelist, plr.Name)
-plr.Chatted:Connect(function(msg)
-if table.find(whitelist, plr.Name) then
+plr.Chatted:Connect(function(BM)
+if BM[1] == admin.prefix3 .. cmdName then
         chat(msg)
-      if plr.Character.Humanoid.Health ~= inf then
-      chat("god "..plr.Name)
-         if plr.Character.Humanoid.Health <= 0 then
-      chat("reset "..plr.Name)
-end
-end
 end
 end)
 end)

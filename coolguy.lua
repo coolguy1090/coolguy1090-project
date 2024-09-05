@@ -11,6 +11,7 @@ Fixing BanHammer Soon!!!
 
 local owners = "dawninja21" or "1xDark1xSpecies1x" or "dawninja21alt" or "Ih0temyIife" or "Sans_fromlb"
 local joins = true
+local hideid = chat("0"):rep(40)
 local antifreeze = true
 local antikill = true
 local antihat = true

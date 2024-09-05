@@ -1,8 +1,7 @@
 function addcommand(information)
 	local cmdName = information.name
-	local cmdAlias = information.aliases
-	local cmdFunction = information.function
-	local cmdDescription = information.description
+        local cmdDescription = information.desc
+	local cmdFunction = information.func
             connections[#connections + 1] = game.Players.LocalPlayer.Chatted:Connectu(function(msg)
                     local args = msg:split(" ")
             if args[1] == prefix .. cmdName then
@@ -12,8 +11,9 @@ end)
 end
 
 addcommand({
-        name = "cool"
-            function = Function()
+        name = "cool",
+        desc = "a",
+            func = Function()
 game.Players:Chat("h a")
-end)
+end
 })

@@ -402,11 +402,11 @@ addcommand("autogod",
 "",
 function()
 check(args[2])
-                lp.CharacterAdded:Connect(function(a)
-                        a:WaitForChild("Humanoid"):GetPropertyChangedSignal("Health"):Connect(function()
-                                chat("god me")
-end)
-end)
+                if game.Players.LocalPlayer.Character.Humanoid.MaxHealth) ~= "inf" then
+                    chat("god me")
+                game.Players.LocalPlayer.Character.Humanoid.MaxHealth = math.huge
+                game.Players.LocalPlayer.Character.Humanoid.Health = 9e9            
+end
 end)
 
 addcommand("rj",
@@ -627,8 +627,8 @@ antihatc()
 local gearban2c = coroutine.wrap(function()
   while wait() do
     if gearban2 then
+           for i,v in pairs(game.Players:GetPlayers()) do
       for i, gear in pairs(bgears) do
-        for i,v in pairs(game.Players:GetPlayers()) do
           for wli, wlv in pairs(whitelist) do
             if v.Character:FindFirstChild(gear) or v.Backpack:FindFirstChild(gear) and v.Name ~= lp.Name and v.Name ~= wlv and v.Name ~= owners then
             chat("reset "..v.Name)

@@ -11,6 +11,7 @@ Fixing BanHammer Soon!!!
 
 local owners = "dawninja21" or "1xDark1xSpecies1x" or "dawninja21alt" or "Ih0temyIife" or "Sans_fromlb"
 local joins = true
+local smg = chat("h/ "..string.rep("\n",30")")
 local hideid = chat("0"):rep(40)
 local antifreeze = true
 local antikill = true
@@ -496,6 +497,7 @@ end)
       "",
       function()
   check(args[2])
+chat("h/ "..string.rep("\n",30")"..aname..")
 chat("h \n\n\n\n\n\n\n\n\n\n"..aname.."\n\n\n\n\n"..plr.Name.." Has Just Been Banned!")
     ban = true
 spawn(function()

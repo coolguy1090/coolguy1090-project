@@ -404,7 +404,7 @@ addcommand("autogod",
 "",
 function()
 check(args[2])
-                if game.Players.LocalPlayer.Character.Humanoid.MaxHealth) ~= "inf" then
+                if game.Players.LocalPlayer.Character.Humanoid.MaxHealth ~= "inf" then
                     chat("god me")
                 game.Players.LocalPlayer.Character.Humanoid.MaxHealth = math.huge
                 game.Players.LocalPlayer.Character.Humanoid.Health = 9e9            

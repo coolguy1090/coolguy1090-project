@@ -383,10 +383,12 @@ end)
 addcommand("antikill",
 "",
 function()
+if not connections.antikill then
       connections.antikill = 
 rs.RenderStepped:Connect(function()
          if lpch.Health == 0 then
 chat("reset me") 
+end
 end
 end)
 end)

@@ -564,9 +564,7 @@ function()
     local tool = lp.Backpack:WaitForChild("VampireVanquisher")
 tool.Parent = game.Players.LocalPlayer.Character
 tool:Activate()
-wait(0.3)
-tool.Remote:FireServer(Enum.KeyCode.Q)
-wait(0.3)
+wait(0.1)
      for i = 1,100 do
 chat("unsize me me me")
 end

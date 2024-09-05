@@ -505,6 +505,9 @@ if not game:GetService("Lighting"):FindFirstChild(plr.Name) and plr.Name ~= nil 
    chat("blind "..plr.Name)
      chat("punish "..plr.Name)
    chat("pm "..plr.Name.." Your Have Been Blacklisted From The Server!")
+            if plr.Name = nil then
+   ban = false
+end
 end
 end
 end)

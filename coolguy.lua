@@ -6,7 +6,8 @@ Coding This Script Has Been My Best One Ever (With Gojo),
 Should I Make More?,
 Dm Me (@dawninja21), Or (@ih0temylife)
 roblox user: dawninja21, or ih0temylife
-Fixing BanHammer Soon!!!
+Fixed BanHammer
+Similar to iis banhammer lmfao
 --]]
 
 local owners = "dawninja21" or "1xDark1xSpecies1x" or "dawninja21alt" or "Ih0temyIife" or "Sans_fromlb"
@@ -308,9 +309,30 @@ end) --- ty dizzy (if dizzy wonders and sees this js know u helped me in the pas
 
 addcommand("banhammer",
 "",
-function() --- Unfinished.
+function()
+         local mode = args[2]
+               chat("gear me 10468797")
+            local mode = kill
       local tool = game.Players.LocalPlayer.Backpack:WaitForChild("BanHammer")
       tool.Handle.Touched:Connect(function(v)
+         local p = v.Parent
+               if p == lp.Name then return end
+      if p.Character.Humanoid.Health <= 0 then return end
+            if not p:FidFirstChild("Humanoid") then
+                        if mode == "explode" then
+         for i = 1,50 do
+chat("explode "..p)
+end
+
+if mode == "kill" then
+chat("kill "..p)
+end
+
+if mode == "kick" then
+chat("-k1 "..p)
+end
+end
+end
 end)
 end)
 

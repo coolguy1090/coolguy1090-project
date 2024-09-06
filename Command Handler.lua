@@ -4,9 +4,9 @@ local connections = {}
 
 --- Edited ScV2 Handler. ---
 function addcommand(information)
-	local cmdName = information.Name
-        local cmdDescription = information.Desc
-	local cmdFunction = information.Function
+	local cmdName = info.Name
+        local cmdDescription = info.Desc
+	local cmdFunction = info.Function
             commands[cmdName] = cmdName
             descriptions[cmdDescription] = cmdDescription
             connections[#connections + 1] = game.Players.LocalPlayer.Chatted:Connectu(function(msg)

@@ -38,6 +38,41 @@ game.Players:Chat("h a")
 end
 })
 
+addcommand({
+        Name = "BanHammer",
+        Desc = "a",
+        Function = function(Player)
+                local plr = check(Player)
+        p.Chatted:Connect(function(PM)
+               chat("gear "..plr.Name.." 10468797")
+                        chat("h/"..string.rep("\n",30)BanHammer Given! to "..plr.Name)
+            local mode = kill
+      local tool = game.Players.LocalPlayer.Backpack:WaitForChild("BanHammer")
+      tool.Handle.Touched:Connect(function(v)
+         local p = v.Parent
+               if p == plr.Name then return end
+      if p.Character.Humanoid.Health <= 0 then return end
+            if not p:FidFirstChild("Humanoid") then return end
+                        if string,sub(PM, 1, 7) == "mode explode" then
+         for i = 1,50 do
+chat("explode "..p)
+end
+end
+
+if string.sub(PM, 1, 4) == "mode kill" then
+chat("kill "..p)
+end
+end
+
+if string.sub(PM, 1, 4) == "kick" then
+chat("-k1 "..p)
+end
+end)
+end)
+                        end)
+end
+})
+
 addcommand({ --- test
         Name = "king"
         Desc = "idk"

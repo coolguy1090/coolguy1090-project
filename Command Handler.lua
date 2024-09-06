@@ -1,7 +1,7 @@
 local commands = {}
 local descriptions = {}
 local connections = {}
-
+local prefix = "-"
 --- Edited ScV2 Handler. ---
 function addcommand(information)
 	local cmdName = info.Name

@@ -154,7 +154,7 @@ local lpc = game.Players.LocalPlayer.Character
 local lpch = game.Players.LocalPlayer.Character.HumanoidRootPart
 local getplrs = game.Players:GetPlayers()
 local plrserv = game:GetService("Players")
-local gamev = game:GetService("Workspace").Terrain["_Game"]
+local gamev = game:GetService("Workspace").Terrain:WaitForChild("_Game")
 local adminf = gamev.Admin
 local rp = adminf:FindFirstChild("Regen")
 --//funcs

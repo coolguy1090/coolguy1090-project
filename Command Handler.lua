@@ -4,8 +4,8 @@ local connections = {}
 
 --- Edited ScV2 Handler. ---
 function addcommand(information)
-	local cmdName = information.name
-        local cmdDescription = information.desc
+	local cmdName = information.Name
+        local cmdDescription = information.Desc
 	local cmdFunction = information.Function
             commands[cmdName] = cmdName
             descriptions[cmdDescription] = cmdDescription

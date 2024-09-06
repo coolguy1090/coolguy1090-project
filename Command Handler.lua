@@ -20,7 +20,7 @@ end
 addcommand({
         Name = "cool",
         Desc = "a",
-         Function = Function()
+         Function = function()
 game.Players:Chat("h a")
 end
 })

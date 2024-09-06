@@ -47,7 +47,9 @@ addcommand({
         Desc = "a",
         Function = function(Player)
                 local plr = check(Player)
-        p.Chatted:Connect(function(PM)
+        lp.Chatted:Connect(function(PM)
+                        local bm = string.split("PM, " ")
+                mode = bm[2]
                chat("gear "..plr.Name.." 10468797")
                         chat("h/"..string.rep("\n",30)BanHammer Given! to "..plr.Name)
             local mode = kill
@@ -57,18 +59,18 @@ addcommand({
                if p == plr.Name then return end
       if p.Character.Humanoid.Health <= 0 then return end
             if not p:FidFirstChild("Humanoid") then return end
-                        if string,sub(PM, 1, 7) == "mode explode" then
+                        if mode == "explode" then
+                        then
          for i = 1,50 do
 chat("explode "..p)
 end
 end
 
-if string.sub(PM, 1, 4) == "mode kill" then
+if mode == "kill" then
 chat("kill "..p)
 end
-end
 
-if string.sub(PM, 1, 4) == "kick" then
+if mode == "kick" then
 chat("-k1 "..p)
 end
 end)

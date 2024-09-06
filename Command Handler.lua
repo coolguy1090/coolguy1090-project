@@ -1,4 +1,3 @@
-
 local commands = {}
 local descriptions = {}
 local connections = {}

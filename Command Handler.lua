@@ -2,7 +2,9 @@ local commands = {}
 local descriptions = {}
 local connections = {}
 local prefix = "-"
---- Edited ScV2 Handler. ---
+--- Ok I Made This Handler But Similar to Scv2 ---
+--- idk if this handler works but u can use it if u want ---
+--- open source ---
 function addcommand(information)
 	local cmdName = info.Name
         local cmdDescription = info.Desc

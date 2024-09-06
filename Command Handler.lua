@@ -17,6 +17,10 @@ end
 end)
 end
 
+function chat(msg)
+game.Players:Chat(msg)
+end
+
 addcommand({
         Name = "cool",
         Desc = "a",
@@ -24,3 +28,10 @@ addcommand({
 game.Players:Chat("h a")
 end
 })
+
+addcommand({
+        Name = "king"
+        Desc = "idk"
+        Function = function(Player)
+                local plr = check(Player)
+                

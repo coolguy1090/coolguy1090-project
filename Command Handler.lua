@@ -1,6 +1,5 @@
 local aname = "Siyuru.Docx V3"
 local commands = {}
-local descriptions = {}
 local connections = {}
 local prefix = "-"
 --- Ok I Made This Handler But Similar to Scv2 ---
@@ -8,7 +7,6 @@ local prefix = "-"
 --- open source ---
 function addcommand(information)
 	local cmdName = info.Name
-        local cmdDescription = info.Desc
 	local cmdFunction = info.Function
             commands[cmdName] = cmdName
             descriptions[cmdDescription] = cmdDescription
@@ -36,7 +34,6 @@ end
 
 addcommand({
         Name = "cool",
-        Desc = "a",
          Function = function()
 game.Players:Chat("h a")
 end
@@ -44,7 +41,6 @@ end
 
 addcommand({
         Name = "BanHammer",
-        Desc = "a",
         Function = function(Player)
                 local plr = check(Player)
         lp.Chatted:Connect(function(PM)

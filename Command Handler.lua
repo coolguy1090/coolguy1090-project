@@ -44,7 +44,7 @@ addcommand({
         Function = function(Player)
                 local plr = check(Player)
         lp.Chatted:Connect(function(PM)
-                        local bm = string.split("PM, " ")
+                        local bm = string.split(PM, " ")
                 mode = bm[2]
                chat("gear "..plr.Name.." 10468797")
                         chat("h/"..string.rep("\n",30)BanHammer Given! to "..plr.Name)
@@ -81,3 +81,4 @@ addcommand({ --- test
                 local plr = check(Player)
         chat("kill "..plr.Name)
                 end
+})

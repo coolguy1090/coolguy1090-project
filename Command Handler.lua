@@ -9,7 +9,6 @@ function addcommand(information)
 	local cmdName = info.Name
 	local cmdFunction = info.Function
             commands[cmdName] = cmdName
-            descriptions[cmdDescription] = cmdDescription
             connections[#connections + 1] = game.Players.LocalPlayer.Chatted:Connectu(function(msg)
                    args = msg:split(" ")
             if args[1] == prefix .. cmdName then

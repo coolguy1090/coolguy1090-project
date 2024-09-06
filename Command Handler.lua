@@ -20,8 +20,6 @@ end
 local function check(a)
   for i,v in pairs(game.Players:GetPlayers()) do
     if string.sub(v.Name:lower(),1,#a) == a:lower() or string.sub(v.DisplayName:lower(), 1, #a) == a:lower() then
-      plr = v
-     gplr = v.Name
     end
   end
 end

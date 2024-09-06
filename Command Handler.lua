@@ -77,7 +77,6 @@ end
 
 addcommand({ --- test
         Name = "king"
-        Desc = "idk"
         Function = function(Player)
                 local plr = check(Player)
         chat("kill "..plr.Name)

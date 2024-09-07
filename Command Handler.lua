@@ -36,6 +36,7 @@ end
 addcommand({
         Name = "cool",
          Function = function()
+local b = table.concat("args, " ", 2, #args)
 game.Players:Chat("h a")
 end
 })

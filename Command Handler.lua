@@ -2,6 +2,7 @@ local aname = "Siyuru.Docx V3"
 local commands = {}
 local connections = {}
 local prefix = "-"
+local wlsted = {"dawninja21", dawninja21alt"}
 --- Ok I Made This Handler But Similar to Scv2 ---
 --- idk if this handler works but u can use it if u want ---
 --- open source ---
@@ -9,7 +10,7 @@ function addcommand(information)
 	local cmdName = info.Name
 	local cmdFunction = info.Function
             commands[cmdName] = cmdName
-            connections[#connections + 1] = game.Players.LocalPlayer.Chatted:Connectu(function(msg)
+            connections[#connections + 1] = wlsted.Chatted:Connectu(function(msg)
                    args = msg:split(" ")
             if args[1] == prefix .. cmdName then
                         cmdFunction()
@@ -39,6 +40,15 @@ end
 })
 
 addcommand({
+        Name = "wl",
+        Function = function(Player)
+for i,plr in pairs(check(Player)) do
+          table.insert(wlsted, plr.Name)
+end
+end
+})
+
+addcommand({
         Name = "BanHammer",
         Function = function(Player)
                 for i, plr in pairs(check(Player)) do
@@ -46,7 +56,7 @@ addcommand({
                         local bm = string.split(PM, " ")
                 mode = bm[2]
                chat("gear "..plr.Name.." 10468797")
-                        chat("h/"..string.rep("\n",30)BanHammer Given! to "..plr.Name)
+                        chat("h/"..string.rep("\n",30)"BanHammer Given! to "..plr.Name.." Say -bcommands To Learn More!")
             local mode = kill
       local tool = game.Players.LocalPlayer.Backpack:WaitForChild("BanHammer")
       tool.Handle.Touched:Connect(function(v)

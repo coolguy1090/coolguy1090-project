@@ -39,11 +39,17 @@ game.Players:Chat("h a")
 end
 })
 
-addcommand({
+addcommand({ --- unfinished.
             Name = "antis",
             Function = function(Player)
             for i, plr in pairs(check(Player)) do
-                        for i,v in pairs(
+                        for i,v in pairs(plr.Character:GetChildren()) do
+            if v.Name == "Rocket" then
+                        chat("unrocket/"..plr.Name)
+end
+end
+end
+})
             
 
 addcommand({

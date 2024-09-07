@@ -124,7 +124,7 @@ addcommand({ --- test
             if v.Name ~= lp.Name and not table.find(gwl, v.Name) then
             if v.bp:FindFirstChild(gear.Name) then
                         chat("reset "..v.Name)
-                        chat("h/"..string.rep("\n",30).."["..aname..]\nQuit Usin "..v.Name.." Just tried to use "..gear.Name.." WILD!")
+                        chat("h/"..string.rep("\n",30).."["..aname.."]"\nQuit it. "..v.Name.." Just tried to use "..gear.Name.." WILD!")
 end
 end
 end

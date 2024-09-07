@@ -99,8 +99,7 @@ end)
 
 addcommand({ --- test
         Name = "king",
-        Function = function()
-check(args[2])
+        Function = function(check(args[2]))
         chat("kill "..plr.Name)
                 end
 })

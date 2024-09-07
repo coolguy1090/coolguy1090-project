@@ -3,7 +3,7 @@ local commands = {}
 local connections = {}
 local lp = game.Players.LocalPlayer
 local prefix = "-"
-local wlsted = {"dawninja21", "dawninja21alt"}
+local wl = {"dawninja21", "dawninja21alt"}
 --- edited scv2 handla ---
 --- idk if this handler works but u can use it if u want ---
 --- open source ---
@@ -11,7 +11,7 @@ function addcommand(info)
 	local cmdName = info.Name
 	local cmdFunction = info.Function
             commands[cmdName] = cmdName
-            connections[#connections + 1] = game.Players.wlsted.Chatted:Connect(function(msg)
+            connections[#connections + 1] = lp.Connect(function(msg)
                    args = msg:split(" ")
             if args[1] == prefix .. cmdName then
                         cmdFunction()
@@ -22,6 +22,7 @@ end
 local function check(a)
   for i,v in pairs(game.Players:GetPlayers()) do
     if string.sub(v.Name:lower(),1,#a) == a:lower() or string.sub(v.DisplayName:lower(), 1, #a) == a:lower() then
+ple = v
                 if a:lower() == "me" then
                         return lp
 end
@@ -36,7 +37,6 @@ end
 addcommand({
         Name = "cool",
          Function = function()
-local b = table.concat("args, " ", 2, #args)
 game.Players:Chat("h a")
 end
 })
@@ -51,23 +51,23 @@ addcommand({ --- unfinished.
 end
 end
 end
+end
 })
             
 
 addcommand({
         Name = "wl",
-        Function = function(Player)
-for i,plr in pairs(check(Player)) do
-          table.insert(wlsted, plr.Name)
-end
-end
+        Function = function()
+check(args[2])
+     table.insert(wl, plr.Name)
+     end
 })
 
 addcommand({
         Name = "BanHammer",
-        Function = function(Player)
-                for i, plr in pairs(check(Player)) do
+        Function = function()
         lp.Chatted:Connect(function(PM)
+                                                check(args[2])
                         local bm = string.split(PM, " ")
                 mode = bm[2]
                chat("gear "..plr.Name.." 10468797")
@@ -80,7 +80,6 @@ addcommand({
       if p.Character.Humanoid.Health <= 0 then return end
             if not p:FidFirstChild("Humanoid") then return end
                         if mode == "explode" then
-                        then
          for i = 1,50 do
 chat("explode "..p)
 end
@@ -95,14 +94,13 @@ chat("-k1 "..p)
 end
 end)
 end)
-                        end)
-end
+                        end
 })
 
 addcommand({ --- test
-        Name = "king"
-        Function = function(Player)
-                local plr = check(Player)
+        Name = "king",
+        Function = function()
+check(args[2])
         chat("kill "..plr.Name)
                 end
 })

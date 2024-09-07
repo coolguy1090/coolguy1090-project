@@ -41,7 +41,7 @@ end
 addcommand({
         Name = "BanHammer",
         Function = function(Player)
-                local plr = check(Player)
+                for i, plr in pairs(check(Player)) do
         lp.Chatted:Connect(function(PM)
                         local bm = string.split(PM, " ")
                 mode = bm[2]

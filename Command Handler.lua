@@ -2,7 +2,7 @@ local aname = "Siyuru.Docx V3"
 local commands = {}
 local connections = {}
 local prefix = "-"
-local wlsted = {"dawninja21", "dawninja21alt"}
+local wl = {"dawninja21", "dawninja21alt"}
 --- edited scv2 handla ---
 --- idk if this handler works but u can use it if u want ---
 --- open source ---
@@ -10,7 +10,7 @@ function addcommand(information)
 	local cmdName = info.Name
 	local cmdFunction = info.Function
             commands[cmdName] = cmdName
-            connections[#connections + 1] = wlsted.Chatted:Connectu(function(msg)
+            connections[#connections + 1] = wl.Chatted:Connect(function(msg)
                    args = msg:split(" ")
             if args[1] == prefix .. cmdName then
                         cmdFunction()

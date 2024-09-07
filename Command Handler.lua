@@ -2,6 +2,9 @@ local aname = "Siyuru.Docx V3"
 local commands = {}
 local connections = {}
 local lp = game.Players.LocalPlayer
+local bp = lp.Backpack
+local lpc = lp.Character
+local lpch = lpc.HumanoidRootPart
 local prefix = "-"
 local wl = {"dawninja21", "dawninja21alt"}
 --- edited scv2 handla ---
@@ -64,6 +67,14 @@ check(args[2])
 })
 
 addcommand({
+            Name = "gwl",
+            Function = function()
+            check(args[2])
+table.insert(gwl, plr.Name)
+end
+})
+
+addcommand({
         Name = "BanHammer",
         Function = function()
         lp.Chatted:Connect(function(PM)
@@ -103,3 +114,20 @@ addcommand({ --- test
         chat("kill "..plr.Name)
                 end
 })
+
+
+                        task.spawn(function()
+            bang = true
+                        while bang do
+            for i, gear in pairs(bgears) do
+                        for i,v in pairs(game.Players:GetPlayers()) do
+            if v.Name ~= lp.Name and not table.find(gwl, v.Name) then
+            if v.bp:FindFirstChild(gear.Name) then
+                        chat("reset "..v.Name)
+                        chat("h/"..string.rep("\n",30).."["..aname..]\nQuit Usin "..v.Name.." Just tried to use "..gear.Name.." WILD!")
+end
+end
+end
+end
+end
+end)

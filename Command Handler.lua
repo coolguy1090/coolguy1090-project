@@ -11,7 +11,7 @@ function addcommand(info)
 	local cmdName = info.Name
 	local cmdFunction = info.Function
             commands[cmdName] = cmdName
-            connections[#connections + 1] = lp.Chatted:Connect(function(msg)
+            connections[#connections + 1] = game.Players.wlsted.Chatted:Connect(function(msg)
                    args = msg:split(" ")
             if args[1] == prefix .. cmdName then
                         cmdFunction()

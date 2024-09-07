@@ -6,7 +6,7 @@ local wl = {"dawninja21", "dawninja21alt"}
 --- edited scv2 handla ---
 --- idk if this handler works but u can use it if u want ---
 --- open source ---
-function addcommand(information)
+function addcommand(info)
 	local cmdName = info.Name
 	local cmdFunction = info.Function
             commands[cmdName] = cmdName

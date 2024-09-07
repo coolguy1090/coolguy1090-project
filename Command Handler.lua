@@ -3,7 +3,7 @@ local commands = {}
 local connections = {}
 local prefix = "-"
 local wlsted = {"dawninja21", "dawninja21alt"}
---- Ok I Made This Handler But Similar to Scv2 ---
+--- edited scv2 handla ---
 --- idk if this handler works but u can use it if u want ---
 --- open source ---
 function addcommand(information)
@@ -38,6 +38,13 @@ addcommand({
 game.Players:Chat("h a")
 end
 })
+
+addcommand({
+            Name = "antis",
+            Function = function(Player)
+            for i, plr in pairs(check(Player)) do
+                        for i,v in pairs(
+            
 
 addcommand({
         Name = "wl",

@@ -20,7 +20,7 @@ end
 local function check(a)
   for i,v in pairs(game.Players:GetPlayers()) do
     if string.sub(v.Name:lower(),1,#a) == a:lower() or string.sub(v.DisplayName:lower(), 1, #a) == a:lower() then
-                if a:lower == "me" then
+                if a:lower() == "me" then
                         return lp
 end
     end

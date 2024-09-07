@@ -1,6 +1,7 @@
 local aname = "Siyuru.Docx V3"
 local commands = {}
 local connections = {}
+local lp = game.Players.LocalPlayer
 local prefix = "-"
 local wlsted = {"dawninja21", "dawninja21alt"}
 --- edited scv2 handla ---
@@ -10,7 +11,7 @@ function addcommand(info)
 	local cmdName = info.Name
 	local cmdFunction = info.Function
             commands[cmdName] = cmdName
-            connections[#connections + 1] = wlsted.Chatted:Connect(function(msg)
+            connections[#connections + 1] = lp.Chatted:Connect(function(msg)
                    args = msg:split(" ")
             if args[1] == prefix .. cmdName then
                         cmdFunction()

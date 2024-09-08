@@ -78,14 +78,14 @@ end
 })
 
 addcommand({
-								Name = "untoolban",
+   Name = "untoolban",
 Function = function((
     check(args[2])
         connections.toolban:Disconnect()
 end
 })
 
-addcommand(
+addcommand({
                    Name = "vgc",
                         Function = function()
     chat("gear me 00000000000000094794847")
@@ -97,7 +97,8 @@ wait(0.1)
 chat("unsize me me me")
 end
 notif("Server Crashed!")
-end)
+end
+})
 
 addcommand({
         Name = "cool",

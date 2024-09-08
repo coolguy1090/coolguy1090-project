@@ -150,18 +150,19 @@ addcommand({ --- test
 })
 
 
-                        task.spawn(function()
-            bang = true
-                        while bang do
-            for i, gear in pairs(bgears) do
+							task.spawn(function()
+        if not connections.bang2 then
+				          connections.bang2 = rs.RenderStepped:Connect(function()
+        for i, gear in pairs(bgears) do
                         for i,v in pairs(game.Players:GetPlayers()) do
             if v.Name ~= lp.Name and not table.find(gwl, v.Name) then
             if v.Backpack:FindFirstChild(gear.Name) then
                         chat(":reset "..v.Name.." (FUCK)")
                         chat(":h/"..string.rep("\n",30).."["..aname..]\nQuit Usin "..v.Name.." Just tried to use "..gear.Name.." WILD!")
 end
+end)
 end
 end
-end
+end)
 end
 end)

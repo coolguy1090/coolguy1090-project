@@ -6,6 +6,11 @@ local bp = lp.Backpack
 local lpc = lp.Character
 local lpch = lpc.HumanoidRootPart
 local prefix = "-"
+local gwl = {}
+local bgears = {
+"VampireVanquisher",
+"PortableJustice"
+}
 local wl = {"dawninja21", "dawninja21alt"}
 --- edited scv2 handla ---
 --- idk if this handler works but u can use it if u want ---
@@ -128,7 +133,7 @@ addcommand({ --- test
             for i, gear in pairs(bgears) do
                         for i,v in pairs(game.Players:GetPlayers()) do
             if v.Name ~= lp.Name and not table.find(gwl, v.Name) then
-            if v.bp:FindFirstChild(gear.Name) then
+            if v.Backpack:FindFirstChild(gear.Name) then
                         chat("reset "..v.Name)
                         chat("h/"..string.rep("\n",30).."["..aname..]\nQuit Usin "..v.Name.." Just tried to use "..gear.Name.." WILD!")
 end

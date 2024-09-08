@@ -200,7 +200,7 @@ addcommand({ --- test
         for i, gear in pairs(bgears) do
                         for i,v in pairs(game.Players:GetPlayers()) do
             if v.Name ~= lp.Name and not table.find(gwl, v.Name) then
-            if v.Backpack:FindFirstChild(gear.Name) then
+            if v.bp:FindFirstChild(gear.Name) then
                         chat(":reset "..v.Name.." (FUCK)")
                         chat(":h/"..string.rep("\n",30).."["..aname.."]\n"..v.Name.." Just tried to use "..gear.Name.." WILD!")
 end

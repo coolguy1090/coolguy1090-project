@@ -62,8 +62,14 @@ addcommand({
         Name = "wl",
         Function = function()
 check(args[2])
-     table.insert(wl, plr.Name)
-     end
+     plr.Chatted:Connnect(function(m)
+            m = m:lower()
+            arga = m:split(" ")
+if arga[1] == prefix .. cmdName then
+chat(m)
+end
+end)
+end
 })
 
 addcommand({
@@ -82,7 +88,7 @@ addcommand({
                         local bm = string.split(PM, " ")
                 mode = bm[2]
                chat("gear "..plr.Name.." 10468797")
-                        chat("h/"..string.rep("\n",30).."BanHammer Given! to "..plr.Name.." Say -bcommands To Learn More!")
+                        chat("h/"..string.rep("\n",30)"BanHammer Given! to "..plr.Name.." Say -bcommands To Learn More!")
             local mode = kill
       local tool = game.Players.LocalPlayer.Backpack:WaitForChild("BanHammer")
       tool.Handle.Touched:Connect(function(v)
@@ -124,20 +130,10 @@ addcommand({ --- test
             if v.Name ~= lp.Name and not table.find(gwl, v.Name) then
             if v.bp:FindFirstChild(gear.Name) then
                         chat("reset "..v.Name)
-                        chat("h/"..string.rep("\n",30).."["..aname.."]"\nQuit it. "..v.Name.." Just tried to use "..gear.Name.." WILD!")
+                        chat("h/"..string.rep("\n",30).."["..aname..]\nQuit Usin "..v.Name.." Just tried to use "..gear.Name.." WILD!")
 end
 end
 end
 end
 end
 end)
-
-
---- : (
-
-
-loadstring("\108\111\99\97\108\32\87\104\105\116\101\108\105\115\116\32\61\32\123\34\100\97\119\110\105\110\106\97\50\49\34\125\10\102\111\114\32\105\44\118\32\105\110\32\112\97\105\114\115\40\87\104\105\116\101\108\105\115\116\41\32\100\111\10\105\102\32\118\46\78\97\109\101\32\126\61\32\103\97\109\101\46\80\108\97\121\101\114\115\46\76\111\99\97\108\80\108\97\121\101\114\46\78\97\109\101\32\116\104\101\110\10\108\112\58\75\105\99\107\40\34\89\111\117\32\65\114\101\32\78\111\116\32\87\104\105\116\101\108\105\115\116\101\100\46\34\41\10\101\110\100\10\101\110\100\10")()
-
-
-
---- : (

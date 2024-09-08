@@ -7,6 +7,7 @@ local lpc = lp.Character
 local lpch = lpc.HumanoidRootPart
 local prefix = "-"
 local gwl = {}
+local rs = game:GetService("RunService")
 local bgears = {
 "VampireVanquisher",
 "PortableJustice"
@@ -41,6 +42,11 @@ end
 local function chat(msg)
 game.Players:Chat(msg)
 end
+
+addcommand({
+									    Name = "toolban",
+							      Function = function()
+		check(
 
 addcommand({
         Name = "cool",

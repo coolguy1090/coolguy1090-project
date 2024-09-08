@@ -181,7 +181,7 @@ addcommand({
                 Function = function()
         for i, v in pairs(game:GetService("Workspace").Terrain._Game.Workspace.Obby:GetChildren()) do
                 v.CanCollide = false
-                v.CanTouch = faldr
+                v.CanTouch = false
 end
 end
 })

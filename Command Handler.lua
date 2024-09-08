@@ -46,7 +46,16 @@ end
 addcommand({
 									    Name = "toolban",
 							      Function = function()
-		check(
+					check(args[2])
+				if not connections.toolban then
+connections.toolban = rs.RenderStepped:Connect(function()
+								if plr.Backpack:FindFirstChildClassOf("Tool") then
+chat("ungear "..plr.Name)
+end
+end)
+end
+end
+})
 
 addcommand({
         Name = "cool",

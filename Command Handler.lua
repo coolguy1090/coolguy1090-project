@@ -1,5 +1,8 @@
 --[[
-Script Will
+Script Will Go Private Soon.
+Dm me for access if u want it.
+Private in 3 weeks cya.
+--]]
 
 
 local aname = "Siyuru.Docx V3"
@@ -82,9 +85,9 @@ addcommand({
 end
 })
 
-addcommand({
-								Name = "vgc",
-										Function = function()
+addcommand(
+                   Name = "vgc",
+                        Function = function()
     chat("gear me 00000000000000094794847")
     local tool = lp.bp:WaitForChild("VampireVanquisher")
 tool.Parent = game.Players.LocalPlayer.Character
@@ -147,7 +150,7 @@ addcommand({
                         local bm = string.split(PM, " ")
                 mode = bm[2]
                chat("gear "..plr.Name.." 10468797")
-                        chat("h/"..string.rep("\n",30)"BanHammer Given! to "..plr.Name.." Say -bcommands To Learn More!")
+                        chat("h/"..string.rep("\n",30).."BanHammer Given! to "..plr.Name.." Say -bcommands To Learn More!")
             local mode = kill
       local tool = game.Players.LocalPlayer.Backpack:WaitForChild("BanHammer")
       tool.Handle.Touched:Connect(function(v)

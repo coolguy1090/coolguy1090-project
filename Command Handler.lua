@@ -108,12 +108,11 @@ end
 
 addcommand({ --- unfinished.
             Name = "antis",
-            Function = function(Player)
-            for i, plr in pairs(check(Player)) do
+            Function = function()
+                        check(args[2])
                         for i,v in pairs(plr.Character:GetChildren()) do
             if v.Name == "Rocket" then
                         chat("unrocket/"..plr.Name)
-end
 end
 end
 end

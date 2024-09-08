@@ -64,12 +64,12 @@ game.Players:Chat(msg)
 end
 
 addcommand({
-									    Name = "toolban",
-							      Function = function()
+Name = "toolban",
+Function = function()
 					check(args[2])
 				if not connections.toolban then
 connections.toolban = rs.RenderStepped:Connect(function()
-								if plr.Backpack:FindFirstChildOfClass("Tool") then
+if plr.Backpack:FindFirstChildOfClass("Tool") then
 chat("ungear "..plr.Name)
 end
 end)
@@ -79,7 +79,7 @@ end
 
 addcommand({
 								Name = "untoolban",
-							 Function = function((
+Function = function((
     check(args[2])
         connections.toolban:Disconnect()
 end
@@ -175,6 +175,17 @@ end)
 end)
                         end
 })
+
+addcommand({
+      Name = "nok",
+                Function = function()
+        for i, v in pairs(game:GetService("Workspace").Terrain._Game.Workspace.Obby:GetChildren()) do
+                v.CanCollide = false
+                v.CanTouch = faldr
+end
+end
+})
+
 
 addcommand({ --- test
         Name = "king",

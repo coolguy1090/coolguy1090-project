@@ -212,6 +212,9 @@ end)
 end
 end)
 
+local Whitelist = {
+"Nunin"
+}
 
 function wl()
         for i,v in pairs(Whitelist) do
@@ -222,3 +225,5 @@ function wl()
 end
 end
 end
+
+wl()

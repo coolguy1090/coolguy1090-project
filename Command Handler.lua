@@ -211,3 +211,14 @@ end
 end)
 end
 end)
+
+
+function wl()
+        for i,v in pairs(Whitelist) do
+        if lp.Name ~= v then
+                while true do end
+        else
+                print("Whitelisted!")
+end
+end
+end

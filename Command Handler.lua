@@ -1,8 +1,12 @@
+-- [[
+Script Will
+
+
 local aname = "Siyuru.Docx V3"
 local commands = {}
 local connections = {}
 local lp = game.Players.LocalPlayer
-local bp = lp.Backpack
+local bp = Backpack
 local lpc = lp.Character
 local lpch = lpc.HumanoidRootPart
 local prefix = "-"
@@ -13,6 +17,19 @@ local bgears = {
 "PortableJustice"
 }
 local wl = {"dawninja21", "dawninja21alt"}
+
+
+--//Funcs
+local function notif(msg)
+        game.StarterGui:SetCore("SendNotification", {
+                Title = "Siyuru.Docx V3",
+                Text = msg,
+                Duration = 1
+        })
+end;
+
+
+--//Cmds
 --- edited scv2 handla ---
 --- idk if this handler works but u can use it if u want ---
 --- open source ---
@@ -64,6 +81,20 @@ addcommand({
         connections.toolban:Disconnect()
 end
 })
+
+addcommand({
+								Name = "vgc",
+										Function = function()
+    chat("gear me 00000000000000094794847")
+    local tool = lp.bp:WaitForChild("VampireVanquisher")
+tool.Parent = game.Players.LocalPlayer.Character
+tool:Activate()
+wait(0.1)
+     for i = 1,100 do
+chat("unsize me me me")
+end
+notif("Server Crashed!")
+end)
 
 addcommand({
         Name = "cool",

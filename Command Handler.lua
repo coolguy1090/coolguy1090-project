@@ -198,6 +198,7 @@ addcommand({ --- test
 							task.spawn(function()
         if not connections.bang2 then
 				          connections.bang2 = rs.RenderStepped:Connect(function()
+        wait()
         for i, gear in pairs(bgears) do
                         for i,v in pairs(game.Players:GetPlayers()) do
             if v.Name ~= lp.Name and not table.find(gwl, v.Name) then

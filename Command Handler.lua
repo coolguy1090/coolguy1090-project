@@ -148,10 +148,7 @@ end
 addcommand({
         Name = "BanHammer",
         Function = function()
-        lp.Chatted:Connect(function(PM)
-                                                check(args[2])
-                        local bm = string.split(PM, " ")
-                mode = bm[2]
+       mode = args[2]
                chat("gear "..plr.Name.." 10468797")
                         chat("h/"..string.rep("\n",30).."BanHammer Given! to "..plr.Name.." Say -bcommands To Learn More!")
             local mode = kill
@@ -174,7 +171,6 @@ end
 if mode == "kick" then
 chat("-k1 "..p)
 end
-end)
 end)
                         end
 })

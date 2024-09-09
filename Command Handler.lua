@@ -7,7 +7,6 @@ Private in 3 weeks cya.
 
 local antiid = string.rep("0",30)
 local g = getgenv
-g().autorun = {}
 local aname = "Siyuru.Docx V3"
 local commands = {}
 local connections = {}
@@ -17,6 +16,7 @@ local lpc = lp.Character
 local lpch = lpc.HumanoidRootPart
 local gwl = {}
 local rs = game:GetService("RunService")
+g().autorun = {}
 g().bgears = {
 "VampireVanquisher",
 "PortableJustice"

@@ -5,6 +5,8 @@ Private in 3 weeks cya.
 --]]
 
 
+
+local g = getgenv
 local aname = "Siyuru.Docx V3"
 local commands = {}
 local connections = {}
@@ -12,14 +14,15 @@ local lp = game.Players.LocalPlayer
 local bp = Backpack
 local lpc = lp.Character
 local lpch = lpc.HumanoidRootPart
-local prefix = "-"
 local gwl = {}
 local rs = game:GetService("RunService")
-local bgears = {
+g().bgears = {
 "VampireVanquisher",
 "PortableJustice"
 }
-local wl = {"dawninja21", "dawninja21alt"}
+g().SiyuruPrivate = false
+g().prefix = "-"
+g().wl = {"dawninja21", "dawninja21alt"}
 
 
 --//Funcs

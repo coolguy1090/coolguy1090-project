@@ -36,7 +36,9 @@ end;
 
 function startups()
         for i = 1,#autorun do
-                chat("
+                chat("autorun[i]")
+end
+end
 
 
 --//Cmds

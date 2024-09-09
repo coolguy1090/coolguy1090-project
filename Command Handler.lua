@@ -34,6 +34,10 @@ local function notif(msg)
         })
 end;
 
+function startups()
+        for i = 1,#autorun do
+                chat("
+
 
 --//Cmds
 --- edited scv2 handla ---

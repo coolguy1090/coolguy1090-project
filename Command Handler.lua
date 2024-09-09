@@ -7,6 +7,7 @@ Private in 3 weeks cya.
 
 local antiid = string.rep("0",30)
 local g = getgenv
+g().autorun = {}
 local aname = "Siyuru.Docx V3"
 local commands = {}
 local connections = {}
@@ -36,7 +37,7 @@ end;
 
 function startups()
         for i = 1,#autorun do
-                chat("autorun[i]")
+                chat(autorun[i])
 end
 end
 

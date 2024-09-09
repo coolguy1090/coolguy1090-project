@@ -5,7 +5,7 @@ Private in 3 weeks cya.
 --]]
 
 
-
+local antilog = string.rep("0",30)
 local g = getgenv
 local aname = "Siyuru.Docx V3"
 local commands = {}

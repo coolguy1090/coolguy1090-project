@@ -231,4 +231,8 @@ end
 end
 end
 
+connections[#connections + 1] = if siyuruprivate then
+end
+end)
+
 wl()

@@ -166,7 +166,8 @@ if not game.Lighting:FindFirstChild(plr.Name) then
    chat("blind "..plr.Name)
      chat("punish "..plr.Name)
    chat("pm "..plr.Name.." Your Have Been Blacklisted From The Server!")
-        until not plr
+        if not plr then
+                connections.ban:Disconnect()
 end
 end
 end)

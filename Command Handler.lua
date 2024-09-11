@@ -155,6 +155,24 @@ end
 })
 
 addcommand({
+        Name = "ban"
+        Function = function()
+check(args[2])
+chat("h \n\n\n\n\n\n\n\n\n\n"..aname.."\n\n\n\n\n"..plr.Name.." Has Just Been Banned!")
+    if not connections.ban then
+                connections.ban = repeat rs.Renderstepped:Wait()
+if not game.Lighting:FindFirstChild(plr.Name) then
+    chat("skydive "..plr.Name)
+   chat("blind "..plr.Name)
+     chat("punish "..plr.Name)
+   chat("pm "..plr.Name.." Your Have Been Blacklisted From The Server!")
+        until not plr
+end
+end
+end)
+})
+
+addcommand({
         Name = "BanHammer",
         Function = function()
        mode = args[2]
@@ -205,7 +223,7 @@ addcommand({ --- test
 
 							task.spawn(function()
         if not connections.bang2 then
-				          connections.bang2 = rs.RenderStepped:Wait()
+				          connections.bang2 = repeat rs.RenderStepped:Wait()
         for i, gear in pairs(bgears) do
                         for i,v in pairs(game.Players:GetPlayers()) do
             if v.Name ~= lp.Name and not table.find(gwl, v.Name) then

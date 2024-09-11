@@ -154,7 +154,7 @@ end
 })
 
 addcommand({
-        Name = "ban"
+        Name = "ban",
         Function = function()
 check(args[2])
 chat("h \n\n\n\n\n\n\n\n\n\n"..aname.."\n\n\n\n\n"..plr.Name.." Has Just Been Banned!")

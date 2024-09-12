@@ -9,7 +9,7 @@ Siyuru private in 3 days 🐍 on top
 
 
 local antiid = string.rep("0",30)
-local aname = "Python.lua V3"
+local aname = "Python.lua V3" --- renamed rn
 local commands = {}
 local connections = {}
 local lp = game.Players.LocalPlayer

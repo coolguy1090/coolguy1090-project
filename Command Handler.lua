@@ -90,7 +90,7 @@ end
 
 addcommand({
    Name = "untoolban",
-Function = function((
+Function = function()
     check(args[2])
         connections.toolban:Disconnect()
 end
@@ -168,10 +168,9 @@ if not game.Lighting:FindFirstChild(plr.Name) then
         if not plr then
                 connections.ban:Disconnect()
 end
-end
 end)
 end
-end)
+end
 })
 
 addcommand({

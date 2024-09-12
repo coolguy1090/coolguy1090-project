@@ -164,13 +164,13 @@ check(args[2])
 chat("h \n\n\n\n\n\n\n\n\n\n"..aname.."\n\n\n\n\n"..plr.Name.." Has Just Been Banned!")
     if not connections.ban then
                 connections.ban = rs.Renderstepped:Connect(function()
+        if not plr then
+                connections.ban:Disconnect()
 if not game.Lighting:FindFirstChild(plr.Name) then
     chat("skydive "..plr.Name)
    chat("blind "..plr.Name)
      chat("punish "..plr.Name)
    chat("pm "..plr.Name.." Your Have Been Blacklisted From The Server!")
-        if not plr then
-                connections.ban:Disconnect()
 end
 end)
 end

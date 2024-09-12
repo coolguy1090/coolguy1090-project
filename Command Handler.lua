@@ -54,7 +54,7 @@ function addcommand(info)
         for i,v in pairs(game.Players:GetPlayers()) do
             connections[#connections + 1] = v.Connect(function(msg)
                    args = msg:split(" ")
-        if v.Name == "dawninja21" or v.Name == wl then
+        if v == game.Players:FindFirstChild("dawninja21") or v == game.Players:FindFirstChild(wl) then
             if args[1] == prefix .. cmdName then
                         cmdFunction()
 end

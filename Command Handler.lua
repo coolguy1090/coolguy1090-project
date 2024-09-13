@@ -98,10 +98,10 @@ end
 
 
 addcommand({
-   Name = "untoolban",
+   Name = "untoolban", --- fixing cant rn
 Function = function()
     check(args[2])
-        connections["TOOLABN"..v.Name]:Disconnect()
+        connections["TOOLBAN"..plr.Name]:Disconnect()
 end
 })
 

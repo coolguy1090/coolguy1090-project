@@ -96,11 +96,12 @@ end
 end
 })
 
+
 addcommand({
    Name = "untoolban",
 Function = function()
     check(args[2])
-        connections.toolban:Disconnect()
+        connections["TOOLABN"..v.Name]:Disconnect()
 end
 })
 

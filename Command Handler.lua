@@ -7,6 +7,7 @@ to lazy rn
 Siyuru private in 3 days 🐍 on top
 --]]
 
+local g = getgenv
 local time = task.wait
 local antiid = string.rep("0",30)
 local aname = "<Python.docx V3🐍>" --- renamed rn

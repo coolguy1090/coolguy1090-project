@@ -220,6 +220,17 @@ end
 end
 })
 
+addcommand({
+        Name = "Test",
+        Function = function()
+                while true do
+                        chat("h a")
+task.wait(10)
+        break
+end
+end
+})
+
 
 addcommand({ --- test
         Name = "king",

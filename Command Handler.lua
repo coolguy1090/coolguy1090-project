@@ -19,14 +19,14 @@ local lpc = lp.Character
 local lpch = lpc.HumanoidRootPart
 local gwl = {}
 local rs = game:GetService("RunService")
-getgenv().autorun = {}
-getgenv().bgears = {
+g().autorun = {}
+g().bgears = {
 "VampireVanquisher",
 "PortableJustice"
 }
-getgenv().SiyuruPrivate = false
-getgenv().prefix = "-"
-getgenv().wl = {"dawninja21", "dawninja21alt"}
+g().SiyuruPrivate = false
+g().prefix = "-"
+g().wl = {"dawninja21", "dawninja21alt"}
 
 
 --//Funcs

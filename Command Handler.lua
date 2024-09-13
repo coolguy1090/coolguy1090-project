@@ -86,7 +86,7 @@ addcommand({
 Name = "toolban",
 Function = function()
 					check(args[2])
-connections["TOOLBAN "..plr.Name] = rs.RenderStepped:Connect(function()
+connections["_TOOLBAN "..plr.Name] = rs.RenderStepped:Connect(function()
 if plr.Backpack:FindFirstChildOfClass("Tool") then
 chat("ungear "..plr.Name)
 end
@@ -165,9 +165,9 @@ addcommand({
         Function = function()
 check(args[2])
 chat("h \n\n\n\n\n\n\n\n\n\n"..aname.."\n\n\n\n\n"..plr.Name.." Has Just Been Banned!")
-                connections["BAN "..plr.Name] = rs.Renderstepped:Connect(function()
+                connections["_BAN "..plr.Name] = rs.Renderstepped:Connect(function()
         if not plr then
-                connections["BAN "..plr.Name]:Disconnect()
+                connections["_BAN "..plr.Name]:Disconnect()
 if not game.Lighting:FindFirstChild(plr.Name) then
     chat("skydive "..plr.Name)
    chat("blind "..plr.Name)

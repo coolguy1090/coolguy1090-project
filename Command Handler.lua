@@ -86,13 +86,11 @@ addcommand({
 Name = "toolban",
 Function = function()
 					check(args[2])
-				if not connections.toolban then
-connections.toolban = rs.RenderStepped:Connect(function()
+connections["TOOLBAN "..plr.Name] = rs.RenderStepped:Connect(function()
 if plr.Backpack:FindFirstChildOfClass("Tool") then
 chat("ungear "..plr.Name)
 end
 end)
-end
 end
 })
 
@@ -243,7 +241,6 @@ addcommand({ --- test
 
 
 							task.spawn(function()
-        if not connections.bang2 then
 				    connections.bang2 = rs.RenderStepped:Connect(function()
         for i, gear in pairs(bgears) do
                         for i,v in pairs(game.Players:GetPlayers()) do
@@ -256,7 +253,6 @@ end
 end
 end)
 end)
-end
 end)
 
 local Whitelist = {

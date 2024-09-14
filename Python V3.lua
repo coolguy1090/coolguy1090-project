@@ -254,6 +254,17 @@ task.spawn(function() --- credits to jotunn i couldnt figure this simple shit ou
             end
 end)
 
+task.spawn(function() --- credits to jotunn i couldnt figure this simple shit out LOL
+          local bl = isfile("Blacklisted.txt")
+            if not bl then 
+               writefile("Blacklisted.txt", "Roblox\n")
+            else
+              bl = readfile("Blacklisted.txt"):split("\n")
+              for i = 1,#wl do 
+                table.insert(_G.Blacklisted, bl[i])
+              end 
+            end
+end)
 							task.spawn(function()
 				    connections.bang2 = rs.RenderStepped:Connect(function()
         for i, gear in pairs(bgears) do

@@ -269,19 +269,19 @@ end)
         task.spawn(function()
             while true do
     wait()
+            pcall(function()
     for i, v in ipairs(_G.Blacklisted) do
         if not v then
             break
                     else
-    pcall(function()
         if not game.Lighting:FindFirstChild(v) then
             chat("punish "..v.Name)
                 chat("blind "..v.Name)
                         chat("skydive "..v.Name)
 end
-end
-end
 end)
+end
+end
 end
 end)
 							task.spawn(function()

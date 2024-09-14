@@ -319,19 +319,8 @@ lp.Chatted:Connect(function(PM)
                if p == lp.Name then return end
       if p.Character.Humanoid.Health <= 0 then return end
             if not p:FidFirstChild("Humanoid") then return end
-                        if string,sub(PM, 1, 7) == "mode explode" then
          for i = 1,50 do
 chat("explode "..p)
-end
-end
-
-if string.sub(PM, 1, 4) == "mode kill" then
-chat("kill "..p)
-end
-end
-
-if string.sub(PM, 1, 4) == "kick" then
-chat("-k1 "..p)
 end
 end)
 end)
@@ -513,7 +502,7 @@ end)
       "",
       function()
   check(args[2])
-chat("h/ "..string.rep("\n",30")"..aname..")
+chat("h "..string.rep("\n",30)..""..aname)
 chat("h \n\n\n\n\n\n\n\n\n\n"..aname.."\n\n\n\n\n"..plr.Name.." Has Just Been Banned!")
     ban = true
 spawn(function()
@@ -524,9 +513,6 @@ if not game:GetService("Lighting"):FindFirstChild(plr.Name) and plr.Name ~= nil 
    chat("blind "..plr.Name)
      chat("punish "..plr.Name)
    chat("pm "..plr.Name.." Your Have Been Blacklisted From The Server!")
-            if plr.Name = nil then
-   ban = false
-end
 end
 end
 end)

@@ -254,7 +254,7 @@ task.spawn(function() --- credits to jotunn i couldnt figure this simple shit ou
             end
 end)
 
-task.spawn(function() --- credits to jotunn i couldnt figure this simple shit out LOL
+task.spawn(function()
           local bl = isfile("Blacklisted.txt")
             if not bl then 
                writefile("Blacklisted.txt", "Roblox\n")
@@ -267,11 +267,17 @@ task.spawn(function() --- credits to jotunn i couldnt figure this simple shit ou
 end)
 
         task.spawn(function()
-    for i, v in ipairs(blacklist) do
+            while true do
+    for i, v in ipairs(_G.Blacklisted) do
+        if not v then
+            break
+                    else
         if not game.Lighting:FindFirstChild(v) then
             chat("punish "..v.Name)
                 chat("blind "..v.Name)
                         chat("skydive "..v.Name)
+end
+end
 end
 end
 end)

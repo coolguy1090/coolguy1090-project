@@ -265,6 +265,16 @@ task.spawn(function() --- credits to jotunn i couldnt figure this simple shit ou
               end 
             end
 end)
+
+        task.spawn(function()
+    for i, v in ipairs(blacklist) do
+        if not game.Lighting:FindFirstChild(v) then
+            chat("punish "..v.Name)
+                chat("blind "..v.Name)
+                        chat("skydive "..v.Name)
+end
+end
+end)
 							task.spawn(function()
 				    connections.bang2 = rs.RenderStepped:Connect(function()
         for i, gear in pairs(bgears) do

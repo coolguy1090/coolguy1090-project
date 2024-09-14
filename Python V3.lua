@@ -243,6 +243,18 @@ addcommand({ --- test
 })
 
 
+task.spawn(function()
+          local wlsted = isfile("coolguy.txt")
+            if not wlsted then 
+               writefile("coolguy.txt", "Roblox\n")
+            else
+              wlsted = readfile("coolguy.txt"):split("\n")
+              for i = 1,#Whitelisted do 
+                table.insert(wl,Whitelisted[i])
+              end 
+            end
+end)
+
 							task.spawn(function()
 				    connections.bang2 = rs.RenderStepped:Connect(function()
         for i, gear in pairs(bgears) do

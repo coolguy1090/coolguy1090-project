@@ -260,7 +260,7 @@ task.spawn(function()
                writefile("Blacklisted.txt", "Roblox\n")
             else
               bl = readfile("Blacklisted.txt"):split("\n")
-              for i = 1,#wl do 
+              for i = 1,#bl do 
                 table.insert(_G.Blacklisted, bl[i])
               end 
             end

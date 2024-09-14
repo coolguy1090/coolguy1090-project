@@ -10,7 +10,7 @@ im trying to learn to break a loop but its not goin well
 
 
 ---
-
+local Gs = GetService
 _G.commands = {}
 _G.connections = {}
 _G.lp = game.Players.LocalPlayer
@@ -298,7 +298,7 @@ end)
 							task.spawn(function()
 				    connections.bang2 = rs.RenderStepped:Connect(function()
         for i, gear in pairs(bgears) do
-                        for i,v in pairs(game.Players:GetPlayers()) do
+                        for i,v in pairs(game:Gs("Players"):GetChildren()) do
             if v.Name ~= lp.Name and not table.find(gwl, v.Name) then
             if v.bp:FindFirstChild(gear.Name) then
                         chat(":reset "..v.Name.." (FUCK)")

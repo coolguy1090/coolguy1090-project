@@ -8,12 +8,6 @@ Siyuru private in 3 days 🐍 on top
 im trying to learn to break a loop but its not goin well
 --]]
 
---- settings
-_G.Settings = {
-    ["Prefix"] = "-",
-    ["SrcName"] = "<Python.docx V3🐍>", --- renamed rn
-    ["Default Whitelisted"] = ""
-}
 
 ---
 
@@ -24,14 +18,14 @@ _G.bp = Backpack
 _G.lpc = lp.Character
 _G.lpch = lpc.HumanoidRootPart
 _G.gwl = {}
-_G.aname = Settings["SrcName"]
+_G.aname = "<Python.docx V3🐍>"
 _G.rs = game:GetService("RunService")
 _G.autorun = {}
 _G.bgears = {
 "VampireVanquisher",
 "PortableJustice"
 }
-_G.prefix = Settings["Prefix"]
+_G.prefix = "-"
 _G.Whitelisted = {"dawninja21", "dawninja21alt"}
 
 
@@ -131,6 +125,14 @@ game.Players:Chat("h a")
 end
 })
 
+addcommand({
+    Name = "ban2"
+    Function = function()
+        check(args[2])
+            table.insert(_G.Blacklisted, plr.Name)
+        end
+})
+
 addcommand({ --- unfinished.
             Name = "antis",
             Function = function()
@@ -138,7 +140,7 @@ addcommand({ --- unfinished.
                         for i,v in pairs(plr.Character:GetChildren()) do
             if v.Name == "Rocket" then
                         chat("unrocket/"..plr.Name)
-end
+    end
 end
 end
 })

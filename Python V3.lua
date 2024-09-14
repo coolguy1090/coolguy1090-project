@@ -126,7 +126,7 @@ end
 })
 
 addcommand({
-    Name = "ban2"
+    Name = "ban2",
     Function = function()
         check(args[2])
             table.insert(_G.Blacklisted, plr.Name)
@@ -175,6 +175,7 @@ if not game.Lighting:FindFirstChild(plr.Name) then
    chat("blind "..plr.Name)
      chat("punish "..plr.Name)
    chat("pm "..plr.Name.." Your Have Been Blacklisted From The Server!")
+end
 end
 end)
 end
@@ -234,7 +235,7 @@ end
 
 addcommand({ --- test
         Name = "king",
-        Function = function(check(args[2]))
+        Function = function()
         chat("kill "..plr.Name)
                 end
 })
@@ -264,19 +265,6 @@ task.spawn(function()
             end
 end)
 
-            task.spawn(function() --- i have no idea if this works lmfao
-                    commands[cmdName] = cmdName
-                    pcall(function()
-    for i,v in ipairs(_G.Whitelisted) do
-                        v.Chatted:Connect(function(m)
-    local msgg = m:split(" ")
-                        if msgg = _G.prefix .. cmdName then
-    chat(m)
-                end)
-end
-end)
-end
-
         task.spawn(function()
             while true do
     wait()
@@ -290,9 +278,9 @@ end
                 chat("blind "..v.Name)
                         chat("skydive "..v.Name)
 end
+end
+end
 end)
-end
-end
 end
 end)
 							task.spawn(function()
@@ -306,7 +294,7 @@ end)
 end
 end
 end
-end)
+end
 end)
 end)
 

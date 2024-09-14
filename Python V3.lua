@@ -11,7 +11,7 @@ Siyuru private in 3 days 🐍 on top
 local Settings = {
     ["Prefix"] = "-",
     ["SrcName"] = "<Python.docx V3🐍>", --- renamed rn
-    ["DefaultWhitelisted"] = ""
+    ["Default Whitelisted"] = ""
 }
 
 ---

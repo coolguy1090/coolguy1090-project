@@ -5,6 +5,7 @@ Private in 3 weeks cya.
 the erros are crazy ill fix them but
 to lazy rn
 Siyuru private in 3 days 🐍 on top
+im trying to learn to break a loop but its not goin well
 --]]
 
 --- settings
@@ -64,7 +65,7 @@ function addcommand(info)
             connections[#connections + 1] = v.Chatted:Connect(function(msg)
                    args = msg:split(" ")
         if v == game.Players:FindFirstChild("dawninja21") or v == game.Players:FindFirstChild("dawninja21alt") then
-            if args[1] == prefix .. cmdName then
+            if args[1] == _G.prefix .. cmdName then
                         cmdFunction()
 end
 end
@@ -146,13 +147,8 @@ end
 addcommand({
         Name = "wl",
         Function = function()
-check(args[2])
-     plr.Chatted:Connnect(function(m)
-              local args = m:split(" ")
-                    
-            
-end
-end)
+    check(args[2])
+                table.insert(_G.Whitelisted, plr.Name)
 end
 })
 
@@ -165,7 +161,7 @@ end
 })
 
 addcommand({
-        Name = "ban",
+        Name = "ban",--- i might change to another ban
         Function = function()
 check(args[2])
 chat("h \n\n\n\n\n\n\n\n\n\n"..aname.."\n\n\n\n\n"..plr.Name.." Has Just Been Banned!")
@@ -265,6 +261,19 @@ task.spawn(function()
               end 
             end
 end)
+
+            task.spawn(function() --- i have no idea if this works lmfao
+                    commands[cmdName] = cmdName
+                    pcall(function()
+    for i,v in ipairs(_G.Whitelisted) do
+                        v.Chatted:Connect(function(m)
+    local msgg = m:split(" ")
+                        if msgg = _G.prefix .. cmdName then
+    chat(m)
+                end)
+end
+end)
+end
 
         task.spawn(function()
             while true do

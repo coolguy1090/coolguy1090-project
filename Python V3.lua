@@ -8,7 +8,7 @@ Siyuru private in 3 days 🐍 on top
 --]]
 
 --- settings
-local Settings = {
+_G.Settings = {
     ["Prefix"] = "-",
     ["SrcName"] = "<Python.docx V3🐍>", --- renamed rn
     ["Default Whitelisted"] = ""
@@ -16,22 +16,22 @@ local Settings = {
 
 ---
 
-local commands = {}
-local connections = {}
-local lp = game.Players.LocalPlayer
-local bp = Backpack
-local lpc = lp.Character
-local lpch = lpc.HumanoidRootPart
-local gwl = {}
-local aname = Settings["SrcName"]
-local rs = game:GetService("RunService")
-local autorun = {}
-local bgears = {
+_G.commands = {}
+_G.connections = {}
+_G.lp = game.Players.LocalPlayer
+_G.bp = Backpack
+_G.lpc = lp.Character
+_G.lpch = lpc.HumanoidRootPart
+_G.gwl = {}
+_G.aname = Settings["SrcName"]
+_G.rs = game:GetService("RunService")
+_G.autorun = {}
+_G.bgears = {
 "VampireVanquisher",
 "PortableJustice"
 }
-local prefix = Settings["Prefix"]
-local wl = {"dawninja21", "dawninja21alt"}
+_G.prefix = Settings["Prefix"]
+_G.Whitelisted = {"dawninja21", "dawninja21alt"}
 
 
 --//Funcs
@@ -63,7 +63,7 @@ function addcommand(info)
         for i,v in pairs(game.Players:GetPlayers()) do
             connections[#connections + 1] = v.Chatted:Connect(function(msg)
                    args = msg:split(" ")
-        if v == game.Players:FindFirstChild("dawninja21") or v == game.Players:FindFirstChild(wl) then
+        if v == game.Players:FindFirstChild("dawninja21") or v == game.Players:FindFirstChild("dawninja21alt") then
             if args[1] == prefix .. cmdName then
                         cmdFunction()
 end
@@ -148,10 +148,9 @@ addcommand({
         Function = function()
 check(args[2])
      plr.Chatted:Connnect(function(m)
-            m = m:lower()
-            arga = m:split(" ")
-if arga[1] == prefix .. cmdName then
-chat(m)
+              local args = m:split(" ")
+                    
+            
 end
 end)
 end
@@ -243,14 +242,14 @@ addcommand({ --- test
 })
 
 
-task.spawn(function()
-          local wlsted = isfile("coolguy.txt")
-            if not wlsted then 
-               writefile("coolguy.txt", "Roblox\n")
+task.spawn(function() --- credits to jotunn i couldnt figure this simple shit out LOL
+          local wl = isfile("Whitelisted.txt")
+            if not wl then 
+               writefile("Whitelisted.txt", "Roblox\n")
             else
-              wlsted = readfile("coolguy.txt"):split("\n")
-              for i = 1,#Whitelisted do 
-                table.insert(wl,Whitelisted[i])
+              wl = readfile("Whitelisted.txt"):split("\n")
+              for i = 1,#wl do 
+                table.insert(Whitelisted, wl[i])
               end 
             end
 end)

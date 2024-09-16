@@ -11,8 +11,8 @@ im trying to learn to break a loop but its not goin well
 
 ---
 local Gs = GetService
-_G.commands = {}
-_G.connections = {}
+local commands = {}
+local connections = {}
 _G.lp = game.Players.LocalPlayer
 _G.bp = Backpack
 _G.lpc = lp.Character
@@ -59,16 +59,12 @@ function addcommand(info)
 	local cmdName = info.Name
 	local cmdFunction = info.Function
             commands[cmdName] = cmdName
-        for i,v in pairs(game.Players:GetPlayers()) do
-            connections[#connections + 1] = v.Chatted:Connect(function(msg)
+            connections[#connections + 1] = lp.Chatted:Connect(function(msg)
                    args = msg:split(" ")
-        if v == game.Players:FindFirstChild("dawninja21") or v == game.Players:FindFirstChild("dawninja21alt") then
             if args[1] == _G.prefix .. cmdName then
                         cmdFunction()
 end
-end
 end)
-end
 end
 
 local function check(a)

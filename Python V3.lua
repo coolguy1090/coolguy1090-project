@@ -244,6 +244,23 @@ addcommand({ --- test
                 end
 })
 
+local function wl(v) --- yea idc if im called a skid
+v.Chatted:Connect(function(msg) --- literally i a wl like 30 timed and it didnt work
+                if table.find(Whitelisted, v.Name) then
+        local command = string.gsub(msg:lower(), "me", v.Name)
+                        if string.sub(command, 1, 1) == ":" then
+                                        command = ""
+end
+                        if string.sub(command, 1, 1) == "" then
+                                command = ""
+end
+                        
+                        else
+        chat(command)
+end
+end)
+end
+
 
 task.spawn(function() --- credits to jotunn i couldnt figure this simple shit out LOL
           local wl = isfile("Whitelisted.txt")

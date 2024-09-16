@@ -244,8 +244,8 @@ addcommand({ --- test
                 end
 })
 
-local function wl(v) --- yea idc if im called a skid
-v.Chatted:Connect(function(msg) --- literally i tried a wl like 30 times and it didnt work
+task.spawn(function() --- yea idc if im called a skid
+game.Players.PlayerChatted:Connect(function(msg) --- literally i tried a wl like 30 times and it didnt work
                 if table.find(_G.Whitelisted, v.Name) then
         local command = msg:split(" ")
                         if string.sub(command[1], 1, 1) == ":" then return end

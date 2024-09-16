@@ -253,9 +253,10 @@ v.Chatted:Connect(function(msg) --- literally i tried a wl like 30 times and it 
                         if string.sub(command, 1, 1) == "" then return end
 
                         if string.sub(command 1, 1) == "/" then return end
-                        
-                        else
-        chat(command)
+
+                        if string.sub(command 1, 1,) == _G.prefix then
+                                chat(command)
+end
 end
 end)
 end

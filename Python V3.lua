@@ -248,14 +248,12 @@ local function wl(v) --- yea idc if im called a skid
 v.Chatted:Connect(function(msg) --- literally i a wl like 30 timed and it didnt work
                 if table.find(_G.Whitelisted, v.Name) then
         local command = string.gsub(msg:lower(), "me", v.Name)
-                        if string.sub(command, 1, 1) == ":" then
-                                        command = ""
-end
-                        if string.sub(command, 1, 1) == "" then
-                                command = ""
-end
-                        if string.sub(command 1, 1) == "/" then
-                                command = ""
+                        if string.sub(command, 1, 1) == ":" then return end
+
+                        if string.sub(command, 1, 1) == "" then return end
+
+
+                        if string.sub(command 1, 1) == "/" then return end
                         
                         else
         chat(command)

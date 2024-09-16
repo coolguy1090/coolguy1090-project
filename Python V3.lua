@@ -325,7 +325,7 @@ end)
 end
 end)
 							task.spawn(function()
-				    CONS.bang2 = RunService.RenderStepped:Connect(function()
+				    CONS["BANG2"] = RunService.RenderStepped:Connect(function()
         for i, gear in pairs(bgears) do
                         for i,v in pairs(game:Gs("Players"):GetChildren()) do
             if v.Name ~= lp.Name and not table.find(gwl, v.Name) then

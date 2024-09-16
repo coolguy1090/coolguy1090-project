@@ -247,15 +247,15 @@ addcommand({ --- test
 local function wl(v) --- yea idc if im called a skid
 v.Chatted:Connect(function(msg) --- literally i tried a wl like 30 times and it didnt work
                 if table.find(_G.Whitelisted, v.Name) then
-        local command = string.gsub(msg:lower(), "me", v.Name)
-                        if string.sub(command, 1, 1) == ":" then return end
+        local command = msg:split(" ")
+                        if string.sub(command[1], 1, 1) == ":" then return end
 
-                        if string.sub(command, 1, 1) == "" then return end
+                        if string.sub(command[1], 1, 1) == "" then return end
 
-                        if string.sub(command 1, 1) == "/" then return end
+                        if string.sub(command[1], 1, 1) == "/" then return end
 
-                        if string.sub(command 1, 1,) == _G.prefix then
-                                chat(command)
+                        if string.sub(command[1], 1, 1,) == _G.prefix then
+                                chat(command[1])
 end
 end
 end)

@@ -263,8 +263,6 @@ end
 end)
 end
 
-wl(v)
-
 task.spawn(function() --- credits to jotunn i couldnt figure this simple shit out LOL
           local wl = isfile("Whitelisted.txt")
             if not wl then 

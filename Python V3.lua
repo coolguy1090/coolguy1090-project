@@ -46,6 +46,10 @@ end
 
 startups()
 
+function chat(msg)
+        game.Players:Chat(msg)
+end
+
 
 --//Cmds
 --- edited scv2 handla ---

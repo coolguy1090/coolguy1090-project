@@ -10,9 +10,9 @@ im trying to learn to break a loop but its not goin well
 
 
 ---
-local Gs = GetService
+local RunService = game:GetService("RunService")
 local commands = {}
-local connections = {}
+local CONS = {}
 _G.lp = game.Players.LocalPlayer
 _G.bp = Backpack
 _G.lpc = lp.Character
@@ -59,7 +59,7 @@ function addcommand(info)
 	local cmdName = info.Name
 	local cmdFunction = info.Function
             commands[cmdName] = cmdName
-            connections[#connections + 1] = lp.Chatted:Connect(function(msg)
+            CONS[#CONS + 1] = lp.Chatted:Connect(function(msg)
                    args = msg:split(" ")
             if args[1] == _G.prefix .. cmdName then
                         cmdFunction()
@@ -86,7 +86,7 @@ addcommand({
 Name = "toolban",
 Function = function()
 					check(args[2])
-connections["_TOOLBAN "..plr.Name] = rs.RenderStepped:Connect(function()
+CONS["_TOOLBAN "..plr.Name] = RunService.RenderStepped:Connect(function()
 if plr.Backpack:FindFirstChildOfClass("Tool") then
 chat("ungear "..plr.Name)
 end
@@ -99,7 +99,7 @@ addcommand({
    Name = "untoolban", --- fixing cant rn
 Function = function()
     check(args[2])
-        connections["_TOOLBAN"..plr.Name]:Disconnect()
+        CONS["_TOOLBAN"..plr.Name]:Disconnect()
 end
 })
 
@@ -133,15 +133,38 @@ addcommand({
         end
 })
 
-addcommand({ --- unfinished.
+addcommand({
+        Name = "antikill",
+        Function = function()
+        check(args[2])
+                CONS["_ANTIKILL "..plr.Name] = RunService.RenderStepped:Connect(function()
+                        if plr.Character.Humanoid.Health <= 0 then
+                                chat("rest "..plr.Name.." (fuck)")
+                                chat("god "..plr.Name.." (fuck)")
+end
+end)
+end
+})
+
+addcommand({
+        Name = "unantikill",
+        Function = function()
+                check(args[2])
+                        CONS["_ANTIKILL "..plr.Name]:Disconnect()
+end
+})
+
+addcommand({
             Name = "antis",
             Function = function()
                         check(args[2])
+                                CONS["_ANTIROCKET "..plr.Name] = RunService.RenderStepped:Connect(function()
                         for i,v in pairs(plr.Character:GetChildren()) do
             if v.Name == "Rocket" then
                         chat("unrocket/"..plr.Name)
     end
 end
+end)
 end
 })
             
@@ -167,9 +190,11 @@ addcommand({
         Function = function()
 check(args[2])
 chat("h \n\n\n\n\n\n\n\n\n\n"..aname.."\n\n\n\n\n"..plr.Name.." Has Just Been Banned!")
-                connections["_BAN "..plr.Name] = rs.Renderstepped:Connect(function()
+                CONS["_BAN "..plr.Name] = RunService.Renderstepped:Connect(function()
+                wait()
         if not plr then
-                connections["_BAN "..plr.Name]:Disconnect()
+                CONS["_BAN "..plr.Name]:Disconnect()
+                        else
 if not game.Lighting:FindFirstChild(plr.Name) then
     chat("skydive "..plr.Name)
    chat("blind "..plr.Name)
@@ -300,7 +325,7 @@ end)
 end
 end)
 							task.spawn(function()
-				    connections.bang2 = rs.RenderStepped:Connect(function()
+				    CONS.bang2 = RunService.RenderStepped:Connect(function()
         for i, gear in pairs(bgears) do
                         for i,v in pairs(game:Gs("Players"):GetChildren()) do
             if v.Name ~= lp.Name and not table.find(gwl, v.Name) then
